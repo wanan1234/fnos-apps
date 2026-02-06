@@ -1,0 +1,38 @@
+### Generic variables and functions
+### -------------------------------
+
+
+PACKAGE_BASE="${TRIM_APPDEST}"
+SVC_CWD="${PACKAGE_BASE}"
+
+QBIT_BIN="qbittorrent-nox"
+QBIT_CONF="${TRIM_PKGVAR}/qBittorrent/config/qBittorrent.conf"
+PORT=""
+if [ -f "${QBIT_CONF}" ]; then
+    PORT=`get_key_value "${QBIT_CONF}" "WebUI\Port"`
+fi
+UIPORT=""
+if [ -f "${PACKAGE_BASE}/ui/config" ]; then
+    UIPORT=`cat "${PACKAGE_BASE}/ui/config" | jq -r '.".url"."'${TRIM_APPNAME}'.Application"."port"'`
+fi
+
+if [ -z "${PORT}" ] || [ "${PORT}" = "null" ]; then
+    PORT="${UIPORT}"
+fi
+if [ -z "${PORT}" ] || [ "${PORT}" = "null" ]; then
+    PORT="8085"
+fi
+
+### Package specific variables and functions
+### ----------------------------------------
+
+MEM=`free -m | grep Mem: | awk {'print $2'}`
+ulimit -m `expr $MEM / 3 \* 1024`
+
+SERVICE_COMMAND[0]="bin/${QBIT_BIN} --profile=${TRIM_PKGVAR} --webui-port=${PORT}"
+
+# Rename framework log to avoid confusion with qbittorrent.log
+LOG_FILE="${LOG_DIR}/service.log"
+
+SVC_BACKGROUND=y
+SVC_WRITE_PID=y

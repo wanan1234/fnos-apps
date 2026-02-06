@@ -1,0 +1,108 @@
+#!/bin/bash
+set -e
+
+# Build fnOS .fpk package by merging shared framework with app-specific files.
+#
+# Usage: ./scripts/build-fpk.sh <app-dir> <app-tgz> [version] [platform]
+#   app-dir   - Path to app directory (e.g., apps/plex)
+#   app-tgz   - Path to pre-built app.tgz
+#   version   - Override version in manifest (optional)
+#   platform  - Override platform in manifest (optional)
+#
+# The fpk is written to the current directory.
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+SHARED_DIR="$REPO_ROOT/shared"
+
+APP_DIR="$1"
+APP_TGZ="$2"
+VERSION="$3"
+PLATFORM="$4"
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+info() { echo -e "${GREEN}[INFO]${NC} $1"; }
+error() { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
+
+[ -z "$APP_DIR" ] && error "Usage: $0 <app-dir> <app-tgz> [version] [platform]"
+[ -z "$APP_TGZ" ] && error "Usage: $0 <app-dir> <app-tgz> [version] [platform]"
+[ -d "$APP_DIR/fnos" ] || error "App directory not found: $APP_DIR/fnos"
+[ -f "$APP_TGZ" ] || error "app.tgz not found: $APP_TGZ"
+
+# Read appname from manifest
+APPNAME=$(grep "^appname" "$APP_DIR/fnos/manifest" | awk -F'=' '{print $2}' | tr -d ' ')
+[ -z "$APPNAME" ] && error "Cannot read appname from manifest"
+
+info "Building fpk for: $APPNAME"
+
+# Calculate checksum
+CHECKSUM=$(md5sum "$APP_TGZ" | cut -d' ' -f1 2>/dev/null || md5 -q "$APP_TGZ")
+
+# Build package directory
+WORK_DIR=$(mktemp -d)
+PKG_DIR="$WORK_DIR/package"
+mkdir -p "$PKG_DIR/cmd"
+
+# 1. Copy app.tgz
+cp "$APP_TGZ" "$PKG_DIR/app.tgz"
+
+# 2. Copy shared framework cmd/*
+cp "$SHARED_DIR"/cmd/* "$PKG_DIR/cmd/"
+
+# 3. Overlay app-specific cmd/* (overrides shared files)
+if [ -d "$APP_DIR/fnos/cmd" ]; then
+    cp "$APP_DIR"/fnos/cmd/* "$PKG_DIR/cmd/" 2>/dev/null || true
+fi
+
+# 4. Copy config/
+if [ -d "$APP_DIR/fnos/config" ]; then
+    cp -a "$APP_DIR/fnos/config" "$PKG_DIR/"
+fi
+
+# 5. Copy wizard/ - app-specific first, fall back to shared
+if [ -d "$APP_DIR/fnos/wizard" ]; then
+    cp -a "$APP_DIR/fnos/wizard" "$PKG_DIR/"
+elif [ -d "$SHARED_DIR/wizard" ]; then
+    cp -a "$SHARED_DIR/wizard" "$PKG_DIR/"
+fi
+
+# 6. Copy port forwarding config (*.sc)
+cp "$APP_DIR"/fnos/*.sc "$PKG_DIR/" 2>/dev/null || true
+
+# 7. Copy icons
+cp "$APP_DIR"/fnos/ICON*.PNG "$PKG_DIR/" 2>/dev/null || true
+
+# 8. Build manifest
+cp "$APP_DIR/fnos/manifest" "$PKG_DIR/manifest"
+
+if [ -n "$VERSION" ]; then
+    sed -i.tmp "s/^version.*/version         = ${VERSION}/" "$PKG_DIR/manifest"
+fi
+if [ -n "$PLATFORM" ]; then
+    if grep -q "^platform" "$PKG_DIR/manifest"; then
+        sed -i.tmp "s/^platform.*/platform        = ${PLATFORM}/" "$PKG_DIR/manifest"
+    else
+        echo "platform        = ${PLATFORM}" >> "$PKG_DIR/manifest"
+    fi
+fi
+sed -i.tmp "s/^checksum.*/checksum        = ${CHECKSUM}/" "$PKG_DIR/manifest"
+rm -f "$PKG_DIR/manifest.tmp"
+
+# Determine output filename
+MANIFEST_VERSION=$(grep "^version" "$PKG_DIR/manifest" | awk -F'=' '{print $2}' | tr -d ' ')
+MANIFEST_PLATFORM=$(grep "^platform" "$PKG_DIR/manifest" | awk -F'=' '{print $2}' | tr -d ' ')
+FPK_NAME="${APPNAME}_${MANIFEST_VERSION}_${MANIFEST_PLATFORM:-x86}.fpk"
+
+# 9. Create fpk
+cd "$PKG_DIR"
+tar -czf "$OLDPWD/$FPK_NAME" *
+cd "$OLDPWD"
+
+# Cleanup
+rm -rf "$WORK_DIR"
+
+info "Built: $FPK_NAME ($(du -h "$FPK_NAME" | cut -f1))"
+echo "$FPK_NAME"

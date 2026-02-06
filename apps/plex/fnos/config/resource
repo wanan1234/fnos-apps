@@ -1,0 +1,19 @@
+{
+    "port-config":{
+        "protocol-file":"PlexMediaServer.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "PlexMediaServer",
+                "permission": {
+                    "rw": [
+                        "plex"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

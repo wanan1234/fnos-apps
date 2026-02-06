@@ -1,0 +1,170 @@
+name: Build qBittorrent fnOS Package
+
+on:
+  push:
+    paths:
+      - 'apps/qbittorrent/**'
+      - 'shared/**'
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to build'
+        required: true
+      revision:
+        description: 'Revision number'
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  check-version:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      revision: ${{ steps.version.outputs.revision }}
+      should_build: ${{ steps.version.outputs.should_build }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get latest qBittorrent version
+        id: version
+        run: |
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+            REVISION="${{ github.event.inputs.revision }}"
+          else
+            VERSION=$(curl -s https://api.github.com/repos/userdocs/qbittorrent-nox-static/releases/latest | jq -r '.tag_name' | sed 's/^v//')
+            REVISION=""
+          fi
+
+          TAG_PREFIX="qbittorrent/v${VERSION}"
+          EXISTING_TAG=$(git tag -l "${TAG_PREFIX}*" | sort -V | tail -1)
+
+          if [ -z "$EXISTING_TAG" ]; then
+            FINAL_TAG="${TAG_PREFIX}"
+            SHOULD_BUILD="true"
+          else
+            REVISION_NUM=$(echo "$EXISTING_TAG" | grep -oP '(?<=-r)\d+$' || echo "0")
+            NEW_REVISION=$((REVISION_NUM + 1))
+            FINAL_TAG="${TAG_PREFIX}-r${NEW_REVISION}"
+            SHOULD_BUILD="true"
+          fi
+
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "revision=${FINAL_TAG}" >> $GITHUB_OUTPUT
+          echo "should_build=${SHOULD_BUILD}" >> $GITHUB_OUTPUT
+
+  build:
+    needs: check-version
+    if: needs.check-version.outputs.should_build == 'true'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - arch: x86
+            binary_prefix: x86_64
+            manifest_platform: x86
+          - arch: arm
+            binary_prefix: aarch64
+            manifest_platform: arm
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download qBittorrent binary
+        run: |
+          VERSION="${{ needs.check-version.outputs.version }}"
+          wget -O qbittorrent-nox "https://github.com/userdocs/qbittorrent-nox-static/releases/download/v${VERSION}/qbittorrent-nox-${{ matrix.binary_prefix }}"
+          chmod +x qbittorrent-nox
+
+      - name: Download GeoDB
+        run: |
+          mkdir -p geodata
+          wget -O geodata/geoip.dat "https://github.com/Loyalsoldier/geoip/releases/download/202401/geoip.dat"
+
+      - name: Create qBittorrent config
+        run: |
+          mkdir -p qb_config
+          cat > qb_config/qBittorrent.conf << 'EOF'
+          [LegalNotice]
+          Accepted=true
+
+          [Application]
+          FileLogger\Enabled=true
+          FileLogger\Path=/var/apps/qBittorrent/var/logs
+
+          [BitTorrent]
+          Session\DefaultSavePath=/var/apps/qBittorrent/shares/qBittorrent/Download
+          Session\TempPath=/var/apps/qBittorrent/shares/qBittorrent/temp
+          Session\TempPathEnabled=false
+          Session\Port=63219
+          Session\QueueingSystemEnabled=false
+
+          [Preferences]
+          General\Locale=zh_CN
+          WebUI\Port=8085
+          WebUI\Username=admin
+          WebUI\Password_PBKDF2="@ByteArray(xK2EwRvfGtxfF+Ot9v4WYQ==:bNStY/6mFYYW8m/Xm4xSbBjoR2tZNsLZ4KvdUzyCLEOg7tfpchVJucIK9Dwcp6Xe9DI4RwpoCPI9zhicTdtf5A==)"
+          WebUI\CSRFProtection=false
+          WebUI\ClickjackingProtection=false
+          WebUI\HostHeaderValidation=false
+          EOF
+
+      - name: Build app_root
+        run: |
+          mkdir -p app_root/bin
+          cp qbittorrent-nox app_root/bin/
+          mkdir -p app_root/geodata
+          cp -r geodata/* app_root/geodata/
+          mkdir -p app_root/config
+          cp qb_config/qBittorrent.conf app_root/config/
+
+      - name: Create app.tgz
+        run: |
+          tar -czf app.tgz -C app_root .
+
+      - name: Build FPK
+        run: |
+          ./scripts/build-fpk.sh apps/qbittorrent app.tgz "${{ needs.check-version.outputs.version }}" "${{ matrix.manifest_platform }}"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: qbittorrent-fpk-${{ matrix.arch }}
+          path: qbittorrent_*.fpk
+
+  release:
+    needs: [check-version, build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Create release
+        run: |
+          VERSION="${{ needs.check-version.outputs.version }}"
+          TAG="${{ needs.check-version.outputs.revision }}"
+
+          RELEASE_NOTES="qBittorrent fnOS Package v${VERSION}
+
+          Default credentials:
+          - Username: admin
+          - Password: adminadmin
+
+          Mirror links:
+          - x86: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/qbittorrent_${VERSION}_x86.fpk
+          - ARM: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/qbittorrent_${VERSION}_arm.fpk"
+
+          gh release create "$TAG" \
+            --title "qBittorrent v${VERSION}" \
+            --notes "$RELEASE_NOTES" \
+            artifacts/qbittorrent-fpk-x86/*.fpk \
+            artifacts/qbittorrent-fpk-arm/*.fpk
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

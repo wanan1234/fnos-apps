@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "plexmediaserver.Application": 
+        {
+            "title": "Plex Media Server",
+            "desc": "Plex Media Server",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "32400",
+            "protocol": "http",
+            "url": "/web/index.html",
+            "allUsers": true
+        }
+    }
+}

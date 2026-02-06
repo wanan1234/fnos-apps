@@ -1,0 +1,137 @@
+name: Build Plex fnOS Package
+
+on:
+  push:
+    paths:
+      - 'apps/plex/**'
+      - 'shared/**'
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to build'
+        required: true
+      revision:
+        description: 'Revision number'
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  check-version:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      revision: ${{ steps.version.outputs.revision }}
+      should_build: ${{ steps.version.outputs.should_build }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get latest Plex version
+        id: version
+        run: |
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+            REVISION="${{ github.event.inputs.revision }}"
+          else
+            VERSION=$(curl -s https://plex.tv/api/downloads/5.json | jq -r '.computer.Linux.releases[0].version')
+            REVISION=""
+          fi
+
+          TAG_PREFIX="plex/v${VERSION}"
+          EXISTING_TAG=$(git tag -l "${TAG_PREFIX}*" | sort -V | tail -1)
+
+          if [ -z "$EXISTING_TAG" ]; then
+            FINAL_TAG="${TAG_PREFIX}"
+            SHOULD_BUILD="true"
+          else
+            REVISION_NUM=$(echo "$EXISTING_TAG" | grep -oP '(?<=-r)\d+$' || echo "0")
+            NEW_REVISION=$((REVISION_NUM + 1))
+            FINAL_TAG="${TAG_PREFIX}-r${NEW_REVISION}"
+            SHOULD_BUILD="true"
+          fi
+
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "revision=${FINAL_TAG}" >> $GITHUB_OUTPUT
+          echo "should_build=${SHOULD_BUILD}" >> $GITHUB_OUTPUT
+
+  build:
+    needs: check-version
+    if: needs.check-version.outputs.should_build == 'true'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - arch: x86
+            plex_build: linux-x86_64
+            manifest_platform: x86
+          - arch: arm
+            plex_build: linux-aarch64
+            manifest_platform: arm
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Plex
+        run: |
+          DOWNLOAD_URL=$(curl -s https://plex.tv/api/downloads/5.json | jq -r ".computer.Linux.releases[] | select(.build == \"${{ matrix.plex_build }}\") | .url" | head -1)
+          wget -O plex.deb "$DOWNLOAD_URL"
+
+      - name: Extract Plex
+        run: |
+          mkdir -p plex_extracted
+          dpkg-deb -x plex.deb plex_extracted
+
+      - name: Build app_root
+        run: |
+          mkdir -p app_root/usr/lib/plexmediaserver
+          cp -r plex_extracted/usr/lib/plexmediaserver/* app_root/usr/lib/plexmediaserver/
+          mkdir -p app_root/bin
+          cp apps/plex/fnos/bin/plex-server app_root/bin/
+          mkdir -p app_root/ui
+          cp -r apps/plex/fnos/ui/* app_root/ui/
+
+      - name: Create app.tgz
+        run: |
+          tar -czf app.tgz -C app_root .
+
+      - name: Build FPK
+        run: |
+          ./scripts/build-fpk.sh apps/plex app.tgz "${{ needs.check-version.outputs.version }}" "${{ matrix.manifest_platform }}"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: plex-fpk-${{ matrix.arch }}
+          path: plex_*.fpk
+
+  release:
+    needs: [check-version, build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Create release
+        run: |
+          VERSION="${{ needs.check-version.outputs.version }}"
+          TAG="${{ needs.check-version.outputs.revision }}"
+
+          RELEASE_NOTES="Plex fnOS Package v${VERSION}
+
+          Mirror links:
+          - x86: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/plex_${VERSION}_x86.fpk
+          - ARM: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/plex_${VERSION}_arm.fpk"
+
+          gh release create "$TAG" \
+            --title "Plex v${VERSION}" \
+            --notes "$RELEASE_NOTES" \
+            artifacts/plex-fpk-x86/*.fpk \
+            artifacts/plex-fpk-arm/*.fpk
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

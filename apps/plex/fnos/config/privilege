@@ -1,0 +1,8 @@
+{
+    "defaults": {
+        "run-as": "package"
+    },
+    "username": "plex",
+    "groupname": "plex",
+    "join-groups": ["video","render"]
+}
