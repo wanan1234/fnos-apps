@@ -8,6 +8,8 @@ on:
     paths:
       - 'apps/emby/**'
       - 'shared/**'
+    paths-ignore:
+      - '**/*.md'
   schedule:
     - cron: '0 8 * * *'
   workflow_dispatch:
