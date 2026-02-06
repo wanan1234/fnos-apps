@@ -1,0 +1,7 @@
+{
+    "defaults":{
+        "run-as": "root"
+    },
+    "username": "nginx-web",
+    "groupname": "nginx-web"
+}

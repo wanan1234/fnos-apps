@@ -5,7 +5,7 @@
     "data-share": {
         "shares": [
             {
-                "name": "nginx-web",
+                "name": "nginx",
                 "permission": {
                     "rw": [
                         "nginx-web"
