@@ -137,7 +137,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: qbittorrent-fpk-${{ matrix.arch }}
-          path: qbittorrent_*.fpk
+          path: qBittorrent_*.fpk
 
   release:
     needs: [check-version, build]
@@ -162,8 +162,8 @@ jobs:
           - Password: adminadmin
 
           Mirror links:
-          - x86: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/qbittorrent_${VERSION}_x86.fpk
-          - ARM: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/qbittorrent_${VERSION}_arm.fpk"
+          - x86: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/qBittorrent_${VERSION}_x86.fpk
+          - ARM: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/qBittorrent_${VERSION}_arm.fpk"
 
           gh release create "$TAG" \
             --title "qBittorrent v${VERSION}" \

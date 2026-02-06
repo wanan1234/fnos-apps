@@ -104,7 +104,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: plex-fpk-${{ matrix.arch }}
-          path: plex_*.fpk
+          path: plexmediaserver_*.fpk
 
   release:
     needs: [check-version, build]
@@ -125,8 +125,8 @@ jobs:
           RELEASE_NOTES="Plex fnOS Package v${VERSION}
 
           Mirror links:
-          - x86: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/plex_${VERSION}_x86.fpk
-          - ARM: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/plex_${VERSION}_arm.fpk"
+          - x86: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/plexmediaserver_${VERSION}_x86.fpk
+          - ARM: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/plexmediaserver_${VERSION}_arm.fpk"
 
           gh release create "$TAG" \
             --title "Plex v${VERSION}" \

@@ -107,7 +107,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: emby-fpk-${{ matrix.arch }}
-          path: emby_*.fpk
+          path: embyserver_*.fpk
 
   release:
     needs: [check-version, build]
@@ -128,8 +128,8 @@ jobs:
           RELEASE_NOTES="Emby fnOS Package v${VERSION}
 
           Mirror links:
-          - x86: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/emby_${VERSION}_x86.fpk
-          - ARM: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/emby_${VERSION}_arm.fpk"
+          - x86: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/embyserver_${VERSION}_x86.fpk
+          - ARM: https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${TAG}/embyserver_${VERSION}_arm.fpk"
 
           gh release create "$TAG" \
             --title "Emby v${VERSION}" \
