@@ -4,24 +4,15 @@
 
 ## 应用列表
 
-| 应用 | 端口 | 说明 |
-|------|------|------|
-| [Plex Media Server](apps/plex/) | 32400 | 媒体服务器，支持硬件转码 |
-| [Emby Server](apps/emby/) | 8096 | 媒体管理和流式传输 |
-| [qBittorrent](apps/qbittorrent/) | 8085 | 轻量级 BitTorrent 客户端 |
-
-## 下载
-
-从 [Releases](https://github.com/conversun/fnos-apps/releases) 下载对应应用的 `.fpk` 文件。
-
-按应用筛选：
-- Plex: 标签以 `plex/v` 开头
-- Emby: 标签以 `emby/v` 开头
-- qBittorrent: 标签以 `qbittorrent/v` 开头
+| 应用 | 端口 | 说明 | 下载 |
+|------|------|------|------|
+| [Plex Media Server](apps/plex/) | 32400 | 媒体服务器，支持硬件转码 | [Releases](https://github.com/conversun/fnos-apps/releases?q=plex) |
+| [Emby Server](apps/emby/) | 8096 | 媒体管理和流式传输 | [Releases](https://github.com/conversun/fnos-apps/releases?q=emby) |
+| [qBittorrent](apps/qbittorrent/) | 8085 | 轻量级 BitTorrent 客户端 | [Releases](https://github.com/conversun/fnos-apps/releases?q=qbittorrent) |
 
 ## 安装
 
-1. 根据设备架构下载对应的 `.fpk` 文件（x86 或 arm）
+1. 从上方链接下载对应应用的 `.fpk` 文件（x86 或 arm）
 2. 在 fnOS 应用管理中选择「手动安装」
 3. 上传 fpk 文件完成安装
 
@@ -48,17 +39,12 @@ fnos-apps/
 ./scripts/new-app.sh jellyfin "Jellyfin Media Server" 8096
 ```
 
-脚手架会生成应用模板，只需填写应用特有的启动脚本和构建逻辑。
-
 ## 本地构建
 
 ```bash
-# 构建单个应用（以 Plex 为例）
-cd apps/plex
-./update_plex.sh
-
-# 使用共享脚本打包 fpk
-./scripts/build-fpk.sh apps/plex app.tgz "1.42.2.10156" "x86"
+cd apps/plex && ./update_plex.sh
+cd apps/emby && ./update_emby.sh
+cd apps/qbittorrent && ./update_qbittorrent.sh
 ```
 
 ## 开源透明
