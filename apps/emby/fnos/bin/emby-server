@@ -5,7 +5,7 @@ APP_DATA_DIR=$1
 PID_FILE="$APP_DATA_DIR"/$APP_NAME.pid
 
 export AMDGPU_IDS=$APP_DIR/extra/share/libdrm/amdgpu.ids
-[ -z "$EMBY_DATA" ] && export EMBY_DATA=/var/lib/emby
+[ -z "$EMBY_DATA" ] && export EMBY_DATA="$APP_DATA_DIR"
 export FONTCONFIG_PATH=$APP_DIR/etc/fonts
 export LD_LIBRARY_PATH=$APP_DIR/lib:$APP_DIR/extra/lib
 export LIBVA_DRIVERS_PATH=$APP_DIR/extra/lib/dri
@@ -27,4 +27,4 @@ exec $APP_DIR/system/EmbyServer \
   -nolocalportconfig \
   -ignore_vaapi_enabled_flag \
   -pidfile "$PID_FILE" \
-  -defaultdirectory /var/apps/$APP_NAME/shares
+  -defaultdirectory "/var/apps/${APP_NAME}/shares/${APP_NAME}"

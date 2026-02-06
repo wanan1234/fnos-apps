@@ -75,7 +75,17 @@ cp "$APP_DIR"/fnos/*.sc "$PKG_DIR/" 2>/dev/null || true
 # 7. Copy icons
 cp "$APP_DIR"/fnos/ICON*.PNG "$PKG_DIR/" 2>/dev/null || true
 
-# 8. Build manifest
+# 8. Copy ui/ (desktop entry + images)
+if [ -d "$APP_DIR/fnos/ui" ]; then
+    cp -a "$APP_DIR/fnos/ui" "$PKG_DIR/"
+fi
+
+# 9. Copy bin/ (service launcher scripts, e.g. plex-server, emby-server)
+if [ -d "$APP_DIR/fnos/bin" ]; then
+    cp -a "$APP_DIR/fnos/bin" "$PKG_DIR/"
+fi
+
+# 10. Build manifest
 cp "$APP_DIR/fnos/manifest" "$PKG_DIR/manifest"
 
 if [ -n "$VERSION" ]; then
@@ -96,7 +106,7 @@ MANIFEST_VERSION=$(grep "^version" "$PKG_DIR/manifest" | awk -F'=' '{print $2}' 
 MANIFEST_PLATFORM=$(grep "^platform" "$PKG_DIR/manifest" | awk -F'=' '{print $2}' | tr -d ' ')
 FPK_NAME="${APPNAME}_${MANIFEST_VERSION}_${MANIFEST_PLATFORM:-x86}.fpk"
 
-# 9. Create fpk
+# 11. Create fpk
 cd "$PKG_DIR"
 tar -czf "$OLDPWD/$FPK_NAME" *
 cd "$OLDPWD"

@@ -82,7 +82,11 @@ jobs:
       - name: Download GeoDB
         run: |
           mkdir -p geodata
-          wget -O geodata/geoip.dat "https://github.com/Loyalsoldier/geoip/releases/download/202401/geoip.dat"
+          YEAR_MONTH=$(date +%Y%m)
+          wget -O geodata/geoip.dat "https://github.com/Loyalsoldier/geoip/releases/download/${YEAR_MONTH}/geoip.dat" || {
+            YEAR_MONTH=$(date -d "1 month ago" +%Y%m 2>/dev/null || date -v-1m +%Y%m)
+            wget -O geodata/geoip.dat "https://github.com/Loyalsoldier/geoip/releases/download/${YEAR_MONTH}/geoip.dat"
+          }
 
       - name: Create qBittorrent config
         run: |
