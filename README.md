@@ -9,6 +9,7 @@
 | [Plex Media Server](apps/plex/) | 32400 | 媒体服务器，支持硬件转码 | [Releases](https://github.com/conversun/fnos-apps/releases?q=plex) |
 | [Emby Server](apps/emby/) | 8096 | 媒体管理和流式传输 | [Releases](https://github.com/conversun/fnos-apps/releases?q=emby) |
 | [qBittorrent](apps/qbittorrent/) | 8085 | 轻量级 BitTorrent 客户端 | [Releases](https://github.com/conversun/fnos-apps/releases?q=qbittorrent) |
+| [Nginx](apps/nginx/) | 8888 | 高性能 HTTP 和反向代理服务器 | [Releases](https://github.com/conversun/fnos-apps/releases?q=nginx) |
 
 ## 安装
 
@@ -26,7 +27,8 @@ fnos-apps/
 ├── apps/
 │   ├── plex/            # Plex 应用特有文件
 │   ├── emby/            # Emby 应用特有文件
-│   └── qbittorrent/     # qBittorrent 应用特有文件
+│   ├── qbittorrent/     # qBittorrent 应用特有文件
+│   └── nginx/           # Nginx 应用特有文件
 ├── scripts/
 │   ├── build-fpk.sh     # 通用 fpk 打包脚本
 │   └── new-app.sh       # 新应用脚手架
@@ -45,6 +47,7 @@ fnos-apps/
 cd apps/plex && ./update_plex.sh
 cd apps/emby && ./update_emby.sh
 cd apps/qbittorrent && ./update_qbittorrent.sh
+cd apps/nginx && ./update_nginx.sh
 ```
 
 ## 开源透明
