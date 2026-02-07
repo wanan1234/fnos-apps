@@ -65,4 +65,4 @@ export LD_LIBRARY_PATH=$APP_DIR/lib:$LD_LIBRARY_PATH
 export PATH=$APP_DIR/sbin:$PATH
 
 cd $APP_DIR || exit 1
-exec ./sbin/nginx -c "$NGINX_CONF" -g "daemon off;"
+exec ./sbin/nginx -c "$NGINX_CONF" -e "$NGINX_LOG_DIR/error.log" -g "daemon off;"

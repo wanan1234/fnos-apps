@@ -117,6 +117,9 @@ build_app_tgz() {
     # Copy configuration files (mime.types, etc.)
     cp -a "$src/etc/nginx"/* "$dst/conf/" 2>/dev/null || true
     find "$dst/conf/" -type l -delete
+    # official .deb hardcodes 'user nginx;' — fnOS has no nginx user (uses privilege config)
+    sed -i.bak 's/^user[[:space:]]\+nginx;/#user  nginx;/' "$dst/conf/nginx.conf" 2>/dev/null || true
+    rm -f "$dst/conf/nginx.conf.bak"
     
     # Copy default html pages
     cp -a "$src/usr/share/nginx/html"/* "$dst/html/" 2>/dev/null || true
