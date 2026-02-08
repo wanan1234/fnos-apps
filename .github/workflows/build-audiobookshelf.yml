@@ -1,0 +1,157 @@
+name: Build Audiobookshelf for fnOS
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Audiobookshelf 版本号 (如: 2.4.0，留空自动获取最新)'
+        required: false
+        default: ''
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arch: [x86, arm]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup environment
+        run: |
+          echo "=== 开始构建 Audiobookshelf fnOS 安装包 ==="
+          
+      - name: Get Audiobookshelf version
+        id: get_version
+        run: |
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+          else
+            # 简单获取最新版本
+            VERSION=$(curl -sL "https://api.github.com/repos/advplyr/audiobookshelf/releases/latest" | \
+              grep '"tag_name"' | \
+              sed 's/.*"v\(.*\)".*/\1/')
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "使用版本: $VERSION"
+          
+      - name: Download and build for ${{ matrix.arch }}
+        run: |
+          VERSION="${{ steps.get_version.outputs.version }}"
+          
+          if [ "${{ matrix.arch }}" = "x86" ]; then
+            DOWNLOAD_ARCH="linux-x64"
+            PLATFORM="x86"
+          else
+            DOWNLOAD_ARCH="linux-arm64"
+            PLATFORM="arm"
+          fi
+          
+          echo "构建 ${{ matrix.arch }} 版本"
+          echo "下载架构: $DOWNLOAD_ARCH"
+          
+          # 下载
+          URL="https://github.com/advplyr/audiobookshelf/releases/download/v${VERSION}/audiobookshelf-${VERSION}-${DOWNLOAD_ARCH}.tar.gz"
+          echo "下载地址: $URL"
+          curl -L -o audiobookshelf.tar.gz "$URL"
+          
+          # 解压
+          mkdir -p extracted
+          tar -xzf audiobookshelf.tar.gz -C extracted
+          
+          # 创建目录结构
+          mkdir -p package/app_root
+          cp extracted/audiobookshelf package/app_root/
+          chmod +x package/app_root/audiobookshelf
+          
+          # 创建必要目录
+          mkdir -p package/app_root/{bin,config,ui}
+          
+          # 复制配置文件（如果存在）
+          if [ -d "apps/audiobookshelf/fnos/config" ]; then
+            cp -r apps/audiobookshelf/fnos/config/* package/app_root/config/ 2>/dev/null || true
+          fi
+          
+          if [ -f "apps/audiobookshelf/fnos/Audiobookshelf.sc" ]; then
+            cp apps/audiobookshelf/fnos/Audiobookshelf.sc package/app_root/
+          fi
+          
+          # 创建 app.tgz
+          cd package/app_root && tar -czf ../app.tgz . && cd ../..
+          
+          # 计算校验和
+          CHECKSUM=$(md5sum package/app.tgz | cut -d' ' -f1)
+          
+          # 准备最终包
+          mkdir -p package/final
+          mv package/app.tgz package/final/
+          
+          # 复制其他文件
+          if [ -d "shared/cmd" ]; then
+            cp -r shared/cmd package/final/ 2>/dev/null || true
+          fi
+          
+          # 创建 manifest
+          cat > package/final/manifest << EOF
+name            = audiobookshelf
+version         = $VERSION
+display_name    = Audiobookshelf
+platform        = $PLATFORM
+maintainer      = advplyr
+distributor     = wanan1234
+service_port    = 13378
+desc            = Self-hosted audiobook and podcast server
+checksum        = $CHECKSUM
+category        = media
+EOF
+          
+          # 打包 fpk
+          cd package/final && tar -czf ../../audiobookshelf_${VERSION}_${{ matrix.arch }}.fpk * && cd ../..
+          
+          echo "构建完成: audiobookshelf_${VERSION}_${{ matrix.arch }}.fpk"
+          ls -lh audiobookshelf_*.fpk
+          
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: audiobookshelf-${{ matrix.arch }}
+          path: audiobookshelf_*_${{ matrix.arch }}.fpk
+          retention-days: 7
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: success()
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          
+      - name: Create Release
+        run: |
+          # 获取版本号
+          VERSION=$(ls artifacts/audiobookshelf-x86/*.fpk 2>/dev/null | head -1 | grep -o '[0-9]\+\.[0-9]\+\.[0-9]\+' | head -1)
+          
+          if [ -z "$VERSION" ]; then
+            VERSION="latest"
+          fi
+          
+          echo "创建版本: $VERSION"
+          
+          # 列出所有文件
+          find artifacts -name "*.fpk" -type f
+          
+          echo "注意：需要安装 gh CLI 并设置 GITHUB_TOKEN 才能自动创建发布"
+          echo "手动创建发布：https://github.com/${{ github.repository }}/releases/new"
+          echo "上传以下文件："
+          find artifacts -name "*.fpk" -type f -exec echo "  - {}" \;
