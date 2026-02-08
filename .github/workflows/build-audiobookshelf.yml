@@ -1,0 +1,297 @@
+name: Build Audiobookshelf fnOS Package
+
+permissions:
+  contents: write
+
+on:
+  push:
+    paths:
+      - 'apps/audiobookshelf/**'
+      - 'shared/**'
+      - '!**/*.md'
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: '版本号 (留空则自动获取最新)'
+        required: false
+        default: ''
+      revision:
+        description: '修订后缀 (如 r2 用于重新发布，留空则自动处理)'
+        required: false
+        default: ''
+
+jobs:
+  check-version:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      release_tag: ${{ steps.check.outputs.release_tag }}
+      should_build: ${{ steps.check.outputs.should_build }}
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get Latest Version
+        id: version
+        run: |
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+          else
+            # 获取最新稳定版，过滤掉 beta 和 pre-release
+            VERSION=$(curl -sL "https://api.github.com/repos/advplyr/audiobookshelf/releases" | \
+              jq -r '.[] | select(.prerelease == false and .draft == false) | .tag_name' | \
+              head -1 | sed 's/^v//')
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "检测到版本: $VERSION"
+          
+      - name: Setup GitHub CLI
+        run: |
+          type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
+          curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+          sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list >/dev/null
+          sudo apt update
+          sudo apt install gh -y
+
+      - name: Check Release and Determine Tag
+        id: check
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          REVISION="${{ github.event.inputs.revision }}"
+          
+          if [ -n "$REVISION" ]; then
+            RELEASE_TAG="audiobookshelf/v${VERSION}-${REVISION}"
+            echo "手动指定修订: $RELEASE_TAG"
+          else
+            if gh release view "audiobookshelf/v${VERSION}" &>/dev/null; then
+              HIGHEST_REV=$(gh release list --limit 100 | grep "audiobookshelf/v${VERSION}" | \
+                sed -n 's/.*audiobookshelf\/v'"${VERSION}"'-r\([0-9]*\).*/\1/p' | sort -n | tail -1)
+              
+              if [ -n "$HIGHEST_REV" ]; then
+                NEXT_REV=$((HIGHEST_REV + 1))
+                RELEASE_TAG="audiobookshelf/v${VERSION}-r${NEXT_REV}"
+              else
+                RELEASE_TAG="audiobookshelf/v${VERSION}-r2"
+              fi
+              echo "版本已存在，使用修订: $RELEASE_TAG"
+            else
+              RELEASE_TAG="audiobookshelf/v${VERSION}"
+              echo "新版本: $RELEASE_TAG"
+            fi
+          fi
+          
+          if gh release view "$RELEASE_TAG" &>/dev/null; then
+            echo "should_build=false" >> $GITHUB_OUTPUT
+            echo "Release $RELEASE_TAG 已存在，跳过构建"
+          else
+            echo "should_build=true" >> $GITHUB_OUTPUT
+          fi
+          
+          echo "release_tag=$RELEASE_TAG" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  build:
+    needs: check-version
+    if: needs.check-version.outputs.should_build == 'true'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        arch: [x86, arm]
+        include:
+          - arch: x86
+            target_arch: x64
+            manifest_platform: x86
+            download_arch: linux-x64
+          - arch: arm
+            target_arch: arm64
+            manifest_platform: arm
+            download_arch: linux-arm64
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Package
+        run: |
+          VERSION="${{ needs.check-version.outputs.version }}"
+          ARCH="${{ matrix.arch }}"
+          TARGET_ARCH="${{ matrix.target_arch }}"
+          MANIFEST_PLATFORM="${{ matrix.manifest_platform }}"
+          DOWNLOAD_ARCH="${{ matrix.download_arch }}"
+          
+          echo "==> 构建 $ARCH 版本 (target arch: $TARGET_ARCH)"
+          
+          echo "==> 下载 Audiobookshelf $VERSION ($DOWNLOAD_ARCH)"
+          RELEASE_URL="https://github.com/advplyr/audiobookshelf/releases/download/v${VERSION}/audiobookshelf-${VERSION}-${DOWNLOAD_ARCH}.tar.gz"
+          echo "下载地址: $RELEASE_URL"
+          
+          # 下载并解压
+          curl -L -o audiobookshelf.tar.gz "$RELEASE_URL"
+          ls -lh audiobookshelf.tar.gz
+          
+          echo "==> 解压 tar.gz"
+          mkdir -p extracted
+          tar -xzf audiobookshelf.tar.gz -C extracted
+          
+          echo "==> 准备 fnOS 应用目录结构"
+          dst=app_root
+          mkdir -p "$dst"
+          
+          # 复制 audiobookshelf 二进制文件
+          cp extracted/audiobookshelf "$dst/"
+          chmod +x "$dst/audiobookshelf"
+          
+          # 创建必要的目录结构
+          mkdir -p "$dst/bin" "$dst/config" "$dst/data" "$dst/logs" "$dst/metadata" "$dst/cache"
+          mkdir -p "$dst/ui/images"
+          
+          # 创建启动脚本
+          cat > "$dst/bin/audiobookshelf" << 'EOF'
+#!/bin/sh
+export NODE_ENV=production
+export AUDIOBOOKSHELF_CONFIG_DIR=/config
+export AUDIOBOOKSHELF_DATA_DIR=/data
+export AUDIOBOOKSHELF_METADATA_PATH=/metadata
+export AUDIOBOOKSHELF_CACHE_PATH=/cache
+export AUDIOBOOKSHELF_PORT=13378
+
+cd "$(dirname "$0")/.."
+exec ./audiobookshelf
+EOF
+          chmod +x "$dst/bin/audiobookshelf"
+          
+          # 复制配置文件
+          if [ -d "apps/audiobookshelf/fnos/config" ]; then
+            cp -a apps/audiobookshelf/fnos/config/* "$dst/config/"
+          fi
+          
+          # 复制 UI 文件（如果有）
+          if [ -d "apps/audiobookshelf/fnos/ui" ]; then
+            cp -a apps/audiobookshelf/fnos/ui/* "$dst/ui/"
+          fi
+          
+          # 复制其他必要的文件
+          if [ -f "apps/audiobookshelf/fnos/Audiobookshelf.sc" ]; then
+            cp apps/audiobookshelf/fnos/Audiobookshelf.sc "$dst/"
+          fi
+          
+          echo "==> 构建 app.tgz"
+          cd app_root && tar -czf ../app.tgz . && cd ..
+          ls -lh app.tgz
+          
+          echo "==> 构建 fpk"
+          CHECKSUM=$(md5sum app.tgz | cut -d' ' -f1)
+          
+          mkdir -p package
+          mv app.tgz package/
+          cp -a shared/cmd package/
+          
+          # 复制应用特定的命令脚本
+          if [ -d "apps/audiobookshelf/fnos/cmd" ]; then
+            cp -a apps/audiobookshelf/fnos/cmd/* package/cmd/
+          fi
+          
+          # 复制配置文件
+          if [ -d "apps/audiobookshelf/fnos/config" ]; then
+            cp -a apps/audiobookshelf/fnos/config package/
+          fi
+          
+          # 复制向导文件
+          [ -d shared/wizard ] && cp -a shared/wizard package/
+          [ -d apps/audiobookshelf/fnos/wizard ] && cp -a apps/audiobookshelf/fnos/wizard package/
+          
+          # 复制图标
+          if ls apps/audiobookshelf/fnos/ICON*.PNG 2>/dev/null; then
+            cp apps/audiobookshelf/fnos/ICON*.PNG package/
+          else
+            # 如果没有图标，可以创建一个默认的或从别处复制
+            echo "注意：未找到应用图标"
+          fi
+          
+          # 创建或修改 manifest 文件
+          if [ -f "apps/audiobookshelf/fnos/manifest" ]; then
+            cp apps/audiobookshelf/fnos/manifest package/
+            sed -i "s/^version.*/version         = ${VERSION}/" package/manifest
+            sed -i "s/^checksum.*/checksum        = ${CHECKSUM}/" package/manifest
+            
+            if ! grep -q "^platform" package/manifest; then
+              echo "platform        = ${MANIFEST_PLATFORM}" >> package/manifest
+            else
+              sed -i "s/^platform.*/platform        = ${MANIFEST_PLATFORM}/" package/manifest
+            fi
+          else
+            # 创建基本的 manifest 文件
+            cat > package/manifest << MANIFEST
+name            = audiobookshelf
+description     = Self-hosted audiobook and podcast server
+version         = ${VERSION}
+appid           = audiobookshelf
+author          = advplyr
+maintainer      = fnOS Community
+checksum        = ${CHECKSUM}
+platform        = ${MANIFEST_PLATFORM}
+min_os_version  = 1.0.0
+category        = media
+tag             = audiobook,podcast,media,streaming
+MANIFEST
+          fi
+          
+          # 构建 fpk 包
+          cd package && tar -czf ../audiobookshelf_${VERSION}_${ARCH}.fpk * && cd ..
+          
+          echo "==> 完成"
+          ls -lh audiobookshelf_${VERSION}_${ARCH}.fpk
+          
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fpk-${{ matrix.arch }}
+          path: audiobookshelf_${{ needs.check-version.outputs.version }}_${{ matrix.arch }}.fpk
+          retention-days: 1
+
+  release:
+    needs: [check-version, build]
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download All Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Create Release
+        run: |
+          VERSION="${{ needs.check-version.outputs.version }}"
+          RELEASE_TAG="${{ needs.check-version.outputs.release_tag }}"
+          
+          echo "==> 创建 release $RELEASE_TAG"
+          ls -la artifacts/*/
+          
+          if [[ "$RELEASE_TAG" == *"-r"* ]]; then
+            REVISION_NOTE="
+          - **打包修订**: ${RELEASE_TAG##*-}"
+          else
+            REVISION_NOTE=""
+          fi
+          
+          gh release create "$RELEASE_TAG" \
+            --title "Audiobookshelf ${VERSION} for fnOS" \
+            --notes "自动构建的 fnOS 安装包
+          - 基于 [Audiobookshelf ${VERSION}](https://github.com/advplyr/audiobookshelf/releases/tag/v${VERSION})
+          - 平台: fnOS${REVISION_NOTE}
+          **国内镜像**:
+          - [audiobookshelf_${VERSION}_x86.fpk](https://ghfast.top/https://github.com/${{ github.repository }}/releases/download/${RELEASE_TAG}/audiobookshelf_${VERSION}_x86.fpk)
+          - [audiobookshelf_${VERSION}_arm.fpk](https://ghfast.top/https://github.com/${{ github.repository }}/releases/download/${RELEASE_TAG}/audiobookshelf_${VERSION}_arm.fpk)" \
+            artifacts/fpk-x86/*.fpk \
+            artifacts/fpk-arm/*.fpk
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
