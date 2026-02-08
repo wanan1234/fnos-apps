@@ -1,0 +1,8 @@
+{
+    "defaults": {
+        "run-as": "root"
+    },
+    "username": "audiobookshelf",
+    "groupname": "audiobookshelf",
+    "join-groups": ["users"]
+}

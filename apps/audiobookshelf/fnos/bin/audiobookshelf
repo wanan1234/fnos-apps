@@ -1,0 +1,25 @@
+#!/bin/sh
+# Audiobookshelf 启动脚本 for fnOS
+
+APP_NAME=audiobookshelf
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+# 环境变量
+export NODE_ENV=production
+export AUDIOBOOKSHELF_CONFIG_DIR="/config"
+export AUDIOBOOKSHELF_DATA_DIR="/data"
+export AUDIOBOOKSHELF_METADATA_PATH="/metadata"
+export AUDIOBOOKSHELF_CACHE_PATH="/cache"
+export AUDIOBOOKSHELF_PORT=13378
+
+# 确保目录存在
+mkdir -p "$AUDIOBOOKSHELF_CONFIG_DIR" \
+         "$AUDIOBOOKSHELF_DATA_DIR" \
+         "$AUDIOBOOKSHELF_METADATA_PATH" \
+         "$AUDIOBOOKSHELF_CACHE_PATH"
+
+cd "$APP_DIR" || exit 1
+
+# 启动
+exec ./audiobookshelf

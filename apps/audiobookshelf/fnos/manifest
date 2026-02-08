@@ -1,0 +1,17 @@
+appname         = audiobookshelf
+version         = 2.4.0
+display_name    = Audiobookshelf
+platform        = arm
+maintainer      = advplyr
+maintainer_url  = https://github.com/advplyr/audiobookshelf
+distributor     = wanan1234
+distributor_url = https://github.com/wanan1234/emby-fnos
+desktop_uidir   = ui
+desktop_applaunchname = audiobookshelf.Application
+service_port    = 13378
+desc            = Audiobookshelf is a self-hosted audiobook and podcast server. It allows you to organize, stream, and manage your audiobook and podcast collection from a web interface or mobile app.
+source          = thirdparty
+checksum        = 8d1056548fee491f9235e00dae452eaa
+category        = media
+tag             = audiobook,podcast,streaming,media
+min_os_version  = 1.0.0

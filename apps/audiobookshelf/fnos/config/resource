@@ -1,0 +1,18 @@
+{
+    "port-config": {
+        "protocol-file": "Audiobookshelf.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Audiobookshelf",
+                "permission": {
+                    "rw": [
+                        "audiobookshelf"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {}
+}
