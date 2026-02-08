@@ -69,19 +69,18 @@ jobs:
           # 创建目录结构
           mkdir -p build/app_root/{bin,config,ui/images,data,metadata,cache}
           
-          # 创建启动脚本 - 修复 Here Document 语法
-          cat > build/app_root/bin/audiobookshelf.sh << 'SCRIPTEOF'
-#!/bin/sh
-export NODE_ENV=production
-export AUDIOBOOKSHELF_CONFIG_DIR=/config
-export AUDIOBOOKSHELF_DATA_DIR=/data
-export AUDIOBOOKSHELF_METADATA_PATH=/metadata
-export AUDIOBOOKSHELF_CACHE_PATH=/cache
-export AUDIOBOOKSHELF_PORT=13378
-
-cd "$(dirname "$0")/.."
-exec ./audiobookshelf
-SCRIPTEOF
+          # 方法1：使用echo创建文件，避免Here Document问题
+          echo '#!/bin/sh' > build/app_root/bin/audiobookshelf.sh
+          echo 'export NODE_ENV=production' >> build/app_root/bin/audiobookshelf.sh
+          echo 'export AUDIOBOOKSHELF_CONFIG_DIR=/config' >> build/app_root/bin/audiobookshelf.sh
+          echo 'export AUDIOBOOKSHELF_DATA_DIR=/data' >> build/app_root/bin/audiobookshelf.sh
+          echo 'export AUDIOBOOKSHELF_METADATA_PATH=/metadata' >> build/app_root/bin/audiobookshelf.sh
+          echo 'export AUDIOBOOKSHELF_CACHE_PATH=/cache' >> build/app_root/bin/audiobookshelf.sh
+          echo 'export AUDIOBOOKSHELF_PORT=13378' >> build/app_root/bin/audiobookshelf.sh
+          echo '' >> build/app_root/bin/audiobookshelf.sh
+          echo 'cd "$(dirname "$0")/.."' >> build/app_root/bin/audiobookshelf.sh
+          echo 'exec ./audiobookshelf' >> build/app_root/bin/audiobookshelf.sh
+          
           chmod +x build/app_root/bin/audiobookshelf.sh
           
           # 复制配置文件（如果存在）
@@ -133,20 +132,18 @@ SCRIPTEOF
             cp apps/audiobookshelf/fnos/ICON*.PNG package/ 2>/dev/null || true
           fi
           
-          # 创建 manifest - 修复 Here Document 语法
-          cat > package/manifest << 'MANIFESTEOF'
-name            = audiobookshelf
-version         = $VERSION
-display_name    = Audiobookshelf
-platform        = $PLATFORM
-maintainer      = advplyr
-distributor     = wanan1234
-service_port    = 13378
-desc            = Self-hosted audiobook and podcast server
-checksum        = $CHECKSUM
-category        = media
-tag             = audiobook,podcast,media
-MANIFESTEOF
+          # 方法2：使用变量替换创建manifest
+          echo "name            = audiobookshelf" > package/manifest
+          echo "version         = $VERSION" >> package/manifest
+          echo "display_name    = Audiobookshelf" >> package/manifest
+          echo "platform        = $PLATFORM" >> package/manifest
+          echo "maintainer      = advplyr" >> package/manifest
+          echo "distributor     = wanan1234" >> package/manifest
+          echo "service_port    = 13378" >> package/manifest
+          echo "desc            = Self-hosted audiobook and podcast server" >> package/manifest
+          echo "checksum        = $CHECKSUM" >> package/manifest
+          echo "category        = media" >> package/manifest
+          echo "tag             = audiobook,podcast,media" >> package/manifest
           
           # 打包 fpk
           cd package && tar -czf ../audiobookshelf_${VERSION}_${{ matrix.arch }}.fpk * && cd ..
