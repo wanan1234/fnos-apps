@@ -114,30 +114,7 @@ build_app_tgz() {
     cp -a "$PKG_DIR/ui"/* "$dst/ui/" 2>/dev/null || true
     cp -a "$WORK_DIR/GeoDB"/* "$dst/var/qBittorrent/data/GeoDB/" 2>/dev/null || true
     
-    cat > "$dst/var/qBittorrent/config/qBittorrent.conf" << 'QBCONF'
-[LegalNotice]
-Accepted=true
-
-[Application]
-FileLogger\Enabled=true
-FileLogger\Path=/var/apps/qBittorrent/var/logs
-
-[BitTorrent]
-Session\DefaultSavePath=/var/apps/qBittorrent/shares/qBittorrent/Download
-Session\TempPath=/var/apps/qBittorrent/shares/qBittorrent/temp
-Session\TempPathEnabled=false
-Session\Port=63219
-Session\QueueingSystemEnabled=false
-
-[Preferences]
-General\Locale=zh_CN
-WebUI\Port=8085
-WebUI\Username=admin
-WebUI\Password_PBKDF2="@ByteArray(xK2EwRvfGtxfF+Ot9v4WYQ==:bNStY/6mFYYW8m/Xm4xSbBjoR2tZNsLZ4KvdUzyCLEOg7tfpchVJucIK9Dwcp6Xe9DI4RwpoCPI9zhicTdtf5A==)"
-WebUI\CSRFProtection=false
-WebUI\ClickjackingProtection=false
-WebUI\HostHeaderValidation=false
-QBCONF
+    cp "$PKG_DIR/defaults/qBittorrent.conf" "$dst/var/qBittorrent/config/qBittorrent.conf"
     
     cd "$dst"
     tar -czf "$WORK_DIR/app.tgz" .

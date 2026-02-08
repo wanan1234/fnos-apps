@@ -28,30 +28,7 @@ chmod +x app_root/bin/qbittorrent-nox
 cp -a apps/qbittorrent/fnos/ui/* app_root/ui/ 2>/dev/null || true
 cp -a GeoDB/* app_root/var/qBittorrent/data/GeoDB/ 2>/dev/null || true
 
-cat << 'QBCONF' | sed 's/^ *//' > app_root/var/qBittorrent/config/qBittorrent.conf
-[LegalNotice]
-Accepted=true
-
-[Application]
-FileLogger\Enabled=true
-FileLogger\Path=/var/apps/qBittorrent/var/logs
-
-[BitTorrent]
-Session\DefaultSavePath=/var/apps/qBittorrent/shares/qBittorrent/Download
-Session\TempPath=/var/apps/qBittorrent/shares/qBittorrent/temp
-Session\TempPathEnabled=false
-Session\Port=63219
-Session\QueueingSystemEnabled=false
-
-[Preferences]
-General\Locale=zh_CN
-WebUI\Port=8085
-WebUI\Username=admin
-WebUI\Password_PBKDF2="@ByteArray(xK2EwRvfGtxfF+Ot9v4WYQ==:bNStY/6mFYYW8m/Xm4xSbBjoR2tZNsLZ4KvdUzyCLEOg7tfpchVJucIK9Dwcp6Xe9DI4RwpoCPI9zhicTdtf5A==)"
-WebUI\CSRFProtection=false
-WebUI\ClickjackingProtection=false
-WebUI\HostHeaderValidation=false
-QBCONF
+cp apps/qbittorrent/fnos/defaults/qBittorrent.conf app_root/var/qBittorrent/config/qBittorrent.conf
 
 cd app_root
 tar -czf ../app.tgz .
