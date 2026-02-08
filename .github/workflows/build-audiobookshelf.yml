@@ -1,0 +1,184 @@
+name: Build Audiobookshelf for fnOS
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Audiobookshelf version (e.g., 2.4.0, empty for latest)'
+        required: false
+        default: ''
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arch: [x86, arm]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get Audiobookshelf version
+        id: get_version
+        run: |
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+          else
+            VERSION=$(curl -sL "https://api.github.com/repos/advplyr/audiobookshelf/releases/latest" | grep '"tag_name"' | sed 's/.*"v\(.*\)".*/\1/')
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Using version: $VERSION"
+
+      - name: Setup build for ${{ matrix.arch }}
+        run: |
+          if [ "${{ matrix.arch }}" = "x86" ]; then
+            echo "DOWNLOAD_ARCH=linux-x64" >> $GITHUB_ENV
+            echo "PLATFORM=x86" >> $GITHUB_ENV
+          else
+            echo "DOWNLOAD_ARCH=linux-arm64" >> $GITHUB_ENV
+            echo "PLATFORM=arm" >> $GITHUB_ENV
+          fi
+
+      - name: Download Audiobookshelf
+        run: |
+          VERSION="${{ steps.get_version.outputs.version }}"
+          URL="https://github.com/advplyr/audiobookshelf/releases/download/v${VERSION}/audiobookshelf-${VERSION}-${DOWNLOAD_ARCH}.tar.gz"
+          echo "Downloading: $URL"
+          curl -L -o audiobookshelf.tar.gz "$URL"
+          ls -lh audiobookshelf.tar.gz
+
+      - name: Build package for ${{ matrix.arch }}
+        run: |
+          # 清理工作区
+          rm -rf build output
+          mkdir -p build output
+          
+          # 解压
+          tar -xzf audiobookshelf.tar.gz -C build
+          
+          # 创建应用目录结构
+          mkdir -p app_root
+          cp build/audiobookshelf app_root/
+          chmod +x app_root/audiobookshelf
+          
+          mkdir -p app_root/{bin,config,ui}
+          
+          # 创建启动脚本 - 不使用 Here Document
+          echo '#!/bin/sh' > app_root/bin/audiobookshelf-launch
+          echo 'export NODE_ENV=production' >> app_root/bin/audiobookshelf-launch
+          echo 'export AUDIOBOOKSHELF_CONFIG_DIR=/config' >> app_root/bin/audiobookshelf-launch
+          echo 'export AUDIOBOOKSHELF_DATA_DIR=/data' >> app_root/bin/audiobookshelf-launch
+          echo 'export AUDIOBOOKSHELF_METADATA_PATH=/metadata' >> app_root/bin/audiobookshelf-launch
+          echo 'export AUDIOBOOKSHELF_CACHE_PATH=/cache' >> app_root/bin/audiobookshelf-launch
+          echo 'export AUDIOBOOKSHELF_PORT=13378' >> app_root/bin/audiobookshelf-launch
+          echo '' >> app_root/bin/audiobookshelf-launch
+          echo 'cd "$(dirname "$0")/.."' >> app_root/bin/audiobookshelf-launch
+          echo 'exec ./audiobookshelf' >> app_root/bin/audiobookshelf-launch
+          chmod +x app_root/bin/audiobookshelf-launch
+          
+          # 复制配置文件
+          if [ -d "apps/audiobookshelf/fnos/config" ]; then
+            cp -r apps/audiobookshelf/fnos/config/* app_root/config/ 2>/dev/null || true
+          fi
+          
+          # 复制服务脚本
+          if [ -f "apps/audiobookshelf/fnos/Audiobookshelf.sc" ]; then
+            cp apps/audiobookshelf/fnos/Audiobookshelf.sc app_root/
+          fi
+          
+          # 复制 UI 文件
+          if [ -d "apps/audiobookshelf/fnos/ui" ]; then
+            cp -r apps/audiobookshelf/fnos/ui/* app_root/ui/ 2>/dev/null || true
+          fi
+          
+          # 创建 app.tgz
+          cd app_root && tar -czf ../app.tgz . && cd ..
+          APP_SIZE=$(du -h app.tgz | cut -f1)
+          echo "app.tgz created: $APP_SIZE"
+          
+          # 计算校验和
+          CHECKSUM=$(md5sum app.tgz | cut -d' ' -f1)
+          
+          # 准备 fpk 包
+          mkdir -p fpk_package
+          mv app.tgz fpk_package/
+          
+          # 复制共享文件
+          if [ -d "shared/cmd" ]; then
+            cp -r shared/cmd fpk_package/ 2>/dev/null || true
+          fi
+          
+          # 创建 manifest - 不使用 Here Document
+          echo "name            = audiobookshelf" > fpk_package/manifest
+          echo "version         = $VERSION" >> fpk_package/manifest
+          echo "display_name    = Audiobookshelf" >> fpk_package/manifest
+          echo "platform        = $PLATFORM" >> fpk_package/manifest
+          echo "maintainer      = advplyr" >> fpk_package/manifest
+          echo "distributor     = wanan1234" >> fpk_package/manifest
+          echo "service_port    = 13378" >> fpk_package/manifest
+          echo "desc            = Self-hosted audiobook and podcast server" >> fpk_package/manifest
+          echo "checksum        = $CHECKSUM" >> fpk_package/manifest
+          echo "category        = media" >> fpk_package/manifest
+          echo "tag             = audiobook,podcast,media" >> fpk_package/manifest
+          
+          # 打包 fpk
+          cd fpk_package && tar -czf ../audiobookshelf_${VERSION}_${{ matrix.arch }}.fpk * && cd ..
+          
+          # 移动到输出目录
+          mv audiobookshelf_${VERSION}_${{ matrix.arch }}.fpk output/
+          
+          echo "Build complete for ${{ matrix.arch }}"
+          ls -lh output/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: audiobookshelf-${{ matrix.arch }}
+          path: output/audiobookshelf_*.fpk
+          retention-days: 7
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: success()
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: audiobookshelf/latest
+          name: Audiobookshelf for fnOS
+          body: |
+            Audiobookshelf for fnOS
+            
+            Platform support:
+            - x86 (Intel/AMD 64-bit)
+            - arm (ARM 64-bit)
+            
+            Installation:
+            1. Download the .fpk file for your architecture
+            2. Install through fnOS app manager
+            
+            Default port: 13378
+            Default URL: http://[your-fnOS-ip]:13378
+            
+            Note: Check file name for specific version
+          files: |
+            artifacts/audiobookshelf-x86/*.fpk
+            artifacts/audiobookshelf-arm/*.fpk
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
