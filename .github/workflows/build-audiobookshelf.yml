@@ -117,6 +117,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
       - name: Build Package
         run: |
           VERSION="${{ needs.check-version.outputs.version }}"
@@ -227,7 +230,7 @@ EOF
             fi
           else
             # 创建基本的 manifest 文件
-            cat > package/manifest << MANIFEST
+            cat > package/manifest << MANIFESTEOF
 name            = audiobookshelf
 description     = Self-hosted audiobook and podcast server
 version         = ${VERSION}
@@ -239,7 +242,7 @@ platform        = ${MANIFEST_PLATFORM}
 min_os_version  = 1.0.0
 category        = media
 tag             = audiobook,podcast,media,streaming
-MANIFEST
+MANIFESTEOF
           fi
           
           # 构建 fpk 包
