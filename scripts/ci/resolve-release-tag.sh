@@ -44,7 +44,7 @@ else
       NEXT_REV=$((HIGHEST_REV + 1))
       RELEASE_TAG="${BASE_TAG}-r${NEXT_REV}"
     else
-      RELEASE_TAG="${BASE_TAG}-r2"
+      RELEASE_TAG="${BASE_TAG}-r1"
     fi
     echo "Version exists, using revision: ${RELEASE_TAG}"
   else
@@ -60,5 +60,13 @@ else
   SHOULD_BUILD="true"
 fi
 
+# fpk_version: version string for fpk filename (includes -rN if revision)
+if [[ "${RELEASE_TAG}" =~ -r[0-9]+$ ]]; then
+  FPK_VERSION="${VERSION}${BASH_REMATCH[0]}"
+else
+  FPK_VERSION="${VERSION}"
+fi
+
 emit_output "release_tag" "${RELEASE_TAG}"
 emit_output "should_build" "${SHOULD_BUILD}"
+emit_output "fpk_version" "${FPK_VERSION}"
