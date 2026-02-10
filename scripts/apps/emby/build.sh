@@ -1,8 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
-VERSION="${1:-}"
-DEB_ARCH="${2:-}"
+VERSION="${1:-${VERSION:-}}"
+DEB_ARCH="${2:-${DEB_ARCH:-}}"
 
 [ -z "${VERSION}" ] && { echo "VERSION is required" >&2; exit 1; }
 [ -z "${DEB_ARCH}" ] && { echo "DEB_ARCH is required" >&2; exit 1; }
@@ -17,7 +17,7 @@ src=extracted/opt/emby-server
 dst=app_root
 mkdir -p "$dst"
 for dir in bin etc extra lib licenses share system; do
-  [ -d "$src/$dir" ] && cp -r "$src/$dir" "$dst/"
+  [ -d "$src/$dir" ] && cp -a "$src/$dir" "$dst/"
 done
 mkdir -p "$dst/config" "$dst/ui/images"
 

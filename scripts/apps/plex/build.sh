@@ -1,8 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
-VERSION="${1:-}"
-PLEX_BUILD="${2:-}"
+VERSION="${1:-${VERSION:-}}"
+PLEX_BUILD="${2:-${PLEX_BUILD:-}}"
 
 [ -z "${VERSION}" ] && { echo "VERSION is required" >&2; exit 1; }
 [ -z "${PLEX_BUILD}" ] && { echo "PLEX_BUILD is required" >&2; exit 1; }

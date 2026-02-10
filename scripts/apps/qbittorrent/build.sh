@@ -1,8 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
-UPSTREAM_TAG="${1:-}"
-QB_BINARY_PREFIX="${2:-}"
+UPSTREAM_TAG="${1:-${UPSTREAM_TAG:-}}"
+QB_BINARY_PREFIX="${2:-${QB_BINARY_PREFIX:-}}"
 
 [ -z "${UPSTREAM_TAG}" ] && { echo "UPSTREAM_TAG is required" >&2; exit 1; }
 [ -z "${QB_BINARY_PREFIX}" ] && { echo "QB_BINARY_PREFIX is required" >&2; exit 1; }

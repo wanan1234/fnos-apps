@@ -1,9 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
-VERSION="${1:-}"
-DEB_ARCH="${2:-}"
-CODENAME="${3:-bookworm}"
+VERSION="${1:-${VERSION:-}}"
+DEB_ARCH="${2:-${DEB_ARCH:-}}"
+CODENAME="${3:-${CODENAME:-bookworm}}"
 
 [ -z "${VERSION}" ] && { echo "VERSION is required" >&2; exit 1; }
 [ -z "${DEB_ARCH}" ] && { echo "DEB_ARCH is required" >&2; exit 1; }
