@@ -42,14 +42,18 @@ app_get_latest_version() {
 
 app_download() {
     local tarball_url="https://repo.jellyfin.org/files/server/linux/latest-stable/${TARBALL_ARCH}/jellyfin_${APP_VERSION}-${TARBALL_ARCH}.tar.gz"
-    local ffmpeg_url="https://repo.jellyfin.org/files/ffmpeg/debian/latest-7.x/${TARBALL_ARCH}/jellyfin-ffmpeg7_7.1.3-1-bookworm_${TARBALL_ARCH}.deb"
+    local ffmpeg_base="https://repo.jellyfin.org/files/ffmpeg/debian/latest-7.x/${TARBALL_ARCH}"
+    local ffmpeg_deb
+    ffmpeg_deb=$(curl -sL "$ffmpeg_base/" | grep -oP 'jellyfin-ffmpeg7_[^"]*-bookworm_'"${TARBALL_ARCH}"'\.deb' | head -1)
+    [ -z "$ffmpeg_deb" ] && error "无法从 $ffmpeg_base/ 解析 ffmpeg 文件名"
+    local ffmpeg_url="${ffmpeg_base}/${ffmpeg_deb}"
 
     info "下载 ($ARCH): $tarball_url"
     mkdir -p "$WORK_DIR"
     curl -L -f -o "$WORK_DIR/jellyfin.tar.gz" "$tarball_url" || error "下载失败"
     info "下载完成: $(du -h "$WORK_DIR/jellyfin.tar.gz" | cut -f1)"
 
-    info "下载 jellyfin-ffmpeg7..."
+    info "下载 jellyfin-ffmpeg7: $ffmpeg_deb"
     curl -L -f -o "$WORK_DIR/jellyfin-ffmpeg7.deb" "$ffmpeg_url" || error "ffmpeg 下载失败"
     info "ffmpeg 下载完成: $(du -h "$WORK_DIR/jellyfin-ffmpeg7.deb" | cut -f1)"
 }

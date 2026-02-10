@@ -10,7 +10,11 @@ TARBALL_ARCH="${2:-${TARBALL_ARCH:-}}"
 echo "==> Building Jellyfin ${VERSION} (${TARBALL_ARCH})"
 
 TARBALL_URL="https://repo.jellyfin.org/files/server/linux/latest-stable/${TARBALL_ARCH}/jellyfin_${VERSION}-${TARBALL_ARCH}.tar.gz"
-FFMPEG_URL="https://repo.jellyfin.org/files/ffmpeg/debian/latest-7.x/${TARBALL_ARCH}/jellyfin-ffmpeg7_7.1.3-1-bookworm_${TARBALL_ARCH}.deb"
+FFMPEG_BASE="https://repo.jellyfin.org/files/ffmpeg/debian/latest-7.x/${TARBALL_ARCH}"
+FFMPEG_DEB=$(curl -sL "$FFMPEG_BASE/" | grep -oP 'jellyfin-ffmpeg7_[^"]*-bookworm_'"${TARBALL_ARCH}"'\.deb' | head -1)
+[ -z "$FFMPEG_DEB" ] && { echo "Failed to resolve ffmpeg deb from $FFMPEG_BASE/" >&2; exit 1; }
+FFMPEG_URL="${FFMPEG_BASE}/${FFMPEG_DEB}"
+echo "==> FFmpeg: $FFMPEG_DEB"
 
 curl -L -o jellyfin.tar.gz "$TARBALL_URL"
 curl -L -o jellyfin-ffmpeg7.deb "$FFMPEG_URL"
