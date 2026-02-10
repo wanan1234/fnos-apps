@@ -1,12 +1,7 @@
 # Build artifacts
 *.fpk
 *.tmp
-
-# Temp directories from local builds
-apps/*/nginx_*
-apps/*/plexmediaserver_*
-apps/*/embyserver_*
-apps/*/qBittorrent_*
+dist/
 
 # macOS
 .DS_Store

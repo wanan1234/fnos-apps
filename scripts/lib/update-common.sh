@@ -235,6 +235,7 @@ build_fpk() {
     local fpk_name="${1:?build_fpk requires fpk_name}"
     local version="${2:?build_fpk requires version}"
     local app_tgz="${3:-$WORK_DIR/app.tgz}"
+    local output_dir="${4:-$SCRIPT_DIR}"
 
     local build_fpk_script="${BUILD_FPK_SCRIPT:-$REPO_ROOT/scripts/build-fpk.sh}"
 
@@ -242,15 +243,15 @@ build_fpk() {
 
     local build_output
     local built_name
-    build_output=$(cd "$SCRIPT_DIR" && "$build_fpk_script" "$SCRIPT_DIR" "$app_tgz" "$version" "$MANIFEST_PLATFORM") || error "打包失败"
+    build_output=$(cd "$output_dir" && "$build_fpk_script" "$SCRIPT_DIR" "$app_tgz" "$version" "$MANIFEST_PLATFORM") || error "打包失败"
     echo "$build_output"
     built_name=$(echo "$build_output" | tail -n 1)
 
-    if [ "$built_name" != "$fpk_name" ] && [ -f "$SCRIPT_DIR/$built_name" ]; then
-        mv -f "$SCRIPT_DIR/$built_name" "$SCRIPT_DIR/$fpk_name"
+    if [ "$built_name" != "$fpk_name" ] && [ -f "$output_dir/$built_name" ]; then
+        mv -f "$output_dir/$built_name" "$output_dir/$fpk_name"
     fi
 
-    info "生成: $SCRIPT_DIR/$fpk_name ($(du -h "$SCRIPT_DIR/$fpk_name" | cut -f1))"
+    info "生成: $output_dir/$fpk_name ($(du -h "$output_dir/$fpk_name" | cut -f1))"
 }
 
 # ============================================================================
@@ -315,25 +316,17 @@ main_flow() {
         compare_version=$(app_compare_version)
     fi
 
-    # Check if already up-to-date
-    if [ "$current_version" = "$compare_version" ]; then
-        warn "已是最新版本"
-        read -p "强制重新构建? [y/N] " -n 1 -r; echo
-        [[ ! $REPLY =~ ^[Yy]$ ]] && exit 0
-    fi
-
     # Download (app-specific)
     app_download
 
     # Build app.tgz (app-specific)
     app_build_app_tgz
 
-    # Update manifest
-    update_manifest "$compare_version" "$WORK_DIR/app.tgz"
-
-    # Build fpk
+    # Build fpk to dist/
+    local dist_dir="$REPO_ROOT/dist"
+    mkdir -p "$dist_dir"
     local fpk_name="${APP_FPK_PREFIX}_${compare_version}_${ARCH}.fpk"
-    build_fpk "$fpk_name" "$compare_version"
+    build_fpk "$fpk_name" "$compare_version" "$WORK_DIR/app.tgz" "$dist_dir"
 
     # Optional post-build hook
     if type app_post_build &>/dev/null; then

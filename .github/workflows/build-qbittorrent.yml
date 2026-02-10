@@ -4,11 +4,6 @@ permissions:
   contents: write
 
 on:
-  push:
-    paths:
-      - 'apps/qbittorrent/**'
-      - 'shared/**'
-      - '!**/*.md'
   schedule:
     - cron: '0 8 * * *'
   workflow_dispatch:

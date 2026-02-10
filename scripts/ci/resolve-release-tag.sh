@@ -35,13 +35,11 @@ elif [ "${EVENT_NAME}" = "schedule" ]; then
   echo "Scheduled run: using base tag ${RELEASE_TAG}"
 else
   if gh release view "${BASE_TAG}" &>/dev/null; then
-    # Use structured JSON output to avoid matching release titles instead of tags
     HIGHEST_REV=$(
       gh release list --limit 200 --json tagName -q '.[].tagName' | \
         grep "^${BASE_TAG}-r" | \
         sed -n "s/.*-r\([0-9]*\)$/\1/p" | sort -n | tail -1
     )
-
     if [ -n "${HIGHEST_REV}" ]; then
       NEXT_REV=$((HIGHEST_REV + 1))
       RELEASE_TAG="${BASE_TAG}-r${NEXT_REV}"

@@ -42,91 +42,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Validate App Input
+        run: |
+          APP="${{ inputs.app }}"
+          VALID_APPS="plex emby qbittorrent nginx"
+          if ! echo "$VALID_APPS" | grep -qw "$APP"; then
+            echo "Invalid app: $APP. Must be one of: $VALID_APPS" >&2
+            exit 1
+          fi
+
       - name: Resolve App Metadata
         id: meta
         run: |
           APP="${{ inputs.app }}"
-          case "$APP" in
-            plex)
-              echo "file_prefix=plexmediaserver" >> "$GITHUB_OUTPUT"
-              echo "release_title=Plex Media Server" >> "$GITHUB_OUTPUT"
-              ;;
-            emby)
-              echo "file_prefix=embyserver" >> "$GITHUB_OUTPUT"
-              echo "release_title=Emby" >> "$GITHUB_OUTPUT"
-              ;;
-            qbittorrent)
-              echo "file_prefix=qBittorrent" >> "$GITHUB_OUTPUT"
-              echo "release_title=qBittorrent" >> "$GITHUB_OUTPUT"
-              ;;
-            nginx)
-              echo "file_prefix=nginxserver" >> "$GITHUB_OUTPUT"
-              echo "release_title=Nginx" >> "$GITHUB_OUTPUT"
-              ;;
-            *)
-              echo "Unsupported app: $APP" >&2
-              exit 1
-              ;;
-          esac
+          source "scripts/apps/${APP}/meta.env"
+          echo "file_prefix=${FILE_PREFIX}" >> "$GITHUB_OUTPUT"
+          echo "release_title=${RELEASE_TITLE}" >> "$GITHUB_OUTPUT"
 
       - name: Get Latest Version
         id: version
         run: |
           APP="${{ inputs.app }}"
           INPUT_VERSION="${{ inputs.version }}"
-
-          FULL_VERSION=""
-          UPSTREAM_TAG=""
-
-          case "$APP" in
-            plex)
-              API_RESPONSE=$(curl -sL "https://plex.tv/api/downloads/5.json")
-              if [ -n "$INPUT_VERSION" ]; then
-                VERSION="$INPUT_VERSION"
-              else
-                VERSION=$(echo "$API_RESPONSE" | jq -r '.computer.Linux.version' | cut -d'-' -f1)
-              fi
-              FULL_VERSION=$(echo "$API_RESPONSE" | jq -r '.computer.Linux.version')
-              ;;
-            emby)
-              if [ -n "$INPUT_VERSION" ]; then
-                VERSION="$INPUT_VERSION"
-              else
-                VERSION=$(curl -sL "https://github.com/MediaBrowser/Emby.Releases/releases" | \
-                  grep -oE '(releases/tag/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+[^"]*|Latest)' | \
-                  grep -B1 "^Latest$" | head -1 | sed 's|releases/tag/||')
-              fi
-              ;;
-            qbittorrent)
-              UPSTREAM_TAG=$(curl -sL "https://api.github.com/repos/userdocs/qbittorrent-nox-static/releases/latest" | \
-                jq -r '.tag_name')
-              if [ -n "$INPUT_VERSION" ]; then
-                VERSION="$INPUT_VERSION"
-              else
-                VERSION=$(echo "$UPSTREAM_TAG" | sed -E 's/release-([0-9]+\.[0-9]+\.[0-9]+)_.*/\1/')
-              fi
-              ;;
-            nginx)
-              CODENAME="bookworm"
-              if [ -n "$INPUT_VERSION" ]; then
-                VERSION="$INPUT_VERSION"
-              else
-                VERSION=$(curl -sL "https://nginx.org/packages/debian/pool/nginx/n/nginx/" | \
-                  grep -oE "nginx_[0-9]+\.[0-9]+\.[0-9]+-[0-9]+~${CODENAME}_amd64\.deb" | \
-                  sed -E 's/nginx_([0-9]+\.[0-9]+\.[0-9]+)-.*/\1/' | sort -V | tail -1)
-              fi
-              ;;
-            *)
-              echo "Unsupported app: $APP" >&2
-              exit 1
-              ;;
-          esac
-
-          [ -z "$VERSION" ] && { echo "Failed to resolve version for $APP" >&2; exit 1; }
-          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-          echo "full_version=$FULL_VERSION" >> "$GITHUB_OUTPUT"
-          echo "upstream_tag=$UPSTREAM_TAG" >> "$GITHUB_OUTPUT"
-          echo "Detected version: $VERSION"
+          bash "scripts/apps/${APP}/get-latest-version.sh" "${INPUT_VERSION}"
 
       - name: Check Release and Determine Tag
         id: check
@@ -167,37 +105,22 @@ jobs:
         run: |
           APP="${{ inputs.app }}"
           VERSION="${{ needs.check-version.outputs.version }}"
-          ARCH="${{ matrix.arch }}"
           MANIFEST_PLATFORM="${{ matrix.manifest_platform }}"
-          DEB_ARCH="${{ matrix.deb_arch }}"
-          PLEX_BUILD="${{ matrix.plex_build }}"
-          QB_BINARY_PREFIX="${{ matrix.qb_binary_prefix }}"
-          UPSTREAM_TAG="${{ needs.check-version.outputs.upstream_tag }}"
-          CODENAME="bookworm"
 
-          case "$APP" in
-            plex)
-              bash scripts/ci/build-plex.sh "$VERSION" "$PLEX_BUILD"
-              ;;
-            emby)
-              bash scripts/ci/build-emby.sh "$VERSION" "$DEB_ARCH"
-              ;;
-            qbittorrent)
-              bash scripts/ci/build-qbittorrent.sh "$UPSTREAM_TAG" "$QB_BINARY_PREFIX"
-              ;;
-            nginx)
-              bash scripts/ci/build-nginx.sh "$VERSION" "$DEB_ARCH" "$CODENAME"
-              ;;
-            *)
-              echo "Unsupported app: $APP" >&2
-              exit 1
-              ;;
-          esac
+          bash "scripts/apps/${APP}/build.sh"
 
           ls -lh app.tgz
           FPK_NAME=$(bash scripts/build-fpk.sh "apps/${APP}" app.tgz "${VERSION}" "${MANIFEST_PLATFORM}" | tail -n 1)
           echo "Built: ${FPK_NAME}"
           ls -lh "${FPK_NAME}"
+        env:
+          VERSION: ${{ needs.check-version.outputs.version }}
+          FULL_VERSION: ${{ needs.check-version.outputs.full_version }}
+          UPSTREAM_TAG: ${{ needs.check-version.outputs.upstream_tag }}
+          DEB_ARCH: ${{ matrix.deb_arch }}
+          PLEX_BUILD: ${{ matrix.plex_build }}
+          QB_BINARY_PREFIX: ${{ matrix.qb_binary_prefix }}
+          CODENAME: bookworm
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
@@ -212,6 +135,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Download All Artifacts
         uses: actions/download-artifact@v4
         with:
@@ -227,63 +153,16 @@ jobs:
           TITLE_PREFIX="${{ needs.check-version.outputs.release_title }}"
           FILE_PREFIX="${{ needs.check-version.outputs.file_prefix }}"
 
-          if [[ "$RELEASE_TAG" == *"-r"* ]]; then
+          if [[ "$RELEASE_TAG" != "$APP/v$VERSION" ]]; then
             REVISION_NOTE="
-          - **打包修订**: ${RELEASE_TAG##*-}"
+          - **打包修订**: ${RELEASE_TAG##*-}
+          - ⚠️ 如果当前版本使用正常，无需更新此修订版。需先卸载再重新安装。"
           else
             REVISION_NOTE=""
           fi
 
-          case "$APP" in
-            plex)
-              NOTES="自动构建的 fnOS 安装包
-
-          - 基于 [Plex Media Server ${FULL_VERSION}](https://www.plex.tv/media-server-downloads/)
-          - 平台: fnOS
-          - 默认端口: 32400${REVISION_NOTE}
-
-          **国内镜像**:
-          - [${FILE_PREFIX}_${VERSION}_x86.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/${FILE_PREFIX}_${VERSION}_x86.fpk)
-          - [${FILE_PREFIX}_${VERSION}_arm.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/${FILE_PREFIX}_${VERSION}_arm.fpk)"
-              ;;
-            emby)
-              NOTES="自动构建的 fnOS 安装包
-
-          - 基于 [Emby Server ${VERSION}](https://emby.media/)
-          - 平台: fnOS
-          - 默认端口: 8096${REVISION_NOTE}
-
-          **国内镜像**:
-          - [${FILE_PREFIX}_${VERSION}_x86.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/${FILE_PREFIX}_${VERSION}_x86.fpk)
-          - [${FILE_PREFIX}_${VERSION}_arm.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/${FILE_PREFIX}_${VERSION}_arm.fpk)"
-              ;;
-            qbittorrent)
-              NOTES="自动构建的 fnOS 安装包
-
-          - 基于 [qbittorrent-nox-static ${UPSTREAM_TAG}](https://github.com/userdocs/qbittorrent-nox-static/releases/tag/${UPSTREAM_TAG})
-          - 平台: fnOS
-          - 默认用户: admin
-          - 默认密码: adminadmin (请登录后修改)${REVISION_NOTE}
-
-          **国内镜像**:
-          - [${FILE_PREFIX}_${VERSION}_x86.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/${FILE_PREFIX}_${VERSION}_x86.fpk)
-          - [${FILE_PREFIX}_${VERSION}_arm.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/${FILE_PREFIX}_${VERSION}_arm.fpk)"
-              ;;
-            nginx)
-              NOTES="自动构建的 fnOS 安装包
-
-          - 基于 [Nginx ${VERSION}](https://nginx.org/) 官方 Debian 包
-          - 平台: fnOS${REVISION_NOTE}
-
-          **国内镜像**:
-          - [${FILE_PREFIX}_${VERSION}_x86.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/${FILE_PREFIX}_${VERSION}_x86.fpk)
-          - [${FILE_PREFIX}_${VERSION}_arm.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/${FILE_PREFIX}_${VERSION}_arm.fpk)"
-              ;;
-            *)
-              echo "Unsupported app: $APP" >&2
-              exit 1
-              ;;
-          esac
+          export VERSION FULL_VERSION UPSTREAM_TAG RELEASE_TAG FILE_PREFIX REVISION_NOTE
+          NOTES=$(envsubst < "scripts/apps/${APP}/release-notes.tpl")
 
           gh release create "$RELEASE_TAG" \
             --title "${TITLE_PREFIX} ${VERSION} for fnOS" \

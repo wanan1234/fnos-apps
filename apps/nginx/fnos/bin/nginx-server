@@ -7,7 +7,6 @@ NGINX_CONF="${APP_DATA_DIR}/nginx.conf"
 NGINX_LOG_DIR="${APP_DATA_DIR}/logs"
 NGINX_TEMP_DIR="${APP_DATA_DIR}/tmp"
 
-# Ensure directories exist
 mkdir -p "$NGINX_LOG_DIR"
 mkdir -p "$NGINX_TEMP_DIR"
 mkdir -p "$APP_DATA_DIR/html"
@@ -15,7 +14,6 @@ mkdir -p "$APP_DATA_DIR/html"
 # Generate default config if not exists
 if [ ! -f "$NGINX_CONF" ]; then
     cat > "$NGINX_CONF" << CONF
-user root;
 worker_processes auto;
 pid ${APP_DATA_DIR}/nginx.pid;
 error_log ${NGINX_LOG_DIR}/error.log;
@@ -60,11 +58,6 @@ fi
 # Copy default html if not exists
 if [ ! -f "$APP_DATA_DIR/html/index.html" ]; then
     cp -a "$APP_DIR/html"/* "$APP_DATA_DIR/html/" 2>/dev/null || true
-fi
-
-# nginx binary defaults to compiled-in 'nginx' user which doesn't exist on fnOS
-if ! grep -qE '^\s*user\s' "$NGINX_CONF"; then
-    sed -i '1i user root;' "$NGINX_CONF"
 fi
 
 export LD_LIBRARY_PATH=$APP_DIR/lib:$LD_LIBRARY_PATH

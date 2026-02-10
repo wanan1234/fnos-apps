@@ -74,6 +74,25 @@ cd apps/nginx && ./update_nginx.sh
 - 如需调整某个应用"下载/解包/组装 app.tgz"逻辑，请修改对应 `scripts/apps/<app>/build.sh`。
 - `shared/cmd` 已补充 `config_init/config_callback` 入口，可用于配置变更后的服务重载。
 
+## 更新日志
+
+### 2026-02-10 安全与打包改进
+
+**⚠️ 重要变更：所有应用改为非 root 用户运行**
+
+为提升安全性，所有应用（Plex、Emby、qBittorrent、Nginx）均已从 `root` 改为以独立用户身份运行。
+
+**已安装用户升级须知：**
+- 升级后需手动为应用数据目录添加对应用户的读写权限
+- 各应用运行用户：Plex → `plex`，Emby → `EmbyServer`，qBittorrent → `qBittorrent`，Nginx → `nginxserver`
+- 示例：`chown -R plex:plex /var/apps/plexmediaserver/`（请根据实际安装路径调整）
+
+**其他改进：**
+- 修复 Nginx 启动时 `could not open error log file` 错误
+- CI 不再由代码推送触发，仅在每日定时检查上游更新或手动触发时构建
+- 修订版发布（`-r2`、`-r3`）说明：修订版仅包含打包修复，如当前版本运行正常无需更新；修订版需先卸载再重新安装
+- 本地构建产物统一输出到 `dist/` 目录
+
 ## 开源透明
 
 本项目完全开源，仅从官方渠道下载原版软件并重新打包，**无任何后门或修改**。构建脚本和 CI 流程公开透明，欢迎审查。
