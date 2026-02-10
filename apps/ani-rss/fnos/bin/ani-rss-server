@@ -1,0 +1,20 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+export JAVA_HOME="$APP_DIR/jre"
+export PATH="$JAVA_HOME/bin:$PATH"
+export LANG=C.UTF-8
+export LC_ALL=C.UTF-8
+export CONFIG="$APP_DATA_DIR"
+
+cd "$APP_DIR" || exit 1
+exec "$JAVA_HOME/bin/java" \
+  -Xms60m -Xmx512m -Xss256k \
+  -Dfile.encoding=UTF-8 \
+  -XX:+UseStringDeduplication \
+  -XX:+IgnoreUnrecognizedVMOptions \
+  --add-opens=java.base/java.net=ALL-UNNAMED \
+  --add-opens=java.base/sun.net.www.protocol.https=ALL-UNNAMED \
+  -jar "$APP_DIR/ani-rss-jar-with-dependencies.jar" \
+  --port 7789

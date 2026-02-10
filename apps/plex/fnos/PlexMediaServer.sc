@@ -1,5 +1,5 @@
 [PlexMediaServer]
-title="Plex Media Server"
+title="Plex"
 desc="Plex Web UI"
 port_forward="yes"
 src.ports="32400/tcp"

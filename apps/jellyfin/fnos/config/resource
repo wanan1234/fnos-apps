@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "Jellyfin.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "Jellyfin",
+                "permission": {
+                    "rw": [
+                        "jellyfin"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

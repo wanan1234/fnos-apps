@@ -9,7 +9,7 @@ PKG_DIR="$SCRIPT_DIR/fnos"
 # App-specific config
 # ============================================================================
 APP_NAME="plex"
-APP_DISPLAY_NAME="Plex Media Server"
+APP_DISPLAY_NAME="Plex"
 APP_VERSION_VAR="PLEX_VERSION"
 APP_VERSION="${PLEX_VERSION:-latest}"
 APP_DEPS=(curl ar tar sed)

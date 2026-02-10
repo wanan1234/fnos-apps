@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "ani-rss.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "ani-rss",
+                "permission": {
+                    "rw": [
+                        "ani-rss"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}

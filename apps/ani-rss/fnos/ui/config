@@ -1,14 +1,14 @@
 {
     ".url": {
-        "embyserver.Application": 
+        "ani-rss.Application":
         {
-            "title": "Emby",
-            "desc": "Emby",
+            "title": "ANI-RSS",
+            "desc": "ANI-RSS",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "8096",
+            "port": "7789",
             "protocol": "http",
-            "url": "/web/index.html",
+            "url": "/",
             "allUsers": true
         }
     }

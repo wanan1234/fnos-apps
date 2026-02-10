@@ -1,0 +1,8 @@
+{
+    "defaults": {
+        "run-as": "user"
+    },
+    "username": "jellyfin",
+    "groupname": "jellyfin",
+    "join-groups": ["video","render"]
+}

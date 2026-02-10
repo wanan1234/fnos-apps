@@ -6,9 +6,12 @@
 
 | 应用 | 端口 | 说明 | 下载 |
 |------|------|------|------|
-| [Plex Media Server](apps/plex/) | 32400 | 媒体服务器，支持硬件转码 | [Releases](https://github.com/conversun/fnos-apps/releases?q=plex) |
-| [Emby Server](apps/emby/) | 8096 | 媒体管理和流式传输 | [Releases](https://github.com/conversun/fnos-apps/releases?q=emby) |
-| [qBittorrent](apps/qbittorrent/) | 8085 | 轻量级 BitTorrent 客户端 | [Releases](https://github.com/conversun/fnos-apps/releases?q=qbittorrent) |
+| [Plex](apps/plex/) | 32400 | 媒体服务器，支持硬件转码 | [Releases](https://github.com/conversun/fnos-apps/releases?q=plex) |
+| [Emby](apps/emby/) | 8096 | 媒体管理和流式传输 | [Releases](https://github.com/conversun/fnos-apps/releases?q=emby) |
+| [Jellyfin](apps/jellyfin/) | 8097 | 免费开源媒体系统，内置 FFmpeg | [Releases](https://github.com/conversun/fnos-apps/releases?q=jellyfin) |
+| [qBittorrent](apps/qbittorrent/) | 8085 | 轻量级 BitTorrent 客户端（默认账号 `admin` / `adminadmin`） | [Releases](https://github.com/conversun/fnos-apps/releases?q=qbittorrent) |
+| [Gopeed](apps/gopeed/) | 9999 | 高速下载器，支持 HTTP、BitTorrent、Magnet | [Releases](https://github.com/conversun/fnos-apps/releases?q=gopeed) |
+| [ANI-RSS](apps/ani-rss/) | 7789 | 动漫 RSS 自动追番工具（默认账号 `admin` / `admin`） | [Releases](https://github.com/conversun/fnos-apps/releases?q=ani-rss) |
 | [Nginx](apps/nginx/) | 8888 | 高性能 HTTP 和反向代理服务器 | [Releases](https://github.com/conversun/fnos-apps/releases?q=nginx) |
 
 ## 安装
@@ -27,7 +30,10 @@ fnos-apps/
 ├── apps/
 │   ├── plex/            # Plex 应用特有文件
 │   ├── emby/            # Emby 应用特有文件
+│   ├── jellyfin/        # Jellyfin 应用特有文件
 │   ├── qbittorrent/     # qBittorrent 应用特有文件
+│   ├── gopeed/          # Gopeed 应用特有文件
+│   ├── ani-rss/         # ANI-RSS 应用特有文件
 │   └── nginx/           # Nginx 应用特有文件
 ├── scripts/
 │   ├── build-fpk.sh     # 通用 fpk 打包脚本
@@ -36,7 +42,10 @@ fnos-apps/
 │   │   ├── plex/
 │   │   ├── emby/
 │   │   ├── qbittorrent/
-│   │   └── nginx/
+│   │   ├── nginx/
+│   │   ├── jellyfin/
+│   │   ├── gopeed/
+│   │   └── ani-rss/
 │   ├── lib/             # 共享构建工具库
 │   │   └── update-common.sh  # 应用构建通用函数
 │   └── ci/              # CI 辅助脚本
@@ -47,7 +56,9 @@ fnos-apps/
 ## 新增应用
 
 ```bash
-./scripts/new-app.sh jellyfin "Jellyfin Media Server" 8096
+./scripts/new-app.sh <app-slug> "<显示名>" <端口>
+# 例如：
+./scripts/new-app.sh jellyfin "Jellyfin" 8097
 ```
 
 ## 本地构建
@@ -57,6 +68,9 @@ cd apps/plex && ./update_plex.sh
 cd apps/emby && ./update_emby.sh
 cd apps/qbittorrent && ./update_qbittorrent.sh
 cd apps/nginx && ./update_nginx.sh
+cd apps/jellyfin && ./update_jellyfin.sh
+cd apps/gopeed && ./update_gopeed.sh
+cd apps/ani-rss && ./update_ani-rss.sh
 ```
 
 ## 统一 CI / 打包架构（2026 重构）
@@ -75,6 +89,13 @@ cd apps/nginx && ./update_nginx.sh
 - `shared/cmd` 已补充 `config_init/config_callback` 入口，可用于配置变更后的服务重载。
 
 ## 更新日志
+
+### 2026-02-10 新增 Jellyfin、Gopeed、ANI-RSS
+
+- 新增 [Jellyfin](apps/jellyfin/)：免费开源媒体系统，内置 jellyfin-ffmpeg，支持硬件转码，端口 8097
+- 新增 [Gopeed](apps/gopeed/)：高速下载器，支持 HTTP、BitTorrent、Magnet，端口 9999
+- 新增 [ANI-RSS](apps/ani-rss/)：动漫 RSS 自动追番工具，内置 JRE 17，端口 7789
+- 统一展示名：Plex、Emby、Jellyfin、Gopeed、ANI-RSS（简短名称）
 
 ### 2026-02-10 安全与打包改进
 

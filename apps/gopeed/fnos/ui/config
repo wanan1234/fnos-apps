@@ -1,14 +1,14 @@
 {
     ".url": {
-        "embyserver.Application": 
+        "gopeed.Application":
         {
-            "title": "Emby",
-            "desc": "Emby",
+            "title": "Gopeed",
+            "desc": "Gopeed Download Manager",
             "icon": "images/{0}.png",
             "type": "url",
-            "port": "8096",
+            "port": "9999",
             "protocol": "http",
-            "url": "/web/index.html",
+            "url": "/",
             "allUsers": true
         }
     }

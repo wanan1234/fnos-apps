@@ -1,0 +1,42 @@
+#!/bin/sh
+APP_DIR="${TRIM_APPDEST}"
+APP_DATA_DIR=$1
+
+export JELLYFIN_DATA_DIR="$APP_DATA_DIR/data"
+export JELLYFIN_CONFIG_DIR="$APP_DATA_DIR/config"
+export JELLYFIN_CACHE_DIR="$APP_DATA_DIR/cache"
+export JELLYFIN_LOG_DIR="$APP_DATA_DIR/log"
+export JELLYFIN_WEB_DIR="$APP_DIR/jellyfin-web"
+
+# fontconfig 需要可写缓存目录，否则大量 warning
+export XDG_CACHE_HOME="$JELLYFIN_CACHE_DIR"
+export LD_LIBRARY_PATH="$APP_DIR/jellyfin-ffmpeg/lib:${LD_LIBRARY_PATH:-}"
+
+mkdir -p "$JELLYFIN_DATA_DIR" "$JELLYFIN_CONFIG_DIR" \
+         "$JELLYFIN_CACHE_DIR" "$JELLYFIN_LOG_DIR"
+
+# Jellyfin 通过 network.xml 配置端口和自动发现
+NETWORK_XML="$JELLYFIN_CONFIG_DIR/network.xml"
+if [ ! -f "$NETWORK_XML" ]; then
+  cat > "$NETWORK_XML" <<'EOF'
+<?xml version="1.0" encoding="utf-8"?>
+<NetworkConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <InternalHttpPort>8097</InternalHttpPort>
+  <PublicHttpPort>8097</PublicHttpPort>
+  <EnableHttps>false</EnableHttps>
+  <AutoDiscovery>false</AutoDiscovery>
+</NetworkConfiguration>
+EOF
+fi
+
+# 使用内置 jellyfin-ffmpeg
+FFMPEG_PATH="$APP_DIR/jellyfin-ffmpeg/ffmpeg"
+
+cd "$APP_DIR" || exit 1
+exec ./jellyfin \
+  --datadir "$JELLYFIN_DATA_DIR" \
+  --configdir "$JELLYFIN_CONFIG_DIR" \
+  --cachedir "$JELLYFIN_CACHE_DIR" \
+  --logdir "$JELLYFIN_LOG_DIR" \
+  --webdir "$JELLYFIN_WEB_DIR" \
+  --ffmpeg "$FFMPEG_PATH"

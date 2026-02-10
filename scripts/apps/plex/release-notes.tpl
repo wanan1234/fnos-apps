@@ -1,6 +1,6 @@
 自动构建的 fnOS 安装包
 
-- 基于 [Plex Media Server ${FULL_VERSION}](https://www.plex.tv/media-server-downloads/)
+- 基于 [Plex ${FULL_VERSION}](https://www.plex.tv/media-server-downloads/)
 - 平台: fnOS
 - 默认端口: 32400${REVISION_NOTE}
 ${CHANGELOG}

@@ -4,7 +4,7 @@ on:
   workflow_call:
     inputs:
       app:
-        description: 'App slug: plex|emby|qbittorrent|nginx'
+        description: 'App slug: plex|emby|qbittorrent|nginx|jellyfin|ani-rss|gopeed'
         required: true
         type: string
       version:
@@ -46,7 +46,7 @@ jobs:
       - name: Validate App Input
         run: |
           APP="${{ inputs.app }}"
-          VALID_APPS="plex emby qbittorrent nginx"
+          VALID_APPS="plex emby qbittorrent nginx jellyfin ani-rss gopeed"
           if ! echo "$VALID_APPS" | grep -qw "$APP"; then
             echo "Invalid app: $APP. Must be one of: $VALID_APPS" >&2
             exit 1
@@ -92,11 +92,15 @@ jobs:
             deb_arch: amd64
             plex_build: linux-x86_64
             qb_binary_prefix: x86_64
+            tarball_arch: amd64
+            jre_arch: x64
           - arch: arm
             manifest_platform: arm
             deb_arch: arm64
             plex_build: linux-aarch64
             qb_binary_prefix: aarch64
+            tarball_arch: arm64
+            jre_arch: aarch64
 
     steps:
       - name: Checkout
@@ -128,6 +132,8 @@ jobs:
           DEB_ARCH: ${{ matrix.deb_arch }}
           PLEX_BUILD: ${{ matrix.plex_build }}
           QB_BINARY_PREFIX: ${{ matrix.qb_binary_prefix }}
+          TARBALL_ARCH: ${{ matrix.tarball_arch }}
+          JRE_ARCH: ${{ matrix.jre_arch }}
           CODENAME: bookworm
 
       - name: Upload Artifact

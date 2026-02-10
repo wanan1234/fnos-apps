@@ -6,7 +6,7 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 PKG_DIR="$SCRIPT_DIR/fnos"
 
 APP_NAME="emby"
-APP_DISPLAY_NAME="Emby Server"
+APP_DISPLAY_NAME="Emby"
 APP_VERSION_VAR="EMBY_VERSION"
 APP_VERSION="${EMBY_VERSION:-latest}"
 APP_DEPS=(curl ar tar sed)

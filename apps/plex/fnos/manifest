@@ -1,6 +1,6 @@
 appname         = plexmediaserver
 version         = 1.42.2.10156
-display_name    = Plex Media Server
+display_name    = Plex
 platform        = arm
 maintainer      = Plex Inc.
 maintainer_url  = https://plex.tv

@@ -2,8 +2,8 @@
     ".url": {
         "plexmediaserver.Application": 
         {
-            "title": "Plex Media Server",
-            "desc": "Plex Media Server",
+            "title": "Plex",
+            "desc": "Plex",
             "icon": "images/{0}.png",
             "type": "url",
             "port": "32400",

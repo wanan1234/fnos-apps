@@ -1,8 +1,8 @@
 自动构建的 fnOS 安装包
 
-- 基于 [Emby ${VERSION}](https://emby.media/)
+- 基于 [Jellyfin ${VERSION}](https://jellyfin.org/)
 - 平台: fnOS
-- 默认端口: 8096${REVISION_NOTE}
+- 默认端口: 8097${REVISION_NOTE}
 ${CHANGELOG}
 **国内镜像**:
 - [${FILE_PREFIX}_${FPK_VERSION}_x86.fpk](https://ghfast.top/https://github.com/conversun/fnos-apps/releases/download/${RELEASE_TAG}/${FILE_PREFIX}_${FPK_VERSION}_x86.fpk)
