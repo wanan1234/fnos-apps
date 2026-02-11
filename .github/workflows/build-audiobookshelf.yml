@@ -1,0 +1,28 @@
+name: Build Audiobookshelf fnOS Package
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: '版本号 (留空则自动获取最新)'
+        required: false
+        default: ''
+      revision:
+        description: '修订后缀 (如 r2 用于重新发布，留空则自动处理)'
+        required: false
+        default: ''
+
+jobs:
+  build:
+    uses: ./.github/workflows/reusable-build-app.yml
+    with:
+      app: audiobookshelf
+      version: ${{ github.event.inputs.version || '' }}
+      revision: ${{ github.event.inputs.revision || '' }}
+      event_name: ${{ github.event_name }}
+    secrets: inherit

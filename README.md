@@ -1,7 +1,7 @@
 # fnOS Apps
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Apps](https://img.shields.io/badge/apps-7-2ea44f)
+![Apps](https://img.shields.io/badge/apps-8-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。项目会自动跟踪上游版本并构建可直接安装的 `.fpk` 包。
@@ -16,6 +16,7 @@
 | [qBittorrent](apps/qbittorrent/) | 8085 | BitTorrent 客户端，默认账号 `admin/adminadmin` | [Download](https://github.com/conversun/fnos-apps/releases?q=qbittorrent) |
 | [Gopeed](apps/gopeed/) | 9999 | 高速下载器，支持 HTTP/BT/Magnet | [Download](https://github.com/conversun/fnos-apps/releases?q=gopeed) |
 | [ANI-RSS](apps/ani-rss/) | 7789 | 动漫 RSS 工具，默认账号 `admin/admin` | [Download](https://github.com/conversun/fnos-apps/releases?q=ani-rss) |
+| [Audiobookshelf](apps/audiobookshelf/) | 13378 | 有声书和播客服务器 | [Download](https://github.com/conversun/fnos-apps/releases?q=audiobookshelf) |
 | [Nginx](apps/nginx/) | 8888 | HTTP 服务与反向代理 | [Download](https://github.com/conversun/fnos-apps/releases?q=nginx) |
 
 ## 反馈与请求
@@ -40,6 +41,7 @@ cd apps/jellyfin && ./update_jellyfin.sh
 cd apps/qbittorrent && ./update_qbittorrent.sh
 cd apps/gopeed && ./update_gopeed.sh
 cd apps/ani-rss && ./update_ani-rss.sh
+cd apps/audiobookshelf && ./update_audiobookshelf.sh
 cd apps/nginx && ./update_nginx.sh
 ```
 

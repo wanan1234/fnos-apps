@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "audiobookshelf.Application":
+        {
+            "title": "Audiobookshelf",
+            "desc": "Audiobookshelf",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "13378",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}
