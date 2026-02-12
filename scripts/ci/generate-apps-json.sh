@@ -103,6 +103,50 @@ for app_dir in "${REPO_ROOT}"/scripts/apps/*/; do
   echo "  ✓ ${slug} → ${release_tag}"
 done
 
+STORE_REPO="conversun/fnos-store"
+STORE_RELEASE=$(gh release list --repo "$STORE_REPO" --limit 1 --json tagName,publishedAt 2>/dev/null | jq -r '.[0] // empty')
+if [ -n "$STORE_RELEASE" ] && [ "$STORE_RELEASE" != "null" ]; then
+  store_tag=$(echo "$STORE_RELEASE" | jq -r '.tagName')
+  store_updated=$(echo "$STORE_RELEASE" | jq -r '.publishedAt')
+  store_version="${store_tag#v}"
+  store_version="${store_version%%-r[0-9]*}"
+  store_fpk_version="${store_tag#v}"
+
+  store_obj=$(jq -n \
+    --arg slug "fnos-apps-store" \
+    --arg appname "fnos-apps-store" \
+    --arg file_prefix "fnos-apps-store" \
+    --arg display_name "fnOS Apps Store" \
+    --arg description "fnOS第三方应用商店，支持一键安装、更新和卸载来自conversun/fnos-apps的所有应用。" \
+    --arg version "$store_version" \
+    --arg fpk_version "$store_fpk_version" \
+    --arg release_tag "$store_tag" \
+    --argjson service_port 8011 \
+    --arg homepage_url "https://github.com/${STORE_REPO}" \
+    --arg icon_url "https://raw.githubusercontent.com/${STORE_REPO}/main/fnos/ICON_256.PNG" \
+    --arg updated_at "$store_updated" \
+    '{
+      slug: $slug,
+      appname: $appname,
+      file_prefix: $file_prefix,
+      display_name: $display_name,
+      description: $description,
+      version: $version,
+      fpk_version: $fpk_version,
+      release_tag: $release_tag,
+      service_port: $service_port,
+      homepage_url: $homepage_url,
+      icon_url: $icon_url,
+      platforms: ["x86", "arm"],
+      updated_at: $updated_at
+    }')
+
+  APPS_JSON=$(echo "$APPS_JSON" | jq --argjson app "$store_obj" '. + [$app]')
+  echo "  ✓ fnos-apps-store → ${store_tag}"
+else
+  echo "[WARN] No release found for fnos-apps-store, skipping" >&2
+fi
+
 APPS_JSON=$(echo "$APPS_JSON" | jq 'sort_by(.slug)')
 
 jq -n \
