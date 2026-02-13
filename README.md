@@ -1,7 +1,7 @@
 # fnOS Apps
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Apps](https://img.shields.io/badge/apps-8-2ea44f)
+![Apps](https://img.shields.io/badge/apps-9-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。项目会自动跟踪上游版本并构建可直接安装的 `.fpk` 包。
@@ -12,6 +12,7 @@
 
 | App | Port | Notes | Release |
 |---|---:|---|---|
+| [fnOS Apps](apps/fnos-apps-store/) | 8011 | 第三方应用中心，一键安装/更新所有应用 | [Download](https://github.com/conversun/fnos-apps/releases?q=fnos-apps-store) |
 | [Plex](apps/plex/) | 32400 | 媒体服务器，支持硬件转码 | [Download](https://github.com/conversun/fnos-apps/releases?q=plex) |
 | [Emby](apps/emby/) | 8096 | 媒体管理与流式传输 | [Download](https://github.com/conversun/fnos-apps/releases?q=emby) |
 | [Jellyfin](apps/jellyfin/) | 8097 | 开源媒体系统，内置 FFmpeg | [Download](https://github.com/conversun/fnos-apps/releases?q=jellyfin) |
