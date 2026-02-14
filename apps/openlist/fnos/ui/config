@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "openlist.Application":
+        {
+            "title": "OpenList",
+            "desc": "OpenList",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "5244",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}

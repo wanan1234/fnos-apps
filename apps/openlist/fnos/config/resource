@@ -1,0 +1,19 @@
+{
+    "port-config": {
+        "protocol-file": "openlist.sc"
+    },
+    "data-share": {
+        "shares": [
+            {
+                "name": "OpenList",
+                "permission": {
+                    "rw": [
+                        "openlist"
+                    ]
+                }
+            }
+        ]
+    },
+    "systemd-unit": {
+    }
+}
