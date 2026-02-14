@@ -24,12 +24,11 @@ case $1 in
     stop)
         if daemon_status; then
             echo "Stopping ${DNAME} ..." >> ${LOG_FILE}
-            stop_daemon
-            exit $?
         else
-            echo "${DNAME} is not running" >> ${LOG_FILE}
-            exit 0
+            echo "${DNAME} is not running (PID), attempting cleanup ..." >> ${LOG_FILE}
         fi
+        stop_daemon
+        exit 0
         ;;
     status)
         if daemon_status; then

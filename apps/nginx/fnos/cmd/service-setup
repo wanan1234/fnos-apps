@@ -18,3 +18,7 @@ service_preuninst() {
     sleep 1
     pkill -9 -f "nginx.*${TRIM_PKGVAR}" 2>/dev/null || true
 }
+
+service_poststop() {
+    service_preuninst
+}

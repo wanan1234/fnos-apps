@@ -17,3 +17,7 @@ service_preuninst() {
     sleep 1
     pkill -9 -f "ani-rss-jar-with-dependencies.jar" 2>/dev/null || true
 }
+
+service_poststop() {
+    service_preuninst
+}

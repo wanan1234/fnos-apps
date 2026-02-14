@@ -32,7 +32,7 @@ ulimit -m `expr $MEM / 3 \* 1024`
 SERVICE_COMMAND[0]="bin/${QBIT_BIN} --profile=${TRIM_PKGVAR} --webui-port=${PORT}"
 
 # Rename framework log to avoid confusion with qbittorrent.log
-LOG_FILE="${LOG_DIR}/service.log"
+LOG_FILE="${TRIM_PKGVAR}/service.log"
 
 SVC_BACKGROUND=y
 SVC_WRITE_PID=y
@@ -44,6 +44,10 @@ service_preuninst() {
     sleep 1
     # 仍未退出则强制杀
     pkill -9 -f "${QBIT_BIN}" 2>/dev/null || true
+}
+
+service_poststop() {
+    service_preuninst
 }
 
 service_postupgrade() {

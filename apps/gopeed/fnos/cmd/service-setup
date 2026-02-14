@@ -16,3 +16,7 @@ service_preuninst() {
     sleep 1
     pkill -9 -f "gopeed" 2>/dev/null || true
 }
+
+service_poststop() {
+    service_preuninst
+}
