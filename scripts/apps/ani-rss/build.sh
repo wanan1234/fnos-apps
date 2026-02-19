@@ -8,15 +8,13 @@ VERSION="${VERSION:-latest}"
 WORK_DIR=$(mktemp -d)
 trap "rm -rf $WORK_DIR" EXIT
 
-# Create docker directory with compose file
 mkdir -p "${WORK_DIR}/docker"
 cp "${SCRIPT_DIR}/../../../apps/ani-rss/fnos/docker/docker-compose.yaml" "${WORK_DIR}/docker/"
-
-# Substitute version
 sed -i "s/\${VERSION}/${VERSION}/g" "${WORK_DIR}/docker/docker-compose.yaml"
 
-# Create app.tgz
+cp -a "${SCRIPT_DIR}/../../../apps/ani-rss/fnos/ui" "${WORK_DIR}/ui"
+
 cd "${WORK_DIR}"
-tar czf "${SCRIPT_DIR}/../../../app.tgz" docker/
+tar czf "${SCRIPT_DIR}/../../../app.tgz" docker/ ui/
 
 echo "Built app.tgz for ani-rss ${VERSION}"
