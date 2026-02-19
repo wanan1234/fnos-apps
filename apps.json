@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-14T15:59:14Z",
+  "generated_at": "2026-02-19T17:42:56Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -12,9 +12,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "2.5.4",
-      "fpk_version": "2.5.4-r1",
-      "release_tag": "ani-rss/v2.5.4-r1",
+      "version": "2.5.7",
+      "fpk_version": "2.5.7-r2",
+      "release_tag": "ani-rss/v2.5.7-r2",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -22,7 +22,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-14T14:37:46Z"
+      "updated_at": "2026-02-19T17:20:56Z"
     },
     {
       "slug": "audiobookshelf",
@@ -31,8 +31,8 @@
       "display_name": "Audiobookshelf",
       "description": "自托管的有声书和播客服务器，支持多用户管理、进度同步和丰富的元数据管理。",
       "version": "2.32.1",
-      "fpk_version": "2.32.1-r1",
-      "release_tag": "audiobookshelf/v2.32.1-r1",
+      "fpk_version": "2.32.1-r2",
+      "release_tag": "audiobookshelf/v2.32.1-r2",
       "service_port": 13378,
       "homepage_url": "https://www.audiobookshelf.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/audiobookshelf/fnos/ICON_256.PNG",
@@ -40,7 +40,25 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-14T14:39:17Z"
+      "updated_at": "2026-02-19T17:20:53Z"
+    },
+    {
+      "slug": "certimate",
+      "appname": "certimate",
+      "file_prefix": "certimate",
+      "display_name": "Certimate",
+      "description": "SSL/TLS证书自动化管理工具，支持ACME协议自动申请和续签证书。",
+      "version": "0.4.17",
+      "fpk_version": "0.4.17",
+      "release_tag": "certimate/v0.4.17",
+      "service_port": 8090,
+      "homepage_url": "https://github.com/certimate-go/certimate",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/certimate/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-02-19T17:20:08Z"
     },
     {
       "slug": "emby",
@@ -115,6 +133,60 @@
       "updated_at": "2026-02-14T14:38:20Z"
     },
     {
+      "slug": "kavita",
+      "appname": "kavita",
+      "file_prefix": "kavita",
+      "display_name": "Kavita",
+      "description": "开源的漫画、轻小说和电子书阅读服务器",
+      "version": "0.8.9",
+      "fpk_version": "0.8.9",
+      "release_tag": "kavita/v0.8.9",
+      "service_port": 5000,
+      "homepage_url": "https://github.com/Kareadita/Kavita",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/kavita/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-02-19T17:20:08Z"
+    },
+    {
+      "slug": "moviepilot",
+      "appname": "moviepilot",
+      "file_prefix": "moviepilot",
+      "display_name": "MoviePilot",
+      "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
+      "version": "2.9.11",
+      "fpk_version": "2.9.11",
+      "release_tag": "moviepilot/v2.9.11",
+      "service_port": 3000,
+      "homepage_url": "https://github.com/jxxghp/MoviePilot",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-02-19T17:19:57Z"
+    },
+    {
+      "slug": "navidrome",
+      "appname": "navidrome",
+      "file_prefix": "navidrome",
+      "display_name": "Navidrome",
+      "description": "开源的个人音乐流媒体服务器,兼容 Subsonic/Airsonic API,支持多用户和移动端应用。",
+      "version": "0.60.3",
+      "fpk_version": "0.60.3-r1",
+      "release_tag": "navidrome/v0.60.3-r1",
+      "service_port": 4533,
+      "homepage_url": "https://www.navidrome.org",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/navidrome/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-02-19T17:20:04Z"
+    },
+    {
       "slug": "nginx",
       "appname": "nginxserver",
       "file_prefix": "nginxserver",
@@ -131,6 +203,24 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:46Z"
+    },
+    {
+      "slug": "openlist",
+      "appname": "openlist",
+      "file_prefix": "openlist",
+      "display_name": "OpenList",
+      "description": "支持多种存储后端的文件列表/WebDAV 程序（AList 社区分支）",
+      "version": "4.1.10",
+      "fpk_version": "4.1.10",
+      "release_tag": "openlist/v4.1.10",
+      "service_port": 5244,
+      "homepage_url": "https://github.com/OpenListTeam/OpenList",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/openlist/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-02-19T17:20:08Z"
     },
     {
       "slug": "plex",
@@ -167,6 +257,78 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:35Z"
+    },
+    {
+      "slug": "sun-panel",
+      "appname": "sun-panel",
+      "file_prefix": "sun-panel",
+      "display_name": "Sun-Panel",
+      "description": "服务器/NAS导航面板，支持多账户和Docker容器管理",
+      "version": "1.8.1",
+      "fpk_version": "1.8.1",
+      "release_tag": "sun-panel/v1.8.1",
+      "service_port": 3002,
+      "homepage_url": "https://doc.sun-panel.top/zh_cn",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sun-panel/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-02-19T17:20:02Z"
+    },
+    {
+      "slug": "syncthing",
+      "appname": "syncthing",
+      "file_prefix": "syncthing",
+      "display_name": "Syncthing",
+      "description": "开源的文件同步工具，支持多设备间安全同步",
+      "version": "2.0.14",
+      "fpk_version": "2.0.14",
+      "release_tag": "syncthing/v2.0.14",
+      "service_port": 8384,
+      "homepage_url": "https://syncthing.net",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/syncthing/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-02-19T17:20:02Z"
+    },
+    {
+      "slug": "tinymediamanager",
+      "appname": "tinymediamanager",
+      "file_prefix": "tinymediamanager",
+      "display_name": "tinyMediaManager",
+      "description": "影视文件元数据管理工具，支持从 TheMovieDB、IMDb 刮削元数据，为 Kodi、Emby、Jellyfin、Plex 创建 NFO 文件，自动重命名和整理。含内置 JRE，通过虚拟显示运行。",
+      "version": "5.2.7.1",
+      "fpk_version": "5.2.7.1",
+      "release_tag": "tinymediamanager/v5.2.7.1",
+      "service_port": 5800,
+      "homepage_url": "https://www.tinymediamanager.org",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/tinymediamanager/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-02-19T17:30:56Z"
+    },
+    {
+      "slug": "vaultwarden",
+      "appname": "vaultwarden",
+      "file_prefix": "vaultwarden",
+      "display_name": "Vaultwarden",
+      "description": "轻量级 Bitwarden 兼容密码管理服务器，使用 Rust 编写，支持自托管密码管理。",
+      "version": "1.35.3",
+      "fpk_version": "1.35.3",
+      "release_tag": "vaultwarden/v1.35.3",
+      "service_port": 8880,
+      "homepage_url": "https://github.com/dani-garcia/vaultwarden",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/vaultwarden/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-02-19T17:30:36Z"
     }
   ]
 }
