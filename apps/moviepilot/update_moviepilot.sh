@@ -5,13 +5,13 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 PKG_DIR="$SCRIPT_DIR/fnos"
 
-APP_NAME="audiobookshelf"
-APP_DISPLAY_NAME="Audiobookshelf"
-APP_VERSION_VAR="AUDIOBOOKSHELF_VERSION"
-APP_VERSION="${AUDIOBOOKSHELF_VERSION:-latest}"
+APP_NAME="moviepilot"
+APP_DISPLAY_NAME="MoviePilot"
+APP_VERSION_VAR="MOVIEPILOT_VERSION"
+APP_VERSION="${MOVIEPILOT_VERSION:-latest}"
 APP_DEPS=(curl jq)
-APP_FPK_PREFIX="audiobookshelf"
-APP_HELP_VERSION_EXAMPLE="2.19.4"
+APP_FPK_PREFIX="moviepilot"
+APP_HELP_VERSION_EXAMPLE="2.9.11"
 
 app_set_arch_vars() {
     :
@@ -19,7 +19,7 @@ app_set_arch_vars() {
 
 app_show_help_examples() {
     cat << EOF
-  $0 2.19.4                   # 指定版本
+  $0 2.9.11                  # 指定版本
 EOF
 }
 
@@ -27,11 +27,11 @@ app_get_latest_version() {
     info "获取最新版本信息..."
 
     if [ "$APP_VERSION" = "latest" ]; then
-        APP_VERSION=$(curl -sL "https://api.github.com/repos/advplyr/audiobookshelf/releases/latest" | \
+        APP_VERSION=$(curl -sL "https://api.github.com/repos/jxxghp/MoviePilot/releases/latest" | \
           jq -r '.tag_name' | sed 's/^v//')
     fi
 
-    [ -z "$APP_VERSION" ] && error "无法获取版本信息，请手动指定: $0 2.19.4"
+    [ -z "$APP_VERSION" ] && error "无法获取版本信息，请手动指定: $0 2.9.11"
     info "目标版本: $APP_VERSION"
 }
 
@@ -42,7 +42,7 @@ app_download() {
 app_build_app_tgz() {
     info "构建 app.tgz (Docker)..."
     export VERSION="$APP_VERSION"
-    bash "$REPO_ROOT/scripts/apps/audiobookshelf/build.sh"
+    bash "$REPO_ROOT/scripts/apps/moviepilot/build.sh"
     cp "$REPO_ROOT/app.tgz" "$WORK_DIR/app.tgz"
     info "app.tgz: $(du -h "$WORK_DIR/app.tgz" | cut -f1)"
 }

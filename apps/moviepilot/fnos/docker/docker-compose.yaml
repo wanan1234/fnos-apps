@@ -1,0 +1,15 @@
+services:
+  moviepilot:
+    image: jxxghp/moviepilot-v2:${VERSION}
+    container_name: moviepilot
+    ports:
+      - "${TRIM_SERVICE_PORT}:3000"
+    volumes:
+      - ${TRIM_PKGVAR}/config:/config
+      - ${TRIM_PKGVAR}/core:/moviepilot
+    environment:
+      - TZ=Asia/Shanghai
+      - PORT=3000
+      - GITHUB_PROXY=https://ghfast.top/
+      - SUPERUSER_PASSWORD=${SUPERUSER_PASSWORD:-password}
+    restart: unless-stopped

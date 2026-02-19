@@ -1,25 +1,22 @@
 #!/bin/bash
-set -euo pipefail
+set -e
 
-VERSION="${1:-${VERSION:-}}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "${SCRIPT_DIR}/meta.env"
 
-[ -z "${VERSION}" ] && { echo "VERSION is required" >&2; exit 1; }
+VERSION="${VERSION:-latest}"
+WORK_DIR=$(mktemp -d)
+trap "rm -rf $WORK_DIR" EXIT
 
-echo "==> Building MoviePilot ${VERSION} (uses fnOS system python312)"
+# Create docker directory with compose file
+mkdir -p "${WORK_DIR}/docker"
+cp "${SCRIPT_DIR}/../../../apps/moviepilot/fnos/docker/docker-compose.yaml" "${WORK_DIR}/docker/"
 
-SRC_URL="https://github.com/jxxghp/MoviePilot/archive/v${VERSION}.tar.gz"
-curl -L -o moviepilot-src.tar.gz "$SRC_URL"
-tar xzf moviepilot-src.tar.gz
+# Substitute version
+sed -i "s/\${VERSION}/${VERSION}/g" "${WORK_DIR}/docker/docker-compose.yaml"
 
-dst=app_root
-mkdir -p "$dst/bin" "$dst/config" "$dst/ui/images"
+# Create app.tgz
+cd "${WORK_DIR}"
+tar czf "${SCRIPT_DIR}/../../../app.tgz" docker/
 
-cp -r MoviePilot-${VERSION}/* "$dst/"
-
-cp apps/moviepilot/fnos/bin/moviepilot-server "$dst/bin/moviepilot-server"
-chmod +x "$dst/bin/moviepilot-server"
-
-cp -a apps/moviepilot/fnos/ui/* "$dst/ui/" 2>/dev/null || true
-
-cd app_root
-tar -czf ../app.tgz .
+echo "Built app.tgz for moviepilot ${VERSION}"

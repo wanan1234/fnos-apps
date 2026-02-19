@@ -1,24 +1,22 @@
 #!/bin/bash
-set -euo pipefail
+set -e
 
-VERSION="${1:-${VERSION:-}}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "${SCRIPT_DIR}/meta.env"
 
-[ -z "${VERSION}" ] && { echo "VERSION is required" >&2; exit 1; }
+VERSION="${VERSION:-latest}"
+WORK_DIR=$(mktemp -d)
+trap "rm -rf $WORK_DIR" EXIT
 
-echo "==> Building ani-rss ${VERSION} (uses fnOS system java-17-openjdk)"
+# Create docker directory with compose file
+mkdir -p "${WORK_DIR}/docker"
+cp "${SCRIPT_DIR}/../../../apps/ani-rss/fnos/docker/docker-compose.yaml" "${WORK_DIR}/docker/"
 
-JAR_URL="https://github.com/wushuo894/ani-rss/releases/download/v${VERSION}/ani-rss-jar-with-dependencies.jar"
-curl -L -o ani-rss.jar "$JAR_URL"
+# Substitute version
+sed -i "s/\${VERSION}/${VERSION}/g" "${WORK_DIR}/docker/docker-compose.yaml"
 
-dst=app_root
-mkdir -p "$dst/bin" "$dst/config" "$dst/ui/images"
+# Create app.tgz
+cd "${WORK_DIR}"
+tar czf "${SCRIPT_DIR}/../../../app.tgz" docker/
 
-cp ani-rss.jar "$dst/ani-rss-jar-with-dependencies.jar"
-
-cp apps/ani-rss/fnos/bin/ani-rss-server "$dst/bin/ani-rss-server"
-chmod +x "$dst/bin/ani-rss-server"
-
-cp -a apps/ani-rss/fnos/ui/* "$dst/ui/" 2>/dev/null || true
-
-cd app_root
-tar -czf ../app.tgz .
+echo "Built app.tgz for ani-rss ${VERSION}"

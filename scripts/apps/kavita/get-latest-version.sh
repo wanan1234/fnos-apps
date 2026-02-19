@@ -9,7 +9,8 @@ TAG=$(curl -sL "https://api.github.com/repos/Kareadita/Kavita/releases/latest" |
 if [ -n "$INPUT_VERSION" ]; then
   VERSION="$INPUT_VERSION"
 else
-  VERSION=$(echo "$TAG" | sed 's/^v//')
+  # Docker tags use 3-segment versions (e.g. 0.8.9), GitHub uses 4-segment (e.g. v0.8.9.1)
+  VERSION=$(echo "$TAG" | sed 's/^v//' | sed 's/\.[0-9]*$//')
 fi
 
 [ -z "$VERSION" ] && { echo "Failed to resolve version for kavita" >&2; exit 1; }

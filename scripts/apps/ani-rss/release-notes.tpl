@@ -1,7 +1,7 @@
 自动构建的 fnOS 安装包
 
 - 基于 [ANI-RSS ${VERSION}](https://github.com/wushuo894/ani-rss)
-- 内置 JRE 17 运行环境，无需额外安装 Java
+- 基于 Docker 容器运行，需要 fnOS Docker 环境
 - 平台: fnOS
 - 默认端口: 7789
 - 默认账号: admin / admin${REVISION_NOTE}

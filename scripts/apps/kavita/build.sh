@@ -1,39 +1,22 @@
 #!/bin/bash
-set -euo pipefail
+set -e
 
-VERSION="${VERSION:-}"
-DEB_ARCH="${DEB_ARCH:-amd64}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "${SCRIPT_DIR}/meta.env"
 
-[ -z "$VERSION" ] && { echo "VERSION is required" >&2; exit 1; }
+VERSION="${VERSION:-latest}"
+WORK_DIR=$(mktemp -d)
+trap "rm -rf $WORK_DIR" EXIT
 
-# Map Debian arch to Kavita download arch
-case "$DEB_ARCH" in
-  amd64) KAVITA_ARCH="x64" ;;
-  arm64) KAVITA_ARCH="arm64" ;;
-  *) echo "Unsupported architecture: $DEB_ARCH" >&2; exit 1 ;;
-esac
+# Create docker directory with compose file
+mkdir -p "${WORK_DIR}/docker"
+cp "${SCRIPT_DIR}/../../../apps/kavita/fnos/docker/docker-compose.yaml" "${WORK_DIR}/docker/"
 
-echo "==> Building Kavita ${VERSION} for ${KAVITA_ARCH}"
+# Substitute version
+sed -i "s/\${VERSION}/${VERSION}/g" "${WORK_DIR}/docker/docker-compose.yaml"
 
-DOWNLOAD_URL="https://github.com/Kareadita/Kavita/releases/download/v${VERSION}/kavita-linux-${KAVITA_ARCH}.tar.gz"
-curl -L -o kavita.tar.gz "$DOWNLOAD_URL"
+# Create app.tgz
+cd "${WORK_DIR}"
+tar czf "${SCRIPT_DIR}/../../../app.tgz" docker/
 
-mkdir -p extracted
-tar -xzf kavita.tar.gz -C extracted
-
-mkdir -p app_root/bin app_root/ui
-
-# Kavita extracts to a Kavita/ directory with self-contained .NET runtime
-KAVITA_BIN=$(find extracted -name "Kavita" -type f | head -1)
-[ -z "$KAVITA_BIN" ] && { echo "Kavita binary not found in archive" >&2; exit 1; }
-KAVITA_DIR=$(dirname "$KAVITA_BIN")
-
-cp -a "$KAVITA_DIR"/* app_root/
-chmod +x app_root/Kavita
-
-cp apps/kavita/fnos/bin/kavita-server app_root/bin/kavita-server
-chmod +x app_root/bin/kavita-server
-cp -a apps/kavita/fnos/ui/* app_root/ui/ 2>/dev/null || true
-
-cd app_root
-tar -czf ../app.tgz .
+echo "Built app.tgz for kavita ${VERSION}"

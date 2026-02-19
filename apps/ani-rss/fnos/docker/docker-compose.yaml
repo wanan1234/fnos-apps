@@ -1,0 +1,11 @@
+services:
+  ani-rss:
+    image: wushuo894/ani-rss:v${VERSION}
+    container_name: ani-rss
+    ports:
+      - "${TRIM_SERVICE_PORT}:7789"
+    volumes:
+      - ${TRIM_PKGVAR}/config:/config
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped

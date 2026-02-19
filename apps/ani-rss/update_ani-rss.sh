@@ -9,19 +9,17 @@ APP_NAME="ani-rss"
 APP_DISPLAY_NAME="ANI-RSS"
 APP_VERSION_VAR="ANIRSS_VERSION"
 APP_VERSION="${ANIRSS_VERSION:-latest}"
-APP_DEPS=(curl tar jq)
+APP_DEPS=(curl jq)
 APP_FPK_PREFIX="ani-rss"
 APP_HELP_VERSION_EXAMPLE="2.5.2"
 
 app_set_arch_vars() {
-    # JRE 不再捆绑，改用 fnOS 系统 Java 运行时 (install_dep_apps=java-17-openjdk)
     :
 }
 
 app_show_help_examples() {
     cat << EOF
-  $0 --arch x86 2.5.2        # 指定版本，x86 架构
-  $0 2.5.2                    # 指定版本，自动检测架构
+  $0 2.5.2                    # 指定版本
 EOF
 }
 
@@ -38,32 +36,14 @@ app_get_latest_version() {
 }
 
 app_download() {
-    local jar_url="https://github.com/wushuo894/ani-rss/releases/download/v${APP_VERSION}/ani-rss-jar-with-dependencies.jar"
-
-    info "下载 JAR: $jar_url"
-    mkdir -p "$WORK_DIR"
-    curl -L -f -o "$WORK_DIR/ani-rss.jar" "$jar_url" || error "JAR 下载失败"
-    info "JAR 下载完成: $(du -h "$WORK_DIR/ani-rss.jar" | cut -f1)"
-
-    # JRE 不再捆绑，改用 fnOS 系统 Java 运行时 (install_dep_apps=java-17-openjdk)
+    :
 }
 
 app_build_app_tgz() {
-    info "构建 app.tgz..."
-    cd "$WORK_DIR"
-    local dst="$WORK_DIR/app_root"
-    mkdir -p "$dst/bin" "$dst/config" "$dst/ui/images"
-
-    cp ani-rss.jar "$dst/ani-rss-jar-with-dependencies.jar"
-
-    # JRE 不再捆绑，使用 fnOS 系统 Java 运行时
-
-    cp "$PKG_DIR/bin/ani-rss-server" "$dst/bin/ani-rss-server" 2>/dev/null || true
-    chmod +x "$dst/bin/ani-rss-server" 2>/dev/null || true
-    cp -a "$PKG_DIR/ui"/* "$dst/ui/" 2>/dev/null || true
-
-    cd "$dst"
-    tar -czf "$WORK_DIR/app.tgz" .
+    info "构建 app.tgz (Docker)..."
+    export VERSION="$APP_VERSION"
+    bash "$REPO_ROOT/scripts/apps/ani-rss/build.sh"
+    cp "$REPO_ROOT/app.tgz" "$WORK_DIR/app.tgz"
     info "app.tgz: $(du -h "$WORK_DIR/app.tgz" | cut -f1)"
 }
 

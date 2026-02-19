@@ -1,0 +1,11 @@
+services:
+  kavita:
+    image: jvmilazz0/kavita:${VERSION}
+    container_name: kavita
+    ports:
+      - "${TRIM_SERVICE_PORT}:5000"
+    volumes:
+      - ${TRIM_PKGVAR}/config:/kavita/config
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped

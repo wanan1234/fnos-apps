@@ -1,0 +1,12 @@
+services:
+  audiobookshelf:
+    image: advplyr/audiobookshelf:${VERSION}
+    container_name: audiobookshelf
+    ports:
+      - "${TRIM_SERVICE_PORT}:80"
+    volumes:
+      - ${TRIM_PKGVAR}/config:/config
+      - ${TRIM_PKGVAR}/metadata:/metadata
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped
