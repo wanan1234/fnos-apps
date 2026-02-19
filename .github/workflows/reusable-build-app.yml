@@ -192,3 +192,8 @@ jobs:
             artifacts/fpk-arm/*.fpk
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update apps.json
+        run: gh workflow run update-apps-json.yml --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
