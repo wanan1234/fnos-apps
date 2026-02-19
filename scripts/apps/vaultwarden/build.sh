@@ -1,44 +1,20 @@
 #!/bin/bash
-set -euo pipefail
+set -e
 
-VERSION="${VERSION:-}"
-ZIP_ARCH="${ZIP_ARCH:-${DEB_ARCH:-amd64}}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "${SCRIPT_DIR}/meta.env"
 
-[ -z "$VERSION" ] && { echo "VERSION is required" >&2; exit 1; }
+VERSION="${VERSION:-latest}"
+WORK_DIR=$(mktemp -d)
+trap "rm -rf $WORK_DIR" EXIT
 
-echo "==> Building Vaultwarden ${VERSION} for ${ZIP_ARCH}"
+mkdir -p "${WORK_DIR}/docker"
+cp "${SCRIPT_DIR}/../../../apps/vaultwarden/fnos/docker/docker-compose.yaml" "${WORK_DIR}/docker/"
+sed -i "s/\${VERSION}/${VERSION}/g" "${WORK_DIR}/docker/docker-compose.yaml"
 
-# Map architecture names
-case "$ZIP_ARCH" in
-  amd64|x86_64)
-    VAULTWARDEN_ARCH="x86_64-unknown-linux-musl"
-    ;;
-  arm64|aarch64)
-    VAULTWARDEN_ARCH="aarch64-unknown-linux-musl"
-    ;;
-  *)
-    echo "Unsupported architecture: $ZIP_ARCH" >&2
-    exit 1
-    ;;
-esac
+cp -a "${SCRIPT_DIR}/../../../apps/vaultwarden/fnos/ui" "${WORK_DIR}/ui"
 
-DOWNLOAD_URL="https://github.com/dani-garcia/vaultwarden/releases/download/${VERSION}/vaultwarden-${VERSION}-linux-${VAULTWARDEN_ARCH}.tar.gz"
-curl -L -o vaultwarden.tar.gz "$DOWNLOAD_URL"
+cd "${WORK_DIR}"
+tar czf "${SCRIPT_DIR}/../../../app.tgz" docker/ ui/
 
-tar -xzf vaultwarden.tar.gz
-
-mkdir -p app_root/bin app_root/ui
-
-# Find and copy the vaultwarden binary
-VAULTWARDEN_BIN=$(find . -name "vaultwarden" -type f | head -1)
-[ -z "$VAULTWARDEN_BIN" ] && { echo "vaultwarden binary not found in archive" >&2; exit 1; }
-
-cp "$VAULTWARDEN_BIN" app_root/vaultwarden
-chmod +x app_root/vaultwarden
-
-cp apps/vaultwarden/fnos/bin/vaultwarden-server app_root/bin/vaultwarden-server
-chmod +x app_root/bin/vaultwarden-server
-cp -a apps/vaultwarden/fnos/ui/* app_root/ui/ 2>/dev/null || true
-
-cd app_root
-tar -czf ../app.tgz .
+echo "Built app.tgz for vaultwarden ${VERSION}"

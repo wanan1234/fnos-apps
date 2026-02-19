@@ -1,0 +1,11 @@
+[
+    {
+        "stepTitle": "安装说明",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "Vaultwarden 是轻量级 Bitwarden 兼容密码管理服务器。<br>首次访问时需创建管理员账号。"
+            }
+        ]
+    }
+]

@@ -1,4 +1,7 @@
 {
+    "port-config": {
+        "protocol-file": "Vaultwarden.sc"
+    },
     "data-share": {
         "shares": [
             {
@@ -11,6 +14,12 @@
             }
         ]
     },
-    "systemd-unit": {
+    "docker-project": {
+        "projects": [
+            {
+                "name": "vaultwarden",
+                "path": "docker"
+            }
+        ]
     }
 }
