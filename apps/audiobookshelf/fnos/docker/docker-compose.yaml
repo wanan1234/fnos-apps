@@ -7,6 +7,8 @@ services:
     volumes:
       - ${TRIM_PKGVAR}/config:/config
       - ${TRIM_PKGVAR}/metadata:/metadata
+      - ${AUDIOBOOK_DIR:-${TRIM_PKGVAR}/audiobooks}:/audiobooks
+      - ${PODCAST_DIR:-${TRIM_PKGVAR}/podcasts}:/podcasts
     environment:
       - TZ=Asia/Shanghai
     restart: unless-stopped

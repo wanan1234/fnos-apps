@@ -7,8 +7,13 @@ services:
     volumes:
       - ${TRIM_PKGVAR}/config:/config
       - ${TRIM_PKGVAR}/core:/moviepilot
+      - ${MEDIA_DIR:-${TRIM_PKGVAR}/media}:/media
+      - ${DOWNLOAD_DIR:-${TRIM_PKGVAR}/downloads}:/downloads
     environment:
       - TZ=Asia/Shanghai
+      - PUID=${TRIM_UID}
+      - PGID=${TRIM_GID}
+      - UMASK=022
       - PORT=3000
       - GITHUB_PROXY=https://ghfast.top/
       - SUPERUSER_PASSWORD=${SUPERUSER_PASSWORD:-password}

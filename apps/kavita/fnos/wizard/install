@@ -1,0 +1,20 @@
+[
+    {
+        "stepTitle": "目录设置",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "Kavita 是漫画、轻小说和电子书阅读服务器。<br>首次访问时需创建管理员账号。"
+            },
+            {
+                "type": "tips",
+                "helpText": "请填写 NAS 上的绝对路径（如 <code>/vol1/books</code>）。<br>留空则使用应用默认数据目录，安装后可在应用设置中修改。"
+            },
+            {
+                "type": "text",
+                "field": "wizard_library_dir",
+                "label": "书库目录（漫画/小说/电子书）"
+            }
+        ]
+    }
+]

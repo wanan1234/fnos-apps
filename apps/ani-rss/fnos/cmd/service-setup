@@ -1,0 +1,26 @@
+#!/bin/bash
+# ANI-RSS Docker app — wizard integration
+
+service_postinst() {
+    if [ -n "${wizard_download_dir}" ]; then
+        local env_file="${TRIM_APPDEST}/docker/.env"
+        echo "DOWNLOAD_DIR=${wizard_download_dir}" > "$env_file"
+        mkdir -p "${wizard_download_dir}" 2>/dev/null || true
+        install_log "Wrote docker .env: DOWNLOAD_DIR=${wizard_download_dir}"
+    fi
+    mkdir -p "${TRIM_PKGVAR}/config" "${TRIM_PKGVAR}/downloads" 2>/dev/null || true
+    chown -R "${TRIM_UID}:${TRIM_GID}" "${TRIM_PKGVAR}/config" "${TRIM_PKGVAR}/downloads" 2>/dev/null || true
+}
+
+service_preupgrade() {
+    if [ -f "${TRIM_APPDEST}/docker/.env" ]; then
+        cp "${TRIM_APPDEST}/docker/.env" "${TRIM_PKGVAR}/.env.bak"
+    fi
+}
+
+service_restore() {
+    if [ -f "${TRIM_PKGVAR}/.env.bak" ]; then
+        cp "${TRIM_PKGVAR}/.env.bak" "${TRIM_APPDEST}/docker/.env"
+        rm -f "${TRIM_PKGVAR}/.env.bak"
+    fi
+}

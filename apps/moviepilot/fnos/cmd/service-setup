@@ -1,0 +1,50 @@
+#!/bin/bash
+# MoviePilot Docker app — wizard integration
+# docker-compose.yaml uses ${VAR:-${TRIM_PKGVAR}/default} for safe defaults.
+# .env is written only when user provides custom paths via wizard.
+
+service_postinst() {
+    local env_file="${TRIM_APPDEST}/docker/.env"
+    local need_env=false
+
+    # Write .env only if wizard provided custom values
+    : > "$env_file"
+    if [ -n "${wizard_media_dir}" ]; then
+        echo "MEDIA_DIR=${wizard_media_dir}" >> "$env_file"
+        mkdir -p "${wizard_media_dir}" 2>/dev/null || true
+        need_env=true
+    fi
+    if [ -n "${wizard_download_dir}" ]; then
+        echo "DOWNLOAD_DIR=${wizard_download_dir}" >> "$env_file"
+        mkdir -p "${wizard_download_dir}" 2>/dev/null || true
+        need_env=true
+    fi
+    if [ -n "${wizard_password}" ]; then
+        echo "SUPERUSER_PASSWORD=${wizard_password}" >> "$env_file"
+        need_env=true
+    fi
+
+    if [ "$need_env" = true ]; then
+        chmod 600 "$env_file"
+        install_log "Wrote docker .env with wizard values"
+    else
+        rm -f "$env_file"
+    fi
+
+    # Create default directories and fix ownership for PUID/PGID
+    mkdir -p "${TRIM_PKGVAR}/config" "${TRIM_PKGVAR}/core" "${TRIM_PKGVAR}/media" "${TRIM_PKGVAR}/downloads" 2>/dev/null || true
+    chown -R "${TRIM_UID}:${TRIM_GID}" "${TRIM_PKGVAR}/config" "${TRIM_PKGVAR}/core" "${TRIM_PKGVAR}/media" "${TRIM_PKGVAR}/downloads" 2>/dev/null || true
+}
+
+service_preupgrade() {
+    if [ -f "${TRIM_APPDEST}/docker/.env" ]; then
+        cp "${TRIM_APPDEST}/docker/.env" "${TRIM_PKGVAR}/.env.bak"
+    fi
+}
+
+service_restore() {
+    if [ -f "${TRIM_PKGVAR}/.env.bak" ]; then
+        cp "${TRIM_PKGVAR}/.env.bak" "${TRIM_APPDEST}/docker/.env"
+        rm -f "${TRIM_PKGVAR}/.env.bak"
+    fi
+}

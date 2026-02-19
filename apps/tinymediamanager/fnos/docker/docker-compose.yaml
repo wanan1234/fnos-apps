@@ -1,0 +1,14 @@
+services:
+  tinymediamanager:
+    image: tinymediamanager/tinymediamanager:${VERSION}
+    container_name: tinymediamanager
+    ports:
+      - "${TRIM_SERVICE_PORT}:4000"
+    volumes:
+      - ${TRIM_PKGVAR}/config:/config
+      - ${MEDIA_DIR:-${TRIM_PKGVAR}/data}:/data
+    environment:
+      - TZ=Asia/Shanghai
+      - PUID=${TRIM_UID}
+      - PGID=${TRIM_GID}
+    restart: unless-stopped

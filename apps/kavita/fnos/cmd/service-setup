@@ -1,0 +1,25 @@
+#!/bin/bash
+# Kavita Docker app — wizard integration
+
+service_postinst() {
+    if [ -n "${wizard_library_dir}" ]; then
+        local env_file="${TRIM_APPDEST}/docker/.env"
+        echo "LIBRARY_DIR=${wizard_library_dir}" > "$env_file"
+        mkdir -p "${wizard_library_dir}" 2>/dev/null || true
+        install_log "Wrote docker .env: LIBRARY_DIR=${wizard_library_dir}"
+    fi
+    mkdir -p "${TRIM_PKGVAR}/library" 2>/dev/null || true
+}
+
+service_preupgrade() {
+    if [ -f "${TRIM_APPDEST}/docker/.env" ]; then
+        cp "${TRIM_APPDEST}/docker/.env" "${TRIM_PKGVAR}/.env.bak"
+    fi
+}
+
+service_restore() {
+    if [ -f "${TRIM_PKGVAR}/.env.bak" ]; then
+        cp "${TRIM_PKGVAR}/.env.bak" "${TRIM_APPDEST}/docker/.env"
+        rm -f "${TRIM_PKGVAR}/.env.bak"
+    fi
+}

@@ -1,0 +1,39 @@
+[
+    {
+        "stepTitle": "基本设置",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "MoviePilot 是影视自动化管理工具，支持自动订阅、下载、整理和通知。"
+            },
+            {
+                "type": "password",
+                "field": "wizard_password",
+                "label": "管理员密码",
+                "rules": [
+                    { "required": true, "message": "请设置管理员密码" },
+                    { "min": 6, "message": "密码长度不能少于6位" }
+                ]
+            }
+        ]
+    },
+    {
+        "stepTitle": "目录设置",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "请填写 NAS 上的绝对路径（如 <code>/vol1/media</code>）。<br>留空则使用应用默认数据目录，安装后可在应用设置中修改。"
+            },
+            {
+                "type": "text",
+                "field": "wizard_media_dir",
+                "label": "媒体库目录（电影/剧集）"
+            },
+            {
+                "type": "text",
+                "field": "wizard_download_dir",
+                "label": "下载目录"
+            }
+        ]
+    }
+]

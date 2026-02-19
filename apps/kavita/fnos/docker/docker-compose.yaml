@@ -6,6 +6,7 @@ services:
       - "${TRIM_SERVICE_PORT}:5000"
     volumes:
       - ${TRIM_PKGVAR}/config:/kavita/config
+      - ${LIBRARY_DIR:-${TRIM_PKGVAR}/library}:/library
     environment:
       - TZ=Asia/Shanghai
     restart: unless-stopped

@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "tinymediamanager.Application":
+        {
+            "title": "tinyMediaManager",
+            "desc": "tinyMediaManager",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "5800",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}
