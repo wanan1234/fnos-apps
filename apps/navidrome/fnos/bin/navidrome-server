@@ -1,11 +1,42 @@
 #!/bin/sh
 APP_DIR="${TRIM_APPDEST}"
 APP_DATA_DIR=$1
+DATA_DIR="$APP_DATA_DIR/data"
+CONFIG_FILE="$DATA_DIR/navidrome.toml"
 
-# Navidrome 需要访问音乐文件夹
-MUSIC_DIR="${TRIM_PKGVAR}/music"
+# 数据-share 路径：用户通过 fnOS 文件管理器可见的共享文件夹
+SHARES_DIR="/var/apps/${TRIM_APPNAME}/shares"
+MUSIC_DIR=""
+if [ -d "$SHARES_DIR" ]; then
+    # 取 data-share 中第一个共享文件夹作为默认音乐目录
+    for d in "$SHARES_DIR"/*/; do
+        [ -d "$d" ] && MUSIC_DIR="$d" && break
+    done
+fi
+# 兜底：使用 var 下的 music 目录
+[ -z "$MUSIC_DIR" ] && MUSIC_DIR="$APP_DATA_DIR/music"
+
+mkdir -p "$DATA_DIR"
 mkdir -p "$MUSIC_DIR"
-mkdir -p "$APP_DATA_DIR/data"
+
+# 首次运行时生成默认配置文件
+if [ ! -f "$CONFIG_FILE" ]; then
+    cat > "$CONFIG_FILE" <<EOF
+# Navidrome 配置文件
+# 完整配置项参考: https://www.navidrome.org/docs/usage/configuration-options/
+
+# 音乐文件夹路径（可通过 fnOS 文件管理器访问 "Navidrome" 共享文件夹上传音乐）
+MusicFolder = '${MUSIC_DIR}'
+
+# 扫描间隔（默认每 2 分钟扫描一次，设为 0 禁用自动扫描）
+ScanSchedule = '@every 2m'
+EOF
+fi
+
+# 将系统 ffmpeg 加入 PATH（转码功能依赖）
+if [ -x /usr/bin/ffmpeg ]; then
+    export PATH="/usr/bin:$PATH"
+fi
 
 cd "$APP_DIR" || exit 1
-exec ./navidrome --datafolder "$APP_DATA_DIR/data" --port "${TRIM_SERVICE_PORT}" --musicfolder "$MUSIC_DIR"
+exec ./navidrome --configfile "$CONFIG_FILE" --datafolder "$DATA_DIR" --port "${TRIM_SERVICE_PORT}"
