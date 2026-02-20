@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-19T19:16:25Z",
+  "generated_at": "2026-02-20T03:35:26Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -22,7 +22,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:20:56Z"
+      "updated_at": "2026-02-19T17:20:56Z",
+      "download_count": 98
     },
     {
       "slug": "audiobookshelf",
@@ -40,7 +41,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:20:53Z"
+      "updated_at": "2026-02-19T17:20:53Z",
+      "download_count": 17
     },
     {
       "slug": "certimate",
@@ -58,7 +60,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:20:08Z"
+      "updated_at": "2026-02-19T17:20:08Z",
+      "download_count": 1
     },
     {
       "slug": "emby",
@@ -76,7 +79,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-14T14:38:36Z"
+      "updated_at": "2026-02-14T14:38:36Z",
+      "download_count": 182
     },
     {
       "slug": "fnos-apps-store",
@@ -84,9 +88,9 @@
       "file_prefix": "fnos-apps-store",
       "display_name": "fnOS Apps",
       "description": "fnOS第三方应用中心，支持一键安装、更新和卸载来自conversun/fnos-apps的所有应用。",
-      "version": "1.2.1",
-      "fpk_version": "1.2.1",
-      "release_tag": "fnos-apps-store/v1.2.1",
+      "version": "1.2.2",
+      "fpk_version": "1.2.2",
+      "release_tag": "fnos-apps-store/v1.2.2",
       "service_port": 8011,
       "homepage_url": "https://github.com/conversun/fnos-store",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnos-apps-store/fnos/ICON_256.PNG",
@@ -94,7 +98,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T19:16:14Z"
+      "updated_at": "2026-02-20T03:34:03Z",
+      "download_count": 353
     },
     {
       "slug": "gopeed",
@@ -112,7 +117,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-14T14:37:46Z"
+      "updated_at": "2026-02-14T14:37:46Z",
+      "download_count": 46
     },
     {
       "slug": "jellyfin",
@@ -130,7 +136,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-14T14:38:20Z"
+      "updated_at": "2026-02-14T14:38:20Z",
+      "download_count": 74
     },
     {
       "slug": "kavita",
@@ -148,7 +155,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:20:08Z"
+      "updated_at": "2026-02-19T17:20:08Z",
+      "download_count": 0
     },
     {
       "slug": "moviepilot",
@@ -166,7 +174,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:19:57Z"
+      "updated_at": "2026-02-19T17:19:57Z",
+      "download_count": 5
     },
     {
       "slug": "navidrome",
@@ -184,7 +193,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:20:04Z"
+      "updated_at": "2026-02-19T17:20:04Z",
+      "download_count": 6
     },
     {
       "slug": "nginx",
@@ -202,7 +212,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-14T14:37:46Z"
+      "updated_at": "2026-02-14T14:37:46Z",
+      "download_count": 27
     },
     {
       "slug": "openlist",
@@ -220,7 +231,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:20:08Z"
+      "updated_at": "2026-02-19T17:20:08Z",
+      "download_count": 0
     },
     {
       "slug": "plex",
@@ -238,7 +250,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-14T14:37:53Z"
+      "updated_at": "2026-02-14T14:37:53Z",
+      "download_count": 121
     },
     {
       "slug": "qbittorrent",
@@ -256,7 +269,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-14T14:37:35Z"
+      "updated_at": "2026-02-14T14:37:35Z",
+      "download_count": 157
     },
     {
       "slug": "sun-panel",
@@ -274,7 +288,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:20:02Z"
+      "updated_at": "2026-02-19T17:20:02Z",
+      "download_count": 1
     },
     {
       "slug": "syncthing",
@@ -292,7 +307,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:20:02Z"
+      "updated_at": "2026-02-19T17:20:02Z",
+      "download_count": 3
     },
     {
       "slug": "tinymediamanager",
@@ -310,7 +326,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:30:56Z"
+      "updated_at": "2026-02-19T17:30:56Z",
+      "download_count": 1
     },
     {
       "slug": "vaultwarden",
@@ -328,7 +345,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-19T17:30:36Z"
+      "updated_at": "2026-02-19T17:30:36Z",
+      "download_count": 2
     }
   ]
 }
