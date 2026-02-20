@@ -23,7 +23,7 @@ case "$ZIP_ARCH" in
 esac
 
 DOWNLOAD_URL="https://github.com/hslr-s/sun-panel/releases/download/v${VERSION}/sun-panel_v${VERSION}_linux_${UPSTREAM_ARCH}.tar.gz"
-curl -L -o sun-panel.tar.gz "$DOWNLOAD_URL"
+curl -fL -o sun-panel.tar.gz "$DOWNLOAD_URL"
 
 tar -xzf sun-panel.tar.gz
 

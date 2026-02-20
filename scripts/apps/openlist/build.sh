@@ -9,7 +9,7 @@ ZIP_ARCH="${ZIP_ARCH:-${DEB_ARCH:-amd64}}"
 echo "==> Building OpenList ${VERSION} for ${ZIP_ARCH}"
 
 DOWNLOAD_URL="https://github.com/OpenListTeam/OpenList/releases/download/v${VERSION}/openlist-linux-${ZIP_ARCH}.tar.gz"
-curl -L -o openlist.tar.gz "$DOWNLOAD_URL"
+curl -fL -o openlist.tar.gz "$DOWNLOAD_URL"
 
 tar -xzf openlist.tar.gz
 

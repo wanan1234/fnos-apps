@@ -24,7 +24,7 @@ esac
 
 DOWNLOAD_URL="https://github.com/navidrome/navidrome/releases/download/v${VERSION}/navidrome_${VERSION}_linux_${TARBALL_ARCH}.tar.gz"
 echo "Downloading: $DOWNLOAD_URL"
-curl -L -o navidrome.tar.gz "$DOWNLOAD_URL"
+curl -fL -o navidrome.tar.gz "$DOWNLOAD_URL"
 
 mkdir -p app_root/bin app_root/ui
 tar -xzf navidrome.tar.gz -C app_root

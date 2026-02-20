@@ -10,7 +10,7 @@ echo "==> Building Gotify ${VERSION} for ${ZIP_ARCH}"
 
 # Gotify distributes zip archives containing the binary
 DOWNLOAD_URL="https://github.com/gotify/server/releases/download/v${VERSION}/gotify-linux-${ZIP_ARCH}.zip"
-curl -L -o gotify-linux-${ZIP_ARCH}.zip "$DOWNLOAD_URL"
+curl -fL -o gotify-linux-${ZIP_ARCH}.zip "$DOWNLOAD_URL"
 unzip -o gotify-linux-${ZIP_ARCH}.zip -d gotify-extract
 chmod +x gotify-extract/gotify-linux-${ZIP_ARCH}
 

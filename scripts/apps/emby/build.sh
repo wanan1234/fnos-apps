@@ -8,7 +8,7 @@ DEB_ARCH="${2:-${DEB_ARCH:-}}"
 [ -z "${DEB_ARCH}" ] && { echo "DEB_ARCH is required" >&2; exit 1; }
 
 echo "==> Building Emby ${VERSION} (${DEB_ARCH})"
-curl -L -o emby.deb "https://github.com/MediaBrowser/Emby.Releases/releases/download/${VERSION}/emby-server-deb_${VERSION}_${DEB_ARCH}.deb"
+curl -fL -o emby.deb "https://github.com/MediaBrowser/Emby.Releases/releases/download/${VERSION}/emby-server-deb_${VERSION}_${DEB_ARCH}.deb"
 ar -x emby.deb
 mkdir -p extracted
 tar -xf data.tar.xz -C extracted

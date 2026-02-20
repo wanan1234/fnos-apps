@@ -10,7 +10,7 @@ echo "==> Building WolGoWeb ${VERSION} for ${ZIP_ARCH}"
 
 # WolGoWeb distributes raw binaries (no archive), tag uses uppercase V
 DOWNLOAD_URL="https://github.com/xiaoxinpro/WolGoWeb/releases/download/V${VERSION}/WolGoWeb_linux_${ZIP_ARCH}"
-curl -L -o WolGoWeb_linux_${ZIP_ARCH} "$DOWNLOAD_URL"
+curl -fL -o WolGoWeb_linux_${ZIP_ARCH} "$DOWNLOAD_URL"
 chmod +x WolGoWeb_linux_${ZIP_ARCH}
 
 mkdir -p app_root/bin app_root/ui

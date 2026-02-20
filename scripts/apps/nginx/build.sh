@@ -9,7 +9,7 @@ CODENAME="${3:-${CODENAME:-bookworm}}"
 [ -z "${DEB_ARCH}" ] && { echo "DEB_ARCH is required" >&2; exit 1; }
 
 echo "==> Building Nginx ${VERSION} (${DEB_ARCH})"
-curl -L -o nginx.deb "https://nginx.org/packages/debian/pool/nginx/n/nginx/nginx_${VERSION}-1~${CODENAME}_${DEB_ARCH}.deb"
+curl -fL -o nginx.deb "https://nginx.org/packages/debian/pool/nginx/n/nginx/nginx_${VERSION}-1~${CODENAME}_${DEB_ARCH}.deb"
 ar -x nginx.deb
 mkdir -p extracted
 

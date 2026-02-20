@@ -16,7 +16,7 @@ case "$ZIP_ARCH" in
 esac
 
 DOWNLOAD_URL="https://github.com/jeessy2/ddns-go/releases/download/v${VERSION}/ddns-go_${VERSION}_linux_${ASSET_ARCH}.tar.gz"
-curl -L -o ddns-go.tar.gz "$DOWNLOAD_URL"
+curl -fL -o ddns-go.tar.gz "$DOWNLOAD_URL"
 
 tar -xzf ddns-go.tar.gz
 

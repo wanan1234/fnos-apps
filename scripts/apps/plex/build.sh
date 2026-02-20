@@ -11,7 +11,7 @@ echo "==> Building Plex ${VERSION} (${PLEX_BUILD})"
 DOWNLOAD_URL=$(curl -sL "https://plex.tv/api/downloads/5.json" | \
   jq -r ".computer.Linux.releases[] | select(.build == \"$PLEX_BUILD\" and .distro == \"debian\") | .url")
 
-curl -L -o plex.deb "$DOWNLOAD_URL"
+curl -fL -o plex.deb "$DOWNLOAD_URL"
 ar -x plex.deb
 mkdir -p extracted
 tar -xf data.tar.xz -C extracted

@@ -23,7 +23,7 @@ case "$ZIP_ARCH" in
 esac
 
 DOWNLOAD_URL="https://github.com/certimate-go/certimate/releases/download/v${VERSION}/certimate_v${VERSION}_linux_${CERTIMATE_ARCH}.zip"
-curl -L -o certimate.zip "$DOWNLOAD_URL"
+curl -fL -o certimate.zip "$DOWNLOAD_URL"
 
 unzip -o certimate.zip
 

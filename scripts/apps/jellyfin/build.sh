@@ -16,8 +16,8 @@ FFMPEG_DEB=$(curl -sL "$FFMPEG_BASE/" | grep -oP 'jellyfin-ffmpeg7_[^"]*-bookwor
 FFMPEG_URL="${FFMPEG_BASE}/${FFMPEG_DEB}"
 echo "==> FFmpeg: $FFMPEG_DEB"
 
-curl -L -o jellyfin.tar.gz "$TARBALL_URL"
-curl -L -o jellyfin-ffmpeg7.deb "$FFMPEG_URL"
+curl -fL -o jellyfin.tar.gz "$TARBALL_URL"
+curl -fL -o jellyfin-ffmpeg7.deb "$FFMPEG_URL"
 
 tar -xzf jellyfin.tar.gz
 

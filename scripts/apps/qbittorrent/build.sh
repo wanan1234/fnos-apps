@@ -9,7 +9,7 @@ QB_BINARY_PREFIX="${2:-${QB_BINARY_PREFIX:-}}"
 
 echo "==> Building qBittorrent (${QB_BINARY_PREFIX}) from ${UPSTREAM_TAG}"
 DOWNLOAD_URL="https://github.com/userdocs/qbittorrent-nox-static/releases/download/${UPSTREAM_TAG}/${QB_BINARY_PREFIX}-qbittorrent-nox"
-curl -L -o qbittorrent-nox "$DOWNLOAD_URL"
+curl -fL -o qbittorrent-nox "$DOWNLOAD_URL"
 chmod +x qbittorrent-nox
 
 YEAR_MONTH=$(date +%Y-%m)

@@ -9,7 +9,7 @@ ZIP_ARCH="${ZIP_ARCH:-${DEB_ARCH:-amd64}}"
 echo "==> Building Gopeed ${VERSION} for ${ZIP_ARCH}"
 
 DOWNLOAD_URL="https://github.com/GopeedLab/gopeed/releases/download/v${VERSION}/gopeed-web-v${VERSION}-linux-${ZIP_ARCH}.zip"
-curl -L -o gopeed-web.zip "$DOWNLOAD_URL"
+curl -fL -o gopeed-web.zip "$DOWNLOAD_URL"
 
 unzip -o gopeed-web.zip
 
