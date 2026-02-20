@@ -34,6 +34,7 @@ for app_dir in "${REPO_ROOT}"/scripts/apps/*/; do
   RELEASE_TITLE=""
   DEFAULT_PORT=""
   HOMEPAGE_URL=""
+  CATEGORY=""
   source "${app_dir}/meta.env"
 
   manifest="${REPO_ROOT}/apps/${slug}/fnos/manifest"
@@ -97,6 +98,7 @@ for app_dir in "${REPO_ROOT}"/scripts/apps/*/; do
     --arg updated_at "$updated_at" \
     --argjson download_count "$download_count" \
     --arg app_type "$app_type" \
+    --arg category "$CATEGORY" \
     '{
       slug: $slug,
       appname: $appname,
@@ -112,7 +114,8 @@ for app_dir in "${REPO_ROOT}"/scripts/apps/*/; do
       platforms: ["x86", "arm"],
       updated_at: $updated_at,
       download_count: $download_count,
-      app_type: $app_type
+      app_type: $app_type,
+      category: $category
     }')
 
   APPS_JSON=$(echo "$APPS_JSON" | jq --argjson app "$app_obj" '. + [$app]')
