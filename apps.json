@@ -24,7 +24,8 @@
       ],
       "updated_at": "2026-02-20T15:54:47Z",
       "download_count": 2,
-      "app_type": "docker"
+      "app_type": "docker",
+      "category": "system"
     },
     {
       "slug": "ani-rss",
@@ -44,7 +45,8 @@
       ],
       "updated_at": "2026-02-19T17:20:56Z",
       "download_count": 98,
-      "app_type": "docker"
+      "app_type": "docker",
+      "category": "content"
     },
     {
       "slug": "audiobookshelf",
@@ -64,7 +66,8 @@
       ],
       "updated_at": "2026-02-19T17:20:53Z",
       "download_count": 17,
-      "app_type": "docker"
+      "app_type": "docker",
+      "category": "content"
     },
     {
       "slug": "certimate",
@@ -84,7 +87,8 @@
       ],
       "updated_at": "2026-02-19T17:20:08Z",
       "download_count": 1,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "system"
     },
     {
       "slug": "chromium",
@@ -104,7 +108,8 @@
       ],
       "updated_at": "2026-02-20T15:54:46Z",
       "download_count": 3,
-      "app_type": "docker"
+      "app_type": "docker",
+      "category": "browser"
     },
     {
       "slug": "ddns-go",
@@ -124,7 +129,8 @@
       ],
       "updated_at": "2026-02-20T04:40:10Z",
       "download_count": 2,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "system"
     },
     {
       "slug": "emby",
@@ -144,7 +150,8 @@
       ],
       "updated_at": "2026-02-14T14:38:36Z",
       "download_count": 195,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "media"
     },
     {
       "slug": "firefox",
@@ -164,7 +171,8 @@
       ],
       "updated_at": "2026-02-20T15:54:40Z",
       "download_count": 5,
-      "app_type": "docker"
+      "app_type": "docker",
+      "category": "browser"
     },
     {
       "slug": "fnos-apps-store",
@@ -184,7 +192,8 @@
       ],
       "updated_at": "2026-02-20T03:34:03Z",
       "download_count": 399,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "store"
     },
     {
       "slug": "gopeed",
@@ -204,7 +213,8 @@
       ],
       "updated_at": "2026-02-14T14:37:46Z",
       "download_count": 46,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "download"
     },
     {
       "slug": "gotify",
@@ -224,7 +234,8 @@
       ],
       "updated_at": "2026-02-20T04:40:04Z",
       "download_count": 3,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "system"
     },
     {
       "slug": "jellyfin",
@@ -244,7 +255,8 @@
       ],
       "updated_at": "2026-02-14T14:38:20Z",
       "download_count": 74,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "media"
     },
     {
       "slug": "kavita",
@@ -264,7 +276,8 @@
       ],
       "updated_at": "2026-02-20T15:54:46Z",
       "download_count": 3,
-      "app_type": "docker"
+      "app_type": "docker",
+      "category": "media"
     },
     {
       "slug": "kodbox",
@@ -284,7 +297,8 @@
       ],
       "updated_at": "2026-02-20T15:54:46Z",
       "download_count": 2,
-      "app_type": "docker"
+      "app_type": "docker",
+      "category": "content"
     },
     {
       "slug": "moviepilot",
@@ -304,7 +318,8 @@
       ],
       "updated_at": "2026-02-20T15:54:44Z",
       "download_count": 7,
-      "app_type": "docker"
+      "app_type": "docker",
+      "category": "content"
     },
     {
       "slug": "navidrome",
@@ -324,7 +339,8 @@
       ],
       "updated_at": "2026-02-20T05:03:13Z",
       "download_count": 10,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "media"
     },
     {
       "slug": "nginx",
@@ -344,7 +360,8 @@
       ],
       "updated_at": "2026-02-14T14:37:46Z",
       "download_count": 27,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "system"
     },
     {
       "slug": "openlist",
@@ -364,7 +381,8 @@
       ],
       "updated_at": "2026-02-19T17:20:08Z",
       "download_count": 0,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "content"
     },
     {
       "slug": "plex",
@@ -384,7 +402,8 @@
       ],
       "updated_at": "2026-02-14T14:37:53Z",
       "download_count": 124,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "media"
     },
     {
       "slug": "qbittorrent",
@@ -404,7 +423,8 @@
       ],
       "updated_at": "2026-02-14T14:37:35Z",
       "download_count": 162,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "download"
     },
     {
       "slug": "sun-panel",
@@ -424,7 +444,8 @@
       ],
       "updated_at": "2026-02-19T17:20:02Z",
       "download_count": 2,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "system"
     },
     {
       "slug": "syncthing",
@@ -444,7 +465,8 @@
       ],
       "updated_at": "2026-02-19T17:20:02Z",
       "download_count": 4,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "download"
     },
     {
       "slug": "tinymediamanager",
@@ -464,7 +486,8 @@
       ],
       "updated_at": "2026-02-20T15:54:41Z",
       "download_count": 3,
-      "app_type": "docker"
+      "app_type": "docker",
+      "category": "media"
     },
     {
       "slug": "transmission",
@@ -484,7 +507,8 @@
       ],
       "updated_at": "2026-02-20T15:54:41Z",
       "download_count": 3,
-      "app_type": "docker"
+      "app_type": "docker",
+      "category": "download"
     },
     {
       "slug": "vaultwarden",
@@ -504,7 +528,8 @@
       ],
       "updated_at": "2026-02-20T15:54:47Z",
       "download_count": 3,
-      "app_type": "docker"
+      "app_type": "docker",
+      "category": "system"
     },
     {
       "slug": "wolgoweb",
@@ -524,7 +549,8 @@
       ],
       "updated_at": "2026-02-20T04:40:09Z",
       "download_count": 3,
-      "app_type": "native"
+      "app_type": "native",
+      "category": "system"
     }
   ]
 }
