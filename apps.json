@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-22T10:35:59Z",
+  "generated_at": "2026-02-22T10:36:04Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -412,8 +412,8 @@
       "display_name": "qBittorrent",
       "description": "qBittorrent是一个轻量级BitTorrent客户端，简单易用，功能强大。默认用户名admin，密码adminadmin。",
       "version": "5.1.4",
-      "fpk_version": "5.1.4-r3",
-      "release_tag": "qbittorrent/v5.1.4-r3",
+      "fpk_version": "5.1.4-r4",
+      "release_tag": "qbittorrent/v5.1.4-r4",
       "service_port": 8085,
       "homepage_url": "https://github.com/userdocs/qbittorrent-nox-static",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/qbittorrent/fnos/ICON_256.PNG",
@@ -421,7 +421,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-14T14:37:35Z",
+      "updated_at": "2026-02-22T10:35:59Z",
       "download_count": 176,
       "app_type": "native",
       "category": "download"
