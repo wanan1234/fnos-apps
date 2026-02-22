@@ -37,17 +37,68 @@ LOG_FILE="${TRIM_PKGVAR}/service.log"
 SVC_BACKGROUND=y
 SVC_WRITE_PID=y
 
-service_preuninst() {
-    # 兜底：按进程名确保 qbittorrent-nox 被完全终止
-    # stop_daemon 依赖 PID 文件，若 PID 文件丢失或过期则无法杀死进程
+### Helper functions
+### ----------------------------------------
+
+# 确保 qbittorrent-nox 进程完全终止
+# stop_daemon 依赖 PID 文件，若 PID 文件丢失或过期则无法杀死进程
+# 此函数按进程名兜底，确保不留残留
+ensure_qbit_stopped() {
     pkill -f "${QBIT_BIN}" 2>/dev/null || true
-    sleep 1
+    sleep 2
     # 仍未退出则强制杀
-    pkill -9 -f "${QBIT_BIN}" 2>/dev/null || true
+    if pgrep -f "${QBIT_BIN}" > /dev/null 2>&1; then
+        pkill -9 -f "${QBIT_BIN}" 2>/dev/null || true
+        sleep 1
+    fi
+}
+
+# 等待端口释放，避免新进程启动时端口占用
+wait_for_port_release() {
+    local port="$1"
+    local max_wait="${2:-15}"
+    local i=0
+    while [ $i -lt $max_wait ]; do
+        if ! ss -tln sport = ":${port}" 2>/dev/null | grep -q LISTEN; then
+            return 0
+        fi
+        sleep 1
+        i=$((i + 1))
+    done
+    return 1
+}
+
+### Lifecycle hooks
+### ----------------------------------------
+
+service_preupgrade() {
+    # 升级前确保旧进程完全退出，防止新进程启动时端口占用
+    ensure_qbit_stopped
+    wait_for_port_release "${PORT}" 10 || true
+}
+
+service_prestart() {
+    # 启动前检查端口，处理残留进程或端口冲突
+    if ss -tln sport = ":${PORT}" 2>/dev/null | grep -q LISTEN; then
+        # 是 qbittorrent 自身的残留进程 → 尝试清理
+        if pgrep -f "${QBIT_BIN}" > /dev/null 2>&1; then
+            echo "发现残留的 qBittorrent 进程，正在清理..." >> ${LOG_FILE}
+            ensure_qbit_stopped
+            if ! wait_for_port_release "${PORT}" 10; then
+                error_exit "端口 ${PORT} 被 qBittorrent 残留进程占用，清理失败"
+            fi
+        else
+            error_exit "端口 ${PORT} 已被其他程序占用，无法启动 qBittorrent。请检查端口冲突或修改 WebUI 端口。"
+        fi
+    fi
+}
+
+service_preuninst() {
+    ensure_qbit_stopped
 }
 
 service_poststop() {
-    service_preuninst
+    ensure_qbit_stopped
 }
 
 service_postupgrade() {

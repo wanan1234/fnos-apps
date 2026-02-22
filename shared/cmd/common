@@ -257,6 +257,7 @@ upgrade_init ()
 {
     log_step "upgrade_init"
     call_func "validate_preupgrade"  install_log
+    stop_daemon
     call_func "service_preupgrade" install_log
     call_func "service_save" install_log
     exit 0
