@@ -6,7 +6,8 @@ services:
       - "${TRIM_SERVICE_PORT}:4000"
     volumes:
       - ${TRIM_PKGVAR}/config:/config
-      - ${MEDIA_DIR:-${TRIM_PKGVAR}/data}:/data
+      - ${MOVIE_DIR:-${TRIM_PKGVAR}/data/movies}:/data/movies
+      - ${TVSHOW_DIR:-${TRIM_PKGVAR}/data/tvshows}:/data/tvshows
     environment:
       - TZ=Asia/Shanghai
       - PUID=${TRIM_UID}

@@ -2,13 +2,27 @@
 # tinyMediaManager Docker app — wizard integration
 
 service_postinst() {
-    if [ -n "${wizard_media_dir}" ]; then
-        local env_file="${TRIM_APPDEST}/docker/.env"
-        echo "MEDIA_DIR=${wizard_media_dir}" > "$env_file"
-        mkdir -p "${wizard_media_dir}" 2>/dev/null || true
-        install_log "Wrote docker .env: MEDIA_DIR=${wizard_media_dir}"
+    local env_file="${TRIM_APPDEST}/docker/.env"
+    local has_env=false
+
+    if [ -n "${wizard_movie_dir}" ]; then
+        echo "MOVIE_DIR=${wizard_movie_dir}" > "$env_file"
+        mkdir -p "${wizard_movie_dir}" 2>/dev/null || true
+        install_log "Wrote docker .env: MOVIE_DIR=${wizard_movie_dir}"
+        has_env=true
     fi
-    mkdir -p "${TRIM_PKGVAR}/config" "${TRIM_PKGVAR}/data" 2>/dev/null || true
+
+    if [ -n "${wizard_tvshow_dir}" ]; then
+        if [ "$has_env" = true ]; then
+            echo "TVSHOW_DIR=${wizard_tvshow_dir}" >> "$env_file"
+        else
+            echo "TVSHOW_DIR=${wizard_tvshow_dir}" > "$env_file"
+        fi
+        mkdir -p "${wizard_tvshow_dir}" 2>/dev/null || true
+        install_log "Wrote docker .env: TVSHOW_DIR=${wizard_tvshow_dir}"
+    fi
+
+    mkdir -p "${TRIM_PKGVAR}/config" "${TRIM_PKGVAR}/data/movies" "${TRIM_PKGVAR}/data/tvshows" 2>/dev/null || true
     chown -R "${TRIM_UID}:${TRIM_GID}" "${TRIM_PKGVAR}/config" "${TRIM_PKGVAR}/data" 2>/dev/null || true
 }
 
