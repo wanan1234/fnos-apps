@@ -1,7 +1,7 @@
 # fnOS Apps
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Apps](https://img.shields.io/badge/apps-26-2ea44f)
+![Apps](https://img.shields.io/badge/apps-27-2ea44f)
 ![Platform](https://img.shields.io/badge/fnOS-third--party-orange)
 
 面向飞牛 fnOS 的第三方应用打包仓库。自动跟踪上游版本，构建可直接安装的 `.fpk` 包。
@@ -56,6 +56,7 @@
 | <img src="apps/certimate/fnos/ICON.PNG" width="28"> | [**Certimate**](apps/certimate/) | `8090` | SSL 证书管理 | [Release][r-certimate] |
 | <img src="apps/vaultwarden/fnos/ICON.PNG" width="28"> | [**Vaultwarden**](apps/vaultwarden/) | `8880` | 密码管理（Bitwarden 兼容） | [Release][r-vw] |
 | <img src="apps/nginx/fnos/ICON.PNG" width="28"> | [**Nginx**](apps/nginx/) | `8888` | HTTP 服务与反向代理 | [Release][r-nginx] |
+| <img src="apps/nginx-ui/fnos/ICON.PNG" width="28"> | [**Nginx UI**](apps/nginx-ui/) | `9000` | Nginx 可视化管理面板，内置 Nginx 引擎 | [Release][r-nginx-ui] |
 | <img src="apps/gotify/fnos/ICON.PNG" width="28"> | [**Gotify**](apps/gotify/) | `8070` | 自托管推送通知服务 | [Release][r-gotify] |
 | <img src="apps/ddns-go/fnos/ICON.PNG" width="28"> | [**DDNS-GO**](apps/ddns-go/) | `9876` | 动态 DNS 解析客户端 | [Release][r-ddnsgo] |
 | <img src="apps/wolgoweb/fnos/ICON.PNG" width="28"> | [**WolGoWeb**](apps/wolgoweb/) | `9090` | 网络唤醒 (Wake-on-LAN) 管理 | [Release][r-wolgoweb] |
@@ -164,6 +165,7 @@ fnos-apps/
 [r-certimate]: https://github.com/conversun/fnos-apps/releases?q=certimate
 [r-vw]: https://github.com/conversun/fnos-apps/releases?q=vaultwarden
 [r-nginx]: https://github.com/conversun/fnos-apps/releases?q=nginx
+[r-nginx-ui]: https://github.com/conversun/fnos-apps/releases?q=nginx-ui
 [r-gotify]: https://github.com/conversun/fnos-apps/releases?q=gotify
 [r-ddnsgo]: https://github.com/conversun/fnos-apps/releases?q=ddns-go
 [r-wolgoweb]: https://github.com/conversun/fnos-apps/releases?q=wolgoweb
