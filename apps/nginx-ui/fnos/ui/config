@@ -1,0 +1,15 @@
+{
+    ".url": {
+        "nginx-ui.Application":
+        {
+            "title": "Nginx UI",
+            "desc": "Nginx Web Management Panel",
+            "icon": "images/{0}.png",
+            "type": "url",
+            "port": "9000",
+            "protocol": "http",
+            "url": "/",
+            "allUsers": true
+        }
+    }
+}
