@@ -5,5 +5,11 @@ APP_DATA_DIR=$1
 CONF_DIR="$APP_DATA_DIR/conf"
 mkdir -p "$CONF_DIR"
 
+# 创建 web 目录的符号链接到应用目录，解决 "./web: no such file or directory" 错误
+# 参考 Issue #19: sun-panel 在当前工作目录查找 ./web
+if [ ! -L "$APP_DATA_DIR/web" ] && [ ! -e "$APP_DATA_DIR/web" ]; then
+    ln -sf "$APP_DIR/web" "$APP_DATA_DIR/web"
+fi
+
 cd "$APP_DATA_DIR" || exit 1
 exec "$APP_DIR/sun-panel" -config-path "$CONF_DIR"
