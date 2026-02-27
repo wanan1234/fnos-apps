@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-27T13:22:57Z",
+  "generated_at": "2026-02-27T13:23:01Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -97,8 +97,8 @@
       "display_name": "Certimate",
       "description": "SSL/TLS证书自动化管理工具，支持ACME协议自动申请和续签证书。",
       "version": "0.4.17",
-      "fpk_version": "0.4.17-r1",
-      "release_tag": "certimate/v0.4.17-r1",
+      "fpk_version": "0.4.17-r2",
+      "release_tag": "certimate/v0.4.17-r2",
       "service_port": 8090,
       "homepage_url": "https://github.com/certimate-go/certimate",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/certimate/fnos/ICON_256.PNG",
@@ -106,8 +106,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-22T10:35:51Z",
-      "download_count": 16,
+      "updated_at": "2026-02-27T13:23:00Z",
+      "download_count": 11,
       "app_type": "native",
       "category": "system"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T12:14:11Z",
-      "download_count": 794,
+      "download_count": 848,
       "app_type": "native",
       "category": "store"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-02-27T13:22:52Z",
-      "download_count": 50,
+      "download_count": 53,
       "app_type": "docker",
       "category": "media"
     },
@@ -559,8 +559,8 @@
       "display_name": "Syncthing",
       "description": "开源的文件同步工具，支持多设备间安全同步",
       "version": "2.0.14",
-      "fpk_version": "2.0.14-r1",
-      "release_tag": "syncthing/v2.0.14-r1",
+      "fpk_version": "2.0.14-r2",
+      "release_tag": "syncthing/v2.0.14-r2",
       "service_port": 8384,
       "homepage_url": "https://syncthing.net",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/syncthing/fnos/ICON_256.PNG",
@@ -568,7 +568,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-22T10:35:51Z",
+      "updated_at": "2026-02-27T13:22:56Z",
       "download_count": 13,
       "app_type": "native",
       "category": "download"
