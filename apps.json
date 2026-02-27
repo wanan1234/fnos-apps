@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-27T13:22:51Z",
+  "generated_at": "2026-02-27T13:22:57Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:51Z",
-      "download_count": 11,
+      "download_count": 16,
       "app_type": "native",
       "category": "system"
     },
@@ -118,8 +118,8 @@
       "display_name": "Chromium",
       "description": "Chromium 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
       "version": "26.02.4",
-      "fpk_version": "26.02.4-r1",
-      "release_tag": "chromium/v26.02.4-r1",
+      "fpk_version": "26.02.4-r2",
+      "release_tag": "chromium/v26.02.4-r2",
       "service_port": 5802,
       "homepage_url": "https://github.com/jlesage/docker-chromium",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/chromium/fnos/ICON_256.PNG",
@@ -127,7 +127,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T12:12:41Z",
+      "updated_at": "2026-02-27T13:22:54Z",
       "download_count": 61,
       "app_type": "docker",
       "category": "browser"
@@ -265,8 +265,8 @@
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
       "version": "2.5.6",
-      "fpk_version": "2.5.6-r1",
-      "release_tag": "immich/v2.5.6-r1",
+      "fpk_version": "2.5.6-r2",
+      "release_tag": "immich/v2.5.6-r2",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -274,7 +274,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T12:12:38Z",
+      "updated_at": "2026-02-27T13:22:49Z",
       "download_count": 4,
       "app_type": "docker",
       "category": "media"
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:20Z",
-      "download_count": 231,
+      "download_count": 134,
       "app_type": "native",
       "category": "media"
     },
@@ -307,8 +307,8 @@
       "display_name": "Kavita",
       "description": "开源的漫画、轻小说和电子书阅读服务器",
       "version": "0.8.9",
-      "fpk_version": "0.8.9-r3",
-      "release_tag": "kavita/v0.8.9-r3",
+      "fpk_version": "0.8.9-r4",
+      "release_tag": "kavita/v0.8.9-r4",
       "service_port": 5000,
       "homepage_url": "https://github.com/Kareadita/Kavita",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/kavita/fnos/ICON_256.PNG",
@@ -316,7 +316,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T12:12:37Z",
+      "updated_at": "2026-02-27T13:22:52Z",
       "download_count": 50,
       "app_type": "docker",
       "category": "media"
@@ -328,8 +328,8 @@
       "display_name": "KodBox",
       "description": "KodBox (可道云) 是一个开源的私有云存储和文件管理平台，支持在线文档编辑和多人协作。",
       "version": "1.63",
-      "fpk_version": "1.63-r3",
-      "release_tag": "kodbox/v1.63-r3",
+      "fpk_version": "1.63-r4",
+      "release_tag": "kodbox/v1.63-r4",
       "service_port": 8500,
       "homepage_url": "https://kodcloud.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/kodbox/fnos/ICON_256.PNG",
@@ -337,7 +337,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T12:12:38Z",
+      "updated_at": "2026-02-27T13:22:50Z",
       "download_count": 9,
       "app_type": "docker",
       "category": "content"
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:46Z",
-      "download_count": 53,
+      "download_count": 36,
       "app_type": "native",
       "category": "system"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:53Z",
-      "download_count": 355,
+      "download_count": 224,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:59Z",
-      "download_count": 274,
+      "download_count": 267,
       "app_type": "native",
       "category": "download"
     },
@@ -538,8 +538,8 @@
       "display_name": "Sun-Panel",
       "description": "服务器/NAS导航面板，支持多账户和Docker容器管理",
       "version": "1.8.1",
-      "fpk_version": "1.8.1-r3",
-      "release_tag": "sun-panel/v1.8.1-r3",
+      "fpk_version": "1.8.1-r4",
+      "release_tag": "sun-panel/v1.8.1-r4",
       "service_port": 3002,
       "homepage_url": "https://doc.sun-panel.top/zh_cn",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sun-panel/fnos/ICON_256.PNG",
@@ -547,7 +547,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T08:09:47Z",
+      "updated_at": "2026-02-27T13:22:51Z",
       "download_count": 37,
       "app_type": "native",
       "category": "system"
@@ -580,8 +580,8 @@
       "display_name": "tinyMediaManager",
       "description": "影视文件元数据管理工具，支持从 TheMovieDB、IMDb 刮削元数据，为 Kodi、Emby、Jellyfin、Plex 创建 NFO 文件，自动重命名和整理。含内置 JRE，通过虚拟显示运行。",
       "version": "5.2.7.1",
-      "fpk_version": "5.2.7.1-r4",
-      "release_tag": "tinymediamanager/v5.2.7.1-r4",
+      "fpk_version": "5.2.7.1-r5",
+      "release_tag": "tinymediamanager/v5.2.7.1-r5",
       "service_port": 5800,
       "homepage_url": "https://www.tinymediamanager.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/tinymediamanager/fnos/ICON_256.PNG",
@@ -589,7 +589,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T12:12:39Z",
+      "updated_at": "2026-02-27T13:22:49Z",
       "download_count": 56,
       "app_type": "docker",
       "category": "media"
@@ -601,8 +601,8 @@
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
       "version": "4.1.1",
-      "fpk_version": "4.1.1-r0-ls332-r1",
-      "release_tag": "transmission/v4.1.1-r0-ls332-r1",
+      "fpk_version": "4.1.1-r0-ls332-r2",
+      "release_tag": "transmission/v4.1.1-r0-ls332-r2",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -610,7 +610,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T12:12:37Z",
+      "updated_at": "2026-02-27T13:22:54Z",
       "download_count": 31,
       "app_type": "docker",
       "category": "download"
