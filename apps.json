@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-02-27T13:22:46Z",
+  "generated_at": "2026-02-27T13:22:51Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -181,8 +181,8 @@
       "display_name": "Firefox",
       "description": "Firefox 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
       "version": "26.02.3",
-      "fpk_version": "26.02.3-r1",
-      "release_tag": "firefox/v26.02.3-r1",
+      "fpk_version": "26.02.3-r2",
+      "release_tag": "firefox/v26.02.3-r2",
       "service_port": 5801,
       "homepage_url": "https://github.com/jlesage/docker-firefox",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/firefox/fnos/ICON_256.PNG",
@@ -190,7 +190,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T12:12:42Z",
+      "updated_at": "2026-02-27T13:22:46Z",
       "download_count": 56,
       "app_type": "docker",
       "category": "browser"
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:20Z",
-      "download_count": 134,
+      "download_count": 231,
       "app_type": "native",
       "category": "media"
     },
@@ -412,8 +412,8 @@
       "display_name": "Navidrome",
       "description": "开源的个人音乐流媒体服务器,兼容 Subsonic/Airsonic API,支持多用户和移动端应用。",
       "version": "0.60.3",
-      "fpk_version": "0.60.3-r3",
-      "release_tag": "navidrome/v0.60.3-r3",
+      "fpk_version": "0.60.3-r4",
+      "release_tag": "navidrome/v0.60.3-r4",
       "service_port": 4533,
       "homepage_url": "https://www.navidrome.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/navidrome/fnos/ICON_256.PNG",
@@ -421,7 +421,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-22T10:35:56Z",
+      "updated_at": "2026-02-27T13:22:47Z",
       "download_count": 32,
       "app_type": "native",
       "category": "media"
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:46Z",
-      "download_count": 36,
+      "download_count": 53,
       "app_type": "native",
       "category": "system"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:53Z",
-      "download_count": 224,
+      "download_count": 355,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:59Z",
-      "download_count": 267,
+      "download_count": 274,
       "app_type": "native",
       "category": "download"
     },
