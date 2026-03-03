@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-02T08:55:25Z",
+  "generated_at": "2026-03-03T08:29:00Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-02-28T06:24:08Z",
-      "download_count": 39,
+      "download_count": 40,
       "app_type": "docker",
       "category": "system"
     },
@@ -33,9 +33,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "3.0.2",
-      "fpk_version": "3.0.2",
-      "release_tag": "ani-rss/v3.0.2",
+      "version": "3.0.3",
+      "fpk_version": "3.0.3",
+      "release_tag": "ani-rss/v3.0.3",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -43,8 +43,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-01T08:06:51Z",
-      "download_count": 145,
+      "updated_at": "2026-03-03T08:12:15Z",
+      "download_count": 151,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-03-01T08:12:34Z",
-      "download_count": 23,
+      "download_count": 43,
       "app_type": "docker",
       "category": "content"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-02-28T06:24:09Z",
-      "download_count": 100,
+      "download_count": 107,
       "app_type": "docker",
       "category": "browser"
     },
@@ -138,9 +138,9 @@
       "file_prefix": "ddns-go",
       "display_name": "DDNS-GO",
       "description": "DDNS-GO 是一个简单好用的 DDNS 工具，支持阿里云、腾讯云、Cloudflare 等多个 DNS 服务商。",
-      "version": "6.15.0",
-      "fpk_version": "6.15.0-r3",
-      "release_tag": "ddns-go/v6.15.0-r3",
+      "version": "6.16.0",
+      "fpk_version": "6.16.0",
+      "release_tag": "ddns-go/v6.16.0",
       "service_port": 9876,
       "homepage_url": "https://github.com/jeessy2/ddns-go",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ddns-go/fnos/ICON_256.PNG",
@@ -148,8 +148,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-28T06:24:15Z",
-      "download_count": 12,
+      "updated_at": "2026-03-03T08:09:39Z",
+      "download_count": 15,
       "app_type": "native",
       "category": "system"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:38:36Z",
-      "download_count": 511,
+      "download_count": 539,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-02-28T06:24:12Z",
-      "download_count": 91,
+      "download_count": 107,
       "app_type": "docker",
       "category": "browser"
     },
@@ -201,9 +201,9 @@
       "file_prefix": "fnos-apps-store",
       "display_name": "fnOS Apps",
       "description": "fnOS第三方应用中心，支持一键安装、更新和卸载来自conversun/fnos-apps的所有应用。",
-      "version": "1.4.0",
-      "fpk_version": "1.4.0",
-      "release_tag": "fnos-apps-store/v1.4.0",
+      "version": "1.4.3",
+      "fpk_version": "1.4.3",
+      "release_tag": "fnos-apps-store/v1.4.3",
       "service_port": 8011,
       "homepage_url": "https://github.com/conversun/fnos-store",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnos-apps-store/fnos/ICON_256.PNG",
@@ -211,8 +211,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-27T12:14:11Z",
-      "download_count": 1027,
+      "updated_at": "2026-03-03T08:22:57Z",
+      "download_count": 1123,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:46Z",
-      "download_count": 86,
+      "download_count": 90,
       "app_type": "native",
       "category": "download"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-02-28T06:24:08Z",
-      "download_count": 36,
+      "download_count": 46,
       "app_type": "docker",
       "category": "media"
     },
@@ -286,8 +286,8 @@
       "display_name": "Jellyfin",
       "description": "Jellyfin 是一款免费开源的媒体系统，让您管理和播放您的媒体内容。支持电影、电视剧、音乐等多种媒体类型的管理和流式传输。",
       "version": "10.11.6",
-      "fpk_version": "10.11.6-r1",
-      "release_tag": "jellyfin/v10.11.6-r1",
+      "fpk_version": "10.11.6-r2",
+      "release_tag": "jellyfin/v10.11.6-r2",
       "service_port": 8097,
       "homepage_url": "https://jellyfin.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jellyfin/fnos/ICON_256.PNG",
@@ -295,8 +295,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-14T14:38:20Z",
-      "download_count": 184,
+      "updated_at": "2026-03-02T15:47:19Z",
+      "download_count": 196,
       "app_type": "native",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-02-28T06:24:04Z",
-      "download_count": 72,
+      "download_count": 85,
       "app_type": "docker",
       "category": "media"
     },
@@ -359,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-02-28T06:24:13Z",
-      "download_count": 30,
+      "download_count": 32,
       "app_type": "docker",
       "category": "media"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-02-28T06:24:08Z",
-      "download_count": 18,
+      "download_count": 19,
       "app_type": "native",
       "category": "content"
     },
@@ -391,8 +391,8 @@
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
       "version": "2.9.13",
-      "fpk_version": "2.9.13",
-      "release_tag": "moviepilot/v2.9.13",
+      "fpk_version": "2.9.13-r3",
+      "release_tag": "moviepilot/v2.9.13-r3",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -400,8 +400,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-02T08:13:06Z",
-      "download_count": 150,
+      "updated_at": "2026-03-03T08:18:37Z",
+      "download_count": 181,
       "app_type": "docker",
       "category": "content"
     },
@@ -422,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-02-28T06:24:11Z",
-      "download_count": 47,
+      "download_count": 48,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:46Z",
-      "download_count": 39,
+      "download_count": 42,
       "app_type": "native",
       "category": "system"
     },
@@ -464,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-02-28T06:23:50Z",
-      "download_count": 63,
+      "download_count": 64,
       "app_type": "native",
       "category": "system"
     },
@@ -475,8 +475,8 @@
       "display_name": "OpenList",
       "description": "支持多种存储后端的文件列表/WebDAV 程序（AList 社区分支）",
       "version": "4.1.10",
-      "fpk_version": "4.1.10-r3",
-      "release_tag": "openlist/v4.1.10-r3",
+      "fpk_version": "4.1.10-r4",
+      "release_tag": "openlist/v4.1.10-r4",
       "service_port": 5244,
       "homepage_url": "https://github.com/OpenListTeam/OpenList",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/openlist/fnos/ICON_256.PNG",
@@ -484,8 +484,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-28T06:24:21Z",
-      "download_count": 42,
+      "updated_at": "2026-03-03T08:06:02Z",
+      "download_count": 46,
       "app_type": "native",
       "category": "content"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-02-14T14:37:53Z",
-      "download_count": 246,
+      "download_count": 255,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-02-22T10:35:59Z",
-      "download_count": 305,
+      "download_count": 332,
       "app_type": "native",
       "category": "download"
     },
@@ -548,7 +548,7 @@
         "arm"
       ],
       "updated_at": "2026-02-28T06:24:08Z",
-      "download_count": 41,
+      "download_count": 43,
       "app_type": "native",
       "category": "system"
     },
@@ -559,8 +559,8 @@
       "display_name": "Syncthing",
       "description": "开源的文件同步工具，支持多设备间安全同步",
       "version": "2.0.14",
-      "fpk_version": "2.0.14-r3",
-      "release_tag": "syncthing/v2.0.14-r3",
+      "fpk_version": "2.0.14-r4",
+      "release_tag": "syncthing/v2.0.14-r4",
       "service_port": 8384,
       "homepage_url": "https://syncthing.net",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/syncthing/fnos/ICON_256.PNG",
@@ -568,8 +568,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-02-28T06:24:22Z",
-      "download_count": 24,
+      "updated_at": "2026-03-03T08:05:53Z",
+      "download_count": 33,
       "app_type": "native",
       "category": "download"
     },
@@ -590,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-02-28T06:24:13Z",
-      "download_count": 71,
+      "download_count": 72,
       "app_type": "docker",
       "category": "media"
     },
@@ -611,7 +611,7 @@
         "arm"
       ],
       "updated_at": "2026-03-02T08:18:25Z",
-      "download_count": 42,
+      "download_count": 49,
       "app_type": "docker",
       "category": "download"
     },
@@ -632,7 +632,7 @@
         "arm"
       ],
       "updated_at": "2026-02-28T06:24:17Z",
-      "download_count": 40,
+      "download_count": 42,
       "app_type": "docker",
       "category": "system"
     },
