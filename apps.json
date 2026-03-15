@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-14T08:28:25Z",
+  "generated_at": "2026-03-15T08:30:51Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-03-12T08:09:55Z",
-      "download_count": 14,
+      "download_count": 15,
       "app_type": "docker",
       "category": "system"
     },
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-03-14T08:04:15Z",
-      "download_count": 49,
+      "download_count": 55,
       "app_type": "docker",
       "category": "content"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-03-13T08:08:32Z",
-      "download_count": 7,
+      "download_count": 19,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-03-12T08:09:58Z",
-      "download_count": 14,
+      "download_count": 15,
       "app_type": "docker",
       "category": "content"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-03-04T08:05:43Z",
-      "download_count": 35,
+      "download_count": 36,
       "app_type": "native",
       "category": "system"
     },
@@ -117,9 +117,9 @@
       "file_prefix": "chromium",
       "display_name": "Chromium",
       "description": "Chromium 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
-      "version": "26.03.1",
-      "fpk_version": "26.03.1",
-      "release_tag": "chromium/v26.03.1",
+      "version": "26.03.2",
+      "fpk_version": "26.03.2",
+      "release_tag": "chromium/v26.03.2",
       "service_port": 5802,
       "homepage_url": "https://github.com/jlesage/docker-chromium",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/chromium/fnos/ICON_256.PNG",
@@ -127,8 +127,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-14T08:04:14Z",
-      "download_count": 42,
+      "updated_at": "2026-03-15T08:06:25Z",
+      "download_count": 55,
       "app_type": "docker",
       "category": "browser"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-03-12T08:09:39Z",
-      "download_count": 19,
+      "download_count": 20,
       "app_type": "native",
       "category": "system"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:43Z",
-      "download_count": 153,
+      "download_count": 160,
       "app_type": "native",
       "category": "media"
     },
@@ -180,9 +180,9 @@
       "file_prefix": "firefox",
       "display_name": "Firefox",
       "description": "Firefox 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
-      "version": "26.02.3",
-      "fpk_version": "26.02.3",
-      "release_tag": "firefox/v26.02.3",
+      "version": "26.03.1",
+      "fpk_version": "26.03.1",
+      "release_tag": "firefox/v26.03.1",
       "service_port": 5801,
       "homepage_url": "https://github.com/jlesage/docker-firefox",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/firefox/fnos/ICON_256.PNG",
@@ -190,8 +190,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-12T08:09:51Z",
-      "download_count": 81,
+      "updated_at": "2026-03-15T08:06:19Z",
+      "download_count": 106,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-03-11T20:14:10Z",
-      "download_count": 974,
+      "download_count": 1074,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-03-09T08:08:45Z",
-      "download_count": 79,
+      "download_count": 84,
       "app_type": "native",
       "category": "download"
     },
@@ -254,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:03:31Z",
-      "download_count": 11,
+      "download_count": 12,
       "app_type": "native",
       "category": "system"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-03-11T18:23:50Z",
-      "download_count": 40,
+      "download_count": 43,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:46Z",
-      "download_count": 52,
+      "download_count": 55,
       "app_type": "native",
       "category": "media"
     },
@@ -359,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-03-12T08:09:54Z",
-      "download_count": 11,
+      "download_count": 12,
       "app_type": "docker",
       "category": "media"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:03:31Z",
-      "download_count": 14,
+      "download_count": 15,
       "app_type": "native",
       "category": "content"
     },
@@ -390,9 +390,9 @@
       "file_prefix": "moviepilot",
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
-      "version": "2.9.14",
-      "fpk_version": "2.9.14",
-      "release_tag": "moviepilot/v2.9.14",
+      "version": "2.9.15",
+      "fpk_version": "2.9.15",
+      "release_tag": "moviepilot/v2.9.15",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -400,8 +400,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-12T08:10:00Z",
-      "download_count": 68,
+      "updated_at": "2026-03-15T08:06:25Z",
+      "download_count": 38,
       "app_type": "docker",
       "category": "content"
     },
@@ -422,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:24Z",
-      "download_count": 19,
+      "download_count": 20,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:31Z",
-      "download_count": 24,
+      "download_count": 25,
       "app_type": "native",
       "category": "system"
     },
@@ -464,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:20Z",
-      "download_count": 26,
+      "download_count": 27,
       "app_type": "native",
       "category": "system"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:04:31Z",
-      "download_count": 106,
+      "download_count": 112,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-03-08T08:03:31Z",
-      "download_count": 120,
+      "download_count": 128,
       "app_type": "native",
       "category": "download"
     },
@@ -590,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-03-12T08:09:57Z",
-      "download_count": 48,
+      "download_count": 52,
       "app_type": "docker",
       "category": "media"
     },
@@ -611,7 +611,7 @@
         "arm"
       ],
       "updated_at": "2026-03-12T08:10:07Z",
-      "download_count": 36,
+      "download_count": 41,
       "app_type": "docker",
       "category": "download"
     },
@@ -632,7 +632,7 @@
         "arm"
       ],
       "updated_at": "2026-03-12T08:09:31Z",
-      "download_count": 18,
+      "download_count": 21,
       "app_type": "docker",
       "category": "system"
     },
