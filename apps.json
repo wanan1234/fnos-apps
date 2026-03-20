@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-19T08:53:57Z",
+  "generated_at": "2026-03-20T08:29:37Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:22Z",
-      "download_count": 12,
+      "download_count": 14,
       "app_type": "docker",
       "category": "system"
     },
@@ -33,9 +33,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "3.0.14",
-      "fpk_version": "3.0.14",
-      "release_tag": "ani-rss/v3.0.14",
+      "version": "3.0.15",
+      "fpk_version": "3.0.15",
+      "release_tag": "ani-rss/v3.0.15",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -43,8 +43,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-19T08:08:54Z",
-      "download_count": 17,
+      "updated_at": "2026-03-20T08:08:13Z",
+      "download_count": 7,
       "app_type": "docker",
       "category": "content"
     },
@@ -54,9 +54,9 @@
       "file_prefix": "audiobookshelf",
       "display_name": "Audiobookshelf",
       "description": "自托管的有声书和播客服务器，支持多用户管理、进度同步和丰富的元数据管理。",
-      "version": "2.33.0",
-      "fpk_version": "2.33.0-r2",
-      "release_tag": "audiobookshelf/v2.33.0-r2",
+      "version": "2.33.1",
+      "fpk_version": "2.33.1",
+      "release_tag": "audiobookshelf/v2.33.1",
       "service_port": 13378,
       "homepage_url": "https://www.audiobookshelf.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/audiobookshelf/fnos/ICON_256.PNG",
@@ -64,8 +64,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-18T16:06:46Z",
-      "download_count": 4,
+      "updated_at": "2026-03-20T08:08:17Z",
+      "download_count": 5,
       "app_type": "docker",
       "category": "content"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:10Z",
-      "download_count": 9,
+      "download_count": 11,
       "app_type": "native",
       "category": "system"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:27Z",
-      "download_count": 91,
+      "download_count": 97,
       "app_type": "docker",
       "category": "browser"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:11Z",
-      "download_count": 13,
+      "download_count": 14,
       "app_type": "native",
       "category": "system"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:08:05Z",
-      "download_count": 15,
+      "download_count": 24,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:49Z",
-      "download_count": 121,
+      "download_count": 143,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:29Z",
-      "download_count": 452,
+      "download_count": 580,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:13Z",
-      "download_count": 37,
+      "download_count": 46,
       "app_type": "native",
       "category": "download"
     },
@@ -264,9 +264,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "2.5.6",
-      "fpk_version": "2.5.6-r2",
-      "release_tag": "immich/v2.5.6-r2",
+      "version": "2.6.1",
+      "fpk_version": "2.6.1",
+      "release_tag": "immich/v2.6.1",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -274,8 +274,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-18T16:06:12Z",
-      "download_count": 3,
+      "updated_at": "2026-03-20T08:08:12Z",
+      "download_count": 22,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:46Z",
-      "download_count": 5,
+      "download_count": 16,
       "app_type": "native",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:51Z",
-      "download_count": 3,
+      "download_count": 10,
       "app_type": "docker",
       "category": "media"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:28Z",
-      "download_count": 3,
+      "download_count": 5,
       "app_type": "docker",
       "category": "content"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:32Z",
-      "download_count": 3,
+      "download_count": 7,
       "app_type": "native",
       "category": "content"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:58Z",
-      "download_count": 38,
+      "download_count": 41,
       "app_type": "docker",
       "category": "content"
     },
@@ -422,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:19Z",
-      "download_count": 3,
+      "download_count": 5,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:50Z",
-      "download_count": 0,
+      "download_count": 2,
       "app_type": "native",
       "category": "system"
     },
@@ -485,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:29Z",
-      "download_count": 4,
+      "download_count": 6,
       "app_type": "native",
       "category": "content"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:46Z",
-      "download_count": 44,
+      "download_count": 53,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:34Z",
-      "download_count": 11,
+      "download_count": 36,
       "app_type": "native",
       "category": "download"
     },
@@ -569,7 +569,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:05Z",
-      "download_count": 5,
+      "download_count": 9,
       "app_type": "native",
       "category": "download"
     },
@@ -590,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:26Z",
-      "download_count": 45,
+      "download_count": 46,
       "app_type": "docker",
       "category": "media"
     },
@@ -611,7 +611,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:06:41Z",
-      "download_count": 31,
+      "download_count": 35,
       "app_type": "docker",
       "category": "download"
     },
@@ -632,7 +632,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:08Z",
-      "download_count": 9,
+      "download_count": 15,
       "app_type": "docker",
       "category": "system"
     },
@@ -653,7 +653,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:11Z",
-      "download_count": 2,
+      "download_count": 5,
       "app_type": "native",
       "category": "system"
     }
