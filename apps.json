@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-28T08:27:54Z",
+  "generated_at": "2026-03-28T08:41:26Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:23:59Z",
-      "download_count": 82,
+      "download_count": 84,
       "app_type": "docker",
       "category": "browser"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:14Z",
-      "download_count": 149,
+      "download_count": 150,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:45Z",
-      "download_count": 981,
+      "download_count": 983,
       "app_type": "native",
       "category": "store"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-03-27T08:11:35Z",
-      "download_count": 69,
+      "download_count": 72,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:28Z",
-      "download_count": 21,
+      "download_count": 23,
       "app_type": "native",
       "category": "media"
     },
@@ -359,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:19Z",
-      "download_count": 8,
+      "download_count": 9,
       "app_type": "docker",
       "category": "media"
     },
@@ -485,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:26Z",
-      "download_count": 2,
+      "download_count": 3,
       "app_type": "native",
       "category": "content"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:51Z",
-      "download_count": 55,
+      "download_count": 56,
       "app_type": "native",
       "category": "download"
     },
@@ -590,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:16Z",
-      "download_count": 25,
+      "download_count": 26,
       "app_type": "docker",
       "category": "media"
     },
