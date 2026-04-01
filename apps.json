@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-03-31T09:02:25Z",
+  "generated_at": "2026-04-01T08:52:03Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:42Z",
-      "download_count": 11,
+      "download_count": 12,
       "app_type": "docker",
       "category": "system"
     },
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-03-28T08:08:19Z",
-      "download_count": 53,
+      "download_count": 54,
       "app_type": "docker",
       "category": "content"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:10Z",
-      "download_count": 18,
+      "download_count": 19,
       "app_type": "docker",
       "category": "content"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:45Z",
-      "download_count": 18,
+      "download_count": 19,
       "app_type": "native",
       "category": "system"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:23:59Z",
-      "download_count": 123,
+      "download_count": 131,
       "app_type": "docker",
       "category": "browser"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:32Z",
-      "download_count": 91,
+      "download_count": 96,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:14Z",
-      "download_count": 205,
+      "download_count": 215,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:45Z",
-      "download_count": 1274,
+      "download_count": 1332,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:47Z",
-      "download_count": 54,
+      "download_count": 56,
       "app_type": "native",
       "category": "download"
     },
@@ -254,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:17Z",
-      "download_count": 7,
+      "download_count": 8,
       "app_type": "native",
       "category": "system"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-03-27T08:11:35Z",
-      "download_count": 104,
+      "download_count": 111,
       "app_type": "docker",
       "category": "media"
     },
@@ -285,9 +285,9 @@
       "file_prefix": "jellyfin",
       "display_name": "Jellyfin",
       "description": "Jellyfin 是一款免费开源的媒体系统，让您管理和播放您的媒体内容。支持电影、电视剧、音乐等多种媒体类型的管理和流式传输。",
-      "version": "10.11.6",
-      "fpk_version": "10.11.6-r3",
-      "release_tag": "jellyfin/v10.11.6-r3",
+      "version": "10.11.7",
+      "fpk_version": "10.11.7",
+      "release_tag": "jellyfin/v10.11.7",
       "service_port": 8097,
       "homepage_url": "https://jellyfin.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jellyfin/fnos/ICON_256.PNG",
@@ -295,8 +295,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-26T16:25:28Z",
-      "download_count": 70,
+      "updated_at": "2026-04-01T08:24:18Z",
+      "download_count": 74,
       "app_type": "native",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:18Z",
-      "download_count": 12,
+      "download_count": 14,
       "app_type": "docker",
       "category": "media"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:09Z",
-      "download_count": 13,
+      "download_count": 15,
       "app_type": "docker",
       "category": "content"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-03-31T08:18:50Z",
-      "download_count": 33,
+      "download_count": 42,
       "app_type": "docker",
       "category": "content"
     },
@@ -411,9 +411,9 @@
       "file_prefix": "navidrome",
       "display_name": "Navidrome",
       "description": "开源的个人音乐流媒体服务器,兼容 Subsonic/Airsonic API,支持多用户和移动端应用。",
-      "version": "0.60.3",
-      "fpk_version": "0.60.3-r3",
-      "release_tag": "navidrome/v0.60.3-r3",
+      "version": "0.61.0",
+      "fpk_version": "0.61.0",
+      "release_tag": "navidrome/v0.61.0",
       "service_port": 4533,
       "homepage_url": "https://www.navidrome.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/navidrome/fnos/ICON_256.PNG",
@@ -421,7 +421,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-26T16:24:25Z",
+      "updated_at": "2026-04-01T08:23:34Z",
       "download_count": 11,
       "app_type": "native",
       "category": "media"
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:23:52Z",
-      "download_count": 15,
+      "download_count": 16,
       "app_type": "native",
       "category": "system"
     },
@@ -464,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:46Z",
-      "download_count": 15,
+      "download_count": 17,
       "app_type": "native",
       "category": "system"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:57Z",
-      "download_count": 86,
+      "download_count": 92,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:51Z",
-      "download_count": 91,
+      "download_count": 97,
       "app_type": "native",
       "category": "download"
     },
@@ -569,7 +569,7 @@
         "arm"
       ],
       "updated_at": "2026-03-18T16:07:05Z",
-      "download_count": 20,
+      "download_count": 25,
       "app_type": "native",
       "category": "download"
     },
@@ -590,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:16Z",
-      "download_count": 47,
+      "download_count": 50,
       "app_type": "docker",
       "category": "media"
     },
@@ -601,8 +601,8 @@
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
       "version": "4.1.1",
-      "fpk_version": "4.1.1-r1-ls336-r1",
-      "release_tag": "transmission/v4.1.1-r1-ls336-r1",
+      "fpk_version": "4.1.1-r1-ls337",
+      "release_tag": "transmission/v4.1.1-r1-ls337",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -610,8 +610,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-26T16:24:43Z",
-      "download_count": 49,
+      "updated_at": "2026-04-01T08:23:31Z",
+      "download_count": 41,
       "app_type": "docker",
       "category": "download"
     },
@@ -632,7 +632,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:23:59Z",
-      "download_count": 14,
+      "download_count": 16,
       "app_type": "docker",
       "category": "system"
     },
