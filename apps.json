@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-09T09:19:44Z",
+  "generated_at": "2026-04-10T09:11:57Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:42Z",
-      "download_count": 22,
+      "download_count": 25,
       "app_type": "docker",
       "category": "system"
     },
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:19Z",
-      "download_count": 30,
+      "download_count": 38,
       "app_type": "docker",
       "category": "content"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:23:59Z",
-      "download_count": 191,
+      "download_count": 195,
       "app_type": "docker",
       "category": "browser"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-04-04T08:08:26Z",
-      "download_count": 16,
+      "download_count": 17,
       "app_type": "native",
       "category": "system"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:32Z",
-      "download_count": 226,
+      "download_count": 234,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:14Z",
-      "download_count": 321,
+      "download_count": 328,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-04-07T08:21:47Z",
-      "download_count": 1781,
+      "download_count": 1896,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:47Z",
-      "download_count": 80,
+      "download_count": 86,
       "app_type": "native",
       "category": "download"
     },
@@ -264,9 +264,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "2.7.2",
-      "fpk_version": "2.7.2",
-      "release_tag": "immich/v2.7.2",
+      "version": "2.7.3",
+      "fpk_version": "2.7.3",
+      "release_tag": "immich/v2.7.3",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -274,8 +274,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-08T08:21:14Z",
-      "download_count": 166,
+      "updated_at": "2026-04-10T08:27:05Z",
+      "download_count": 160,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:28:05Z",
-      "download_count": 287,
+      "download_count": 292,
       "app_type": "native",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:18Z",
-      "download_count": 23,
+      "download_count": 24,
       "app_type": "docker",
       "category": "media"
     },
@@ -359,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:13Z",
-      "download_count": 27,
+      "download_count": 28,
       "app_type": "docker",
       "category": "media"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-04-09T08:26:30Z",
-      "download_count": 22,
+      "download_count": 33,
       "app_type": "docker",
       "category": "content"
     },
@@ -422,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-04-05T08:08:23Z",
-      "download_count": 73,
+      "download_count": 77,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:23:52Z",
-      "download_count": 21,
+      "download_count": 22,
       "app_type": "native",
       "category": "system"
     },
@@ -464,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:38Z",
-      "download_count": 36,
+      "download_count": 38,
       "app_type": "native",
       "category": "system"
     },
@@ -474,9 +474,9 @@
       "file_prefix": "openlist",
       "display_name": "OpenList",
       "description": "支持多种存储后端的文件列表/WebDAV 程序（AList 社区分支）",
-      "version": "4.2.0",
-      "fpk_version": "4.2.0",
-      "release_tag": "openlist/v4.2.0",
+      "version": "4.2.1",
+      "fpk_version": "4.2.1",
+      "release_tag": "openlist/v4.2.1",
       "service_port": 5244,
       "homepage_url": "https://github.com/OpenListTeam/OpenList",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/openlist/fnos/ICON_256.PNG",
@@ -484,8 +484,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-09T08:26:49Z",
-      "download_count": 16,
+      "updated_at": "2026-04-10T08:27:17Z",
+      "download_count": 21,
       "app_type": "native",
       "category": "content"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-04-09T08:27:04Z",
-      "download_count": 74,
+      "download_count": 102,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:51Z",
-      "download_count": 207,
+      "download_count": 220,
       "app_type": "native",
       "category": "download"
     },
@@ -548,9 +548,30 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:23:45Z",
-      "download_count": 11,
+      "download_count": 13,
       "app_type": "native",
       "category": "system"
+    },
+    {
+      "slug": "syncthing",
+      "appname": "syncthing",
+      "file_prefix": "syncthing",
+      "display_name": "Syncthing",
+      "description": "开源的文件同步工具，支持多设备间安全同步",
+      "version": "2.0.16",
+      "fpk_version": "2.0.16",
+      "release_tag": "syncthing/v2.0.16",
+      "service_port": 8384,
+      "homepage_url": "https://syncthing.net",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/syncthing/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-04-10T08:27:06Z",
+      "download_count": 32,
+      "app_type": "native",
+      "category": "download"
     },
     {
       "slug": "tinymediamanager",
@@ -590,7 +611,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:20Z",
-      "download_count": 49,
+      "download_count": 53,
       "app_type": "docker",
       "category": "download"
     },
@@ -611,7 +632,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:23:59Z",
-      "download_count": 34,
+      "download_count": 35,
       "app_type": "docker",
       "category": "system"
     },
