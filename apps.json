@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-10T09:19:22Z",
+  "generated_at": "2026-04-11T08:31:11Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:42Z",
-      "download_count": 25,
+      "download_count": 26,
       "app_type": "docker",
       "category": "system"
     },
@@ -33,9 +33,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "3.0.24",
-      "fpk_version": "3.0.24",
-      "release_tag": "ani-rss/v3.0.24",
+      "version": "3.0.25",
+      "fpk_version": "3.0.25",
+      "release_tag": "ani-rss/v3.0.25",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -43,8 +43,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-08T08:21:19Z",
-      "download_count": 38,
+      "updated_at": "2026-04-11T08:09:11Z",
+      "download_count": 27,
       "app_type": "docker",
       "category": "content"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:10Z",
-      "download_count": 43,
+      "download_count": 45,
       "app_type": "docker",
       "category": "content"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:20Z",
-      "download_count": 22,
+      "download_count": 23,
       "app_type": "native",
       "category": "system"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:23:59Z",
-      "download_count": 195,
+      "download_count": 202,
       "app_type": "docker",
       "category": "browser"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:32Z",
-      "download_count": 234,
+      "download_count": 251,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:14Z",
-      "download_count": 328,
+      "download_count": 336,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-04-07T08:21:47Z",
-      "download_count": 1896,
+      "download_count": 2035,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:47Z",
-      "download_count": 86,
+      "download_count": 93,
       "app_type": "native",
       "category": "download"
     },
@@ -264,9 +264,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "2.7.3",
-      "fpk_version": "2.7.3",
-      "release_tag": "immich/v2.7.3",
+      "version": "2.7.4",
+      "fpk_version": "2.7.4",
+      "release_tag": "immich/v2.7.4",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -274,8 +274,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-10T08:27:05Z",
-      "download_count": 160,
+      "updated_at": "2026-04-11T08:09:16Z",
+      "download_count": 34,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:28:05Z",
-      "download_count": 292,
+      "download_count": 329,
       "app_type": "native",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:18Z",
-      "download_count": 24,
+      "download_count": 26,
       "app_type": "docker",
       "category": "media"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:09Z",
-      "download_count": 26,
+      "download_count": 28,
       "app_type": "docker",
       "category": "content"
     },
@@ -359,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:13Z",
-      "download_count": 28,
+      "download_count": 32,
       "app_type": "docker",
       "category": "media"
     },
@@ -390,9 +390,9 @@
       "file_prefix": "moviepilot",
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
-      "version": "2.9.27",
-      "fpk_version": "2.9.27",
-      "release_tag": "moviepilot/v2.9.27",
+      "version": "2.9.28",
+      "fpk_version": "2.9.28",
+      "release_tag": "moviepilot/v2.9.28",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -400,8 +400,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-09T08:26:30Z",
-      "download_count": 33,
+      "updated_at": "2026-04-11T08:09:11Z",
+      "download_count": 45,
       "app_type": "docker",
       "category": "content"
     },
@@ -422,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-04-05T08:08:23Z",
-      "download_count": 77,
+      "download_count": 83,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:23:52Z",
-      "download_count": 22,
+      "download_count": 25,
       "app_type": "native",
       "category": "system"
     },
@@ -485,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-04-10T08:27:17Z",
-      "download_count": 21,
+      "download_count": 29,
       "app_type": "native",
       "category": "content"
     },
@@ -495,9 +495,9 @@
       "file_prefix": "plexmediaserver",
       "display_name": "Plex",
       "description": "Plex Media Server是一款强大的媒体服务器软件，可以管理和串流您的电影、电视剧、音乐和照片到任何设备。支持硬件转码、离线同步等高级功能。",
-      "version": "1.43.1.10576",
-      "fpk_version": "1.43.1.10576",
-      "release_tag": "plex/v1.43.1.10576",
+      "version": "1.43.1.10611",
+      "fpk_version": "1.43.1.10611",
+      "release_tag": "plex/v1.43.1.10611",
       "service_port": 32400,
       "homepage_url": "https://www.plex.tv/media-server-downloads/",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/plex/fnos/ICON_256.PNG",
@@ -505,8 +505,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-09T08:27:04Z",
-      "download_count": 102,
+      "updated_at": "2026-04-11T08:09:33Z",
+      "download_count": 75,
       "app_type": "native",
       "category": "media"
     },
@@ -527,30 +527,9 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:51Z",
-      "download_count": 220,
+      "download_count": 231,
       "app_type": "native",
       "category": "download"
-    },
-    {
-      "slug": "sun-panel",
-      "appname": "sun-panel",
-      "file_prefix": "sun-panel",
-      "display_name": "Sun-Panel",
-      "description": "服务器/NAS导航面板，支持多账户和Docker容器管理",
-      "version": "1.8.1",
-      "fpk_version": "1.8.1-r3",
-      "release_tag": "sun-panel/v1.8.1-r3",
-      "service_port": 3002,
-      "homepage_url": "https://doc.sun-panel.top/zh_cn",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/sun-panel/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-03-26T16:23:45Z",
-      "download_count": 13,
-      "app_type": "native",
-      "category": "system"
     },
     {
       "slug": "syncthing",
@@ -569,7 +548,7 @@
         "arm"
       ],
       "updated_at": "2026-04-10T08:27:06Z",
-      "download_count": 32,
+      "download_count": 35,
       "app_type": "native",
       "category": "download"
     },
@@ -611,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:20Z",
-      "download_count": 53,
+      "download_count": 58,
       "app_type": "docker",
       "category": "download"
     },
