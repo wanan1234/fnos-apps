@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-15T09:27:42Z",
+  "generated_at": "2026-04-16T09:17:42Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-04-15T08:29:42Z",
-      "download_count": 16,
+      "download_count": 24,
       "app_type": "docker",
       "category": "content"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-04-15T08:29:37Z",
-      "download_count": 7,
+      "download_count": 10,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:53Z",
-      "download_count": 27,
+      "download_count": 28,
       "app_type": "docker",
       "category": "content"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:27Z",
-      "download_count": 241,
+      "download_count": 248,
       "app_type": "docker",
       "category": "browser"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-04-15T08:29:43Z",
-      "download_count": 10,
+      "download_count": 11,
       "app_type": "native",
       "category": "system"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:32Z",
-      "download_count": 299,
+      "download_count": 308,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:14Z",
-      "download_count": 385,
+      "download_count": 397,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-04-07T08:21:47Z",
-      "download_count": 2428,
+      "download_count": 2488,
       "app_type": "native",
       "category": "store"
     },
@@ -238,6 +238,27 @@
       "category": "download"
     },
     {
+      "slug": "gotify",
+      "appname": "gotify",
+      "file_prefix": "gotify",
+      "display_name": "Gotify",
+      "description": "Gotify 是一个简单的自托管推送通知服务器，支持通过 REST API 发送和接收消息。",
+      "version": "2.9.1",
+      "fpk_version": "2.9.1",
+      "release_tag": "gotify/v2.9.1",
+      "service_port": 8070,
+      "homepage_url": "https://gotify.net",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/gotify/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-04-16T08:29:22Z",
+      "download_count": 6,
+      "app_type": "native",
+      "category": "system"
+    },
+    {
       "slug": "immich",
       "appname": "immich",
       "file_prefix": "immich",
@@ -254,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-04-14T08:29:38Z",
-      "download_count": 108,
+      "download_count": 133,
       "app_type": "docker",
       "category": "media"
     },
@@ -275,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:28:05Z",
-      "download_count": 361,
+      "download_count": 369,
       "app_type": "native",
       "category": "media"
     },
@@ -296,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:18Z",
-      "download_count": 33,
+      "download_count": 36,
       "app_type": "docker",
       "category": "media"
     },
@@ -338,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:13Z",
-      "download_count": 39,
+      "download_count": 42,
       "app_type": "docker",
       "category": "media"
     },
@@ -359,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:10Z",
-      "download_count": 21,
+      "download_count": 22,
       "app_type": "native",
       "category": "content"
     },
@@ -380,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-04-15T08:29:45Z",
-      "download_count": 36,
+      "download_count": 40,
       "app_type": "docker",
       "category": "content"
     },
@@ -401,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-04-13T08:37:09Z",
-      "download_count": 109,
+      "download_count": 110,
       "app_type": "native",
       "category": "media"
     },
@@ -422,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-04-15T08:29:40Z",
-      "download_count": 15,
+      "download_count": 17,
       "app_type": "native",
       "category": "system"
     },
@@ -443,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:38Z",
-      "download_count": 47,
+      "download_count": 51,
       "app_type": "native",
       "category": "system"
     },
@@ -485,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-04-11T08:09:33Z",
-      "download_count": 143,
+      "download_count": 154,
       "app_type": "native",
       "category": "media"
     },
@@ -506,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:51Z",
-      "download_count": 268,
+      "download_count": 282,
       "app_type": "native",
       "category": "download"
     },
@@ -553,6 +574,27 @@
       "category": "download"
     },
     {
+      "slug": "tinymediamanager",
+      "appname": "tinymediamanager",
+      "file_prefix": "tinymediamanager",
+      "display_name": "tinyMediaManager",
+      "description": "影视文件元数据管理工具，支持从 TheMovieDB、IMDb 刮削元数据，为 Kodi、Emby、Jellyfin、Plex 创建 NFO 文件，自动重命名和整理。含内置 JRE，通过虚拟显示运行。",
+      "version": "5.2.11",
+      "fpk_version": "5.2.11",
+      "release_tag": "tinymediamanager/v5.2.11",
+      "service_port": 5800,
+      "homepage_url": "https://www.tinymediamanager.org",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/tinymediamanager/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-04-16T08:29:15Z",
+      "download_count": 73,
+      "app_type": "docker",
+      "category": "media"
+    },
+    {
       "slug": "transmission",
       "appname": "transmission",
       "file_prefix": "transmission",
@@ -569,7 +611,7 @@
         "arm"
       ],
       "updated_at": "2026-04-15T08:29:39Z",
-      "download_count": 45,
+      "download_count": 46,
       "app_type": "docker",
       "category": "download"
     },
@@ -590,29 +632,8 @@
         "arm"
       ],
       "updated_at": "2026-04-14T08:29:41Z",
-      "download_count": 39,
+      "download_count": 41,
       "app_type": "docker",
-      "category": "system"
-    },
-    {
-      "slug": "wolgoweb",
-      "appname": "wolgoweb",
-      "file_prefix": "wolgoweb",
-      "display_name": "WolGoWeb",
-      "description": "WolGoWeb 是基于 Golang 的远程唤醒 WebAPI 工具，用于在局域网中通过网页唤醒主机。",
-      "version": "1.7.71",
-      "fpk_version": "1.7.71-r3",
-      "release_tag": "wolgoweb/v1.7.71-r3",
-      "service_port": 9090,
-      "homepage_url": "https://github.com/xiaoxinpro/WolGoWeb",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/wolgoweb/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-03-26T16:24:27Z",
-      "download_count": 9,
-      "app_type": "native",
       "category": "system"
     }
   ]
