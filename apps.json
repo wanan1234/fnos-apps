@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-16T09:21:22Z",
+  "generated_at": "2026-04-17T09:07:50Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -12,9 +12,9 @@
       "file_prefix": "adguardhome",
       "display_name": "AdGuardHome",
       "description": "AdGuardHome 是一个网络范围的广告和跟踪器拦截 DNS 服务器，支持 DNS-over-HTTPS、DNS-over-TLS。",
-      "version": "0.107.73",
-      "fpk_version": "0.107.73-r3",
-      "release_tag": "adguardhome/v0.107.73-r3",
+      "version": "0.107.74",
+      "fpk_version": "0.107.74",
+      "release_tag": "adguardhome/v0.107.74",
       "service_port": 3080,
       "homepage_url": "https://adguard.com/adguard-home/overview.html",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/adguardhome/fnos/ICON_256.PNG",
@@ -22,8 +22,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-26T16:24:42Z",
-      "download_count": 29,
+      "updated_at": "2026-04-17T08:29:15Z",
+      "download_count": 31,
       "app_type": "docker",
       "category": "system"
     },
@@ -33,9 +33,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "3.0.27",
-      "fpk_version": "3.0.27",
-      "release_tag": "ani-rss/v3.0.27",
+      "version": "3.0.28",
+      "fpk_version": "3.0.28",
+      "release_tag": "ani-rss/v3.0.28",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -43,8 +43,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-15T08:29:42Z",
-      "download_count": 24,
+      "updated_at": "2026-04-17T08:29:14Z",
+      "download_count": 22,
       "app_type": "docker",
       "category": "content"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:27Z",
-      "download_count": 248,
+      "download_count": 258,
       "app_type": "docker",
       "category": "browser"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:32Z",
-      "download_count": 308,
+      "download_count": 317,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:14Z",
-      "download_count": 397,
+      "download_count": 403,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,30 +212,9 @@
         "arm"
       ],
       "updated_at": "2026-04-07T08:21:47Z",
-      "download_count": 2488,
+      "download_count": 2560,
       "app_type": "native",
       "category": "store"
-    },
-    {
-      "slug": "gopeed",
-      "appname": "gopeed",
-      "file_prefix": "gopeed",
-      "display_name": "Gopeed",
-      "description": "Gopeed是一款支持HTTP、BitTorrent、Magnet等协议的高速下载器。",
-      "version": "1.9.3",
-      "fpk_version": "1.9.3-r1",
-      "release_tag": "gopeed/v1.9.3-r1",
-      "service_port": 9999,
-      "homepage_url": "https://gopeed.com",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/gopeed/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-03-26T16:24:47Z",
-      "download_count": 110,
-      "app_type": "native",
-      "category": "download"
     },
     {
       "slug": "gotify",
@@ -254,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:22Z",
-      "download_count": 6,
+      "download_count": 8,
       "app_type": "native",
       "category": "system"
     },
@@ -275,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-04-14T08:29:38Z",
-      "download_count": 133,
+      "download_count": 142,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:28:05Z",
-      "download_count": 369,
+      "download_count": 373,
       "app_type": "native",
       "category": "media"
     },
@@ -338,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:09Z",
-      "download_count": 30,
+      "download_count": 32,
       "app_type": "docker",
       "category": "content"
     },
@@ -359,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:13Z",
-      "download_count": 42,
+      "download_count": 43,
       "app_type": "docker",
       "category": "media"
     },
@@ -380,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:10Z",
-      "download_count": 22,
+      "download_count": 23,
       "app_type": "native",
       "category": "content"
     },
@@ -390,9 +369,9 @@
       "file_prefix": "moviepilot",
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
-      "version": "2.9.30",
-      "fpk_version": "2.9.30",
-      "release_tag": "moviepilot/v2.9.30",
+      "version": "2.10.1",
+      "fpk_version": "2.10.1",
+      "release_tag": "moviepilot/v2.10.1",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -400,8 +379,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-15T08:29:45Z",
-      "download_count": 40,
+      "updated_at": "2026-04-17T08:29:14Z",
+      "download_count": 43,
       "app_type": "docker",
       "category": "content"
     },
@@ -422,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-04-13T08:37:09Z",
-      "download_count": 110,
+      "download_count": 114,
       "app_type": "native",
       "category": "media"
     },
@@ -485,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-04-10T08:27:17Z",
-      "download_count": 36,
+      "download_count": 39,
       "app_type": "native",
       "category": "content"
     },
@@ -506,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-04-11T08:09:33Z",
-      "download_count": 154,
+      "download_count": 156,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:24:51Z",
-      "download_count": 282,
+      "download_count": 299,
       "app_type": "native",
       "category": "download"
     },
@@ -569,7 +548,7 @@
         "arm"
       ],
       "updated_at": "2026-04-10T08:27:06Z",
-      "download_count": 41,
+      "download_count": 42,
       "app_type": "native",
       "category": "download"
     },
@@ -590,7 +569,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:15Z",
-      "download_count": 73,
+      "download_count": 85,
       "app_type": "docker",
       "category": "media"
     },
@@ -611,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-04-15T08:29:39Z",
-      "download_count": 46,
+      "download_count": 53,
       "app_type": "docker",
       "category": "download"
     },
@@ -634,6 +613,27 @@
       "updated_at": "2026-04-14T08:29:41Z",
       "download_count": 41,
       "app_type": "docker",
+      "category": "system"
+    },
+    {
+      "slug": "wolgoweb",
+      "appname": "wolgoweb",
+      "file_prefix": "wolgoweb",
+      "display_name": "WolGoWeb",
+      "description": "WolGoWeb 是基于 Golang 的远程唤醒 WebAPI 工具，用于在局域网中通过网页唤醒主机。",
+      "version": "1.7.71",
+      "fpk_version": "1.7.71",
+      "release_tag": "wolgoweb/v1.7.71",
+      "service_port": 9090,
+      "homepage_url": "https://github.com/xiaoxinpro/WolGoWeb",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/wolgoweb/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-04-17T08:29:20Z",
+      "download_count": 0,
+      "app_type": "native",
       "category": "system"
     }
   ]
