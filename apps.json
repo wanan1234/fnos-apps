@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-17T09:19:34Z",
+  "generated_at": "2026-04-18T08:42:04Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-04-17T08:29:15Z",
-      "download_count": 31,
+      "download_count": 34,
       "app_type": "docker",
       "category": "system"
     },
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-04-17T08:29:14Z",
-      "download_count": 22,
+      "download_count": 27,
       "app_type": "docker",
       "category": "content"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-04-15T08:29:37Z",
-      "download_count": 10,
+      "download_count": 11,
       "app_type": "docker",
       "category": "content"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:27Z",
-      "download_count": 258,
+      "download_count": 269,
       "app_type": "docker",
       "category": "browser"
     },
@@ -138,9 +138,9 @@
       "file_prefix": "ddns-go",
       "display_name": "DDNS-GO",
       "description": "DDNS-GO 是一个简单好用的 DDNS 工具，支持阿里云、腾讯云、Cloudflare 等多个 DNS 服务商。",
-      "version": "6.16.7",
-      "fpk_version": "6.16.7",
-      "release_tag": "ddns-go/v6.16.7",
+      "version": "6.16.8",
+      "fpk_version": "6.16.8",
+      "release_tag": "ddns-go/v6.16.8",
       "service_port": 9876,
       "homepage_url": "https://github.com/jeessy2/ddns-go",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ddns-go/fnos/ICON_256.PNG",
@@ -148,8 +148,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-15T08:29:43Z",
-      "download_count": 11,
+      "updated_at": "2026-04-18T08:11:17Z",
+      "download_count": 13,
       "app_type": "native",
       "category": "system"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:32Z",
-      "download_count": 317,
+      "download_count": 342,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:14Z",
-      "download_count": 403,
+      "download_count": 412,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,9 +212,30 @@
         "arm"
       ],
       "updated_at": "2026-04-07T08:21:47Z",
-      "download_count": 2560,
+      "download_count": 2612,
       "app_type": "native",
       "category": "store"
+    },
+    {
+      "slug": "gopeed",
+      "appname": "gopeed",
+      "file_prefix": "gopeed",
+      "display_name": "Gopeed",
+      "description": "Gopeed是一款支持HTTP、BitTorrent、Magnet等协议的高速下载器。",
+      "version": "1.9.3",
+      "fpk_version": "1.9.3",
+      "release_tag": "gopeed/v1.9.3",
+      "service_port": 9999,
+      "homepage_url": "https://gopeed.com",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/gopeed/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-04-18T08:11:12Z",
+      "download_count": 34,
+      "app_type": "native",
+      "category": "download"
     },
     {
       "slug": "gotify",
@@ -254,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-04-14T08:29:38Z",
-      "download_count": 142,
+      "download_count": 153,
       "app_type": "docker",
       "category": "media"
     },
@@ -275,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:28:05Z",
-      "download_count": 373,
+      "download_count": 408,
       "app_type": "native",
       "category": "media"
     },
@@ -380,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-04-17T08:29:14Z",
-      "download_count": 43,
+      "download_count": 46,
       "app_type": "docker",
       "category": "content"
     },
@@ -401,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-04-13T08:37:09Z",
-      "download_count": 114,
+      "download_count": 119,
       "app_type": "native",
       "category": "media"
     },
@@ -464,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-04-10T08:27:17Z",
-      "download_count": 39,
+      "download_count": 47,
       "app_type": "native",
       "category": "content"
     },
@@ -485,30 +506,9 @@
         "arm"
       ],
       "updated_at": "2026-04-11T08:09:33Z",
-      "download_count": 156,
+      "download_count": 158,
       "app_type": "native",
       "category": "media"
-    },
-    {
-      "slug": "qbittorrent",
-      "appname": "qBittorrent",
-      "file_prefix": "qBittorrent",
-      "display_name": "qBittorrent",
-      "description": "qBittorrent是一个轻量级BitTorrent客户端，简单易用，功能强大。默认用户名admin，密码adminadmin。",
-      "version": "5.1.4",
-      "fpk_version": "5.1.4-r3",
-      "release_tag": "qbittorrent/v5.1.4-r3",
-      "service_port": 8085,
-      "homepage_url": "https://github.com/userdocs/qbittorrent-nox-static",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/qbittorrent/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-03-26T16:24:51Z",
-      "download_count": 299,
-      "app_type": "native",
-      "category": "download"
     },
     {
       "slug": "sun-panel",
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:35Z",
-      "download_count": 7,
+      "download_count": 10,
       "app_type": "native",
       "category": "system"
     },
@@ -569,7 +569,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:15Z",
-      "download_count": 85,
+      "download_count": 88,
       "app_type": "docker",
       "category": "media"
     },
@@ -590,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-04-15T08:29:39Z",
-      "download_count": 53,
+      "download_count": 56,
       "app_type": "docker",
       "category": "download"
     },
@@ -611,7 +611,7 @@
         "arm"
       ],
       "updated_at": "2026-04-14T08:29:41Z",
-      "download_count": 41,
+      "download_count": 42,
       "app_type": "docker",
       "category": "system"
     },
@@ -632,7 +632,7 @@
         "arm"
       ],
       "updated_at": "2026-04-17T08:29:20Z",
-      "download_count": 0,
+      "download_count": 4,
       "app_type": "native",
       "category": "system"
     }
