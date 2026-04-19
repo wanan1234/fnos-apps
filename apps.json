@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-19T08:47:31Z",
+  "generated_at": "2026-04-19T08:56:25Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:18Z",
-      "download_count": 36,
+      "download_count": 38,
       "app_type": "docker",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:09Z",
-      "download_count": 36,
+      "download_count": 38,
       "app_type": "docker",
       "category": "content"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:13Z",
-      "download_count": 45,
+      "download_count": 47,
       "app_type": "docker",
       "category": "media"
     },
@@ -359,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:10Z",
-      "download_count": 30,
+      "download_count": 32,
       "app_type": "native",
       "category": "content"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-04-19T08:16:39Z",
-      "download_count": 20,
+      "download_count": 22,
       "app_type": "docker",
       "category": "content"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-04-13T08:37:09Z",
-      "download_count": 123,
+      "download_count": 125,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-04-19T08:16:39Z",
-      "download_count": 50,
+      "download_count": 52,
       "app_type": "native",
       "category": "system"
     },
@@ -464,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-04-10T08:27:17Z",
-      "download_count": 48,
+      "download_count": 50,
       "app_type": "native",
       "category": "content"
     },
@@ -485,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-04-11T08:09:33Z",
-      "download_count": 170,
+      "download_count": 172,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:35Z",
-      "download_count": 11,
+      "download_count": 13,
       "app_type": "native",
       "category": "system"
     },
@@ -548,7 +548,7 @@
         "arm"
       ],
       "updated_at": "2026-04-10T08:27:06Z",
-      "download_count": 44,
+      "download_count": 46,
       "app_type": "native",
       "category": "download"
     },
