@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-18T08:42:04Z",
+  "generated_at": "2026-04-19T08:45:17Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-04-17T08:29:15Z",
-      "download_count": 34,
+      "download_count": 39,
       "app_type": "docker",
       "category": "system"
     },
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-04-17T08:29:14Z",
-      "download_count": 27,
+      "download_count": 37,
       "app_type": "docker",
       "category": "content"
     },
@@ -65,28 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-04-15T08:29:37Z",
-      "download_count": 11,
-      "app_type": "docker",
-      "category": "content"
-    },
-    {
-      "slug": "auto-bangumi",
-      "appname": "auto-bangumi",
-      "file_prefix": "auto-bangumi",
-      "display_name": "AutoBangumi",
-      "description": "基于 RSS 的全自动追番下载整理工具，支持 Mikan 等数据源，自动下载并重命名为 Plex/Jellyfin 兼容格式。",
-      "version": "3.2.6",
-      "fpk_version": "3.2.6-r3",
-      "release_tag": "auto-bangumi/v3.2.6-r3",
-      "service_port": 7892,
-      "homepage_url": "https://github.com/EstrellaXD/Auto_Bangumi",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/auto-bangumi/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-03-26T16:24:53Z",
-      "download_count": 28,
+      "download_count": 14,
       "app_type": "docker",
       "category": "content"
     },
@@ -107,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:20Z",
-      "download_count": 25,
+      "download_count": 27,
       "app_type": "native",
       "category": "system"
     },
@@ -128,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:27Z",
-      "download_count": 269,
+      "download_count": 293,
       "app_type": "docker",
       "category": "browser"
     },
@@ -138,9 +117,9 @@
       "file_prefix": "ddns-go",
       "display_name": "DDNS-GO",
       "description": "DDNS-GO 是一个简单好用的 DDNS 工具，支持阿里云、腾讯云、Cloudflare 等多个 DNS 服务商。",
-      "version": "6.16.8",
-      "fpk_version": "6.16.8",
-      "release_tag": "ddns-go/v6.16.8",
+      "version": "6.16.9",
+      "fpk_version": "6.16.9",
+      "release_tag": "ddns-go/v6.16.9",
       "service_port": 9876,
       "homepage_url": "https://github.com/jeessy2/ddns-go",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ddns-go/fnos/ICON_256.PNG",
@@ -148,8 +127,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-18T08:11:17Z",
-      "download_count": 13,
+      "updated_at": "2026-04-19T08:16:29Z",
+      "download_count": 14,
       "app_type": "native",
       "category": "system"
     },
@@ -170,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:32Z",
-      "download_count": 342,
+      "download_count": 354,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:14Z",
-      "download_count": 412,
+      "download_count": 427,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-04-07T08:21:47Z",
-      "download_count": 2612,
+      "download_count": 2702,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-04-18T08:11:12Z",
-      "download_count": 34,
+      "download_count": 49,
       "app_type": "native",
       "category": "download"
     },
@@ -254,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:22Z",
-      "download_count": 8,
+      "download_count": 10,
       "app_type": "native",
       "category": "system"
     },
@@ -275,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-04-14T08:29:38Z",
-      "download_count": 153,
+      "download_count": 162,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:28:05Z",
-      "download_count": 408,
+      "download_count": 440,
       "app_type": "native",
       "category": "media"
     },
@@ -338,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:09Z",
-      "download_count": 32,
+      "download_count": 36,
       "app_type": "docker",
       "category": "content"
     },
@@ -359,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:13Z",
-      "download_count": 43,
+      "download_count": 45,
       "app_type": "docker",
       "category": "media"
     },
@@ -380,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:10Z",
-      "download_count": 23,
+      "download_count": 30,
       "app_type": "native",
       "category": "content"
     },
@@ -390,9 +369,9 @@
       "file_prefix": "moviepilot",
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
-      "version": "2.10.1",
-      "fpk_version": "2.10.1",
-      "release_tag": "moviepilot/v2.10.1",
+      "version": "2.10.2",
+      "fpk_version": "2.10.2",
+      "release_tag": "moviepilot/v2.10.2",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -400,8 +379,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-17T08:29:14Z",
-      "download_count": 46,
+      "updated_at": "2026-04-19T08:16:39Z",
+      "download_count": 20,
       "app_type": "docker",
       "category": "content"
     },
@@ -422,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-04-13T08:37:09Z",
-      "download_count": 119,
+      "download_count": 123,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-04-15T08:29:40Z",
-      "download_count": 17,
+      "download_count": 18,
       "app_type": "native",
       "category": "system"
     },
@@ -453,9 +432,9 @@
       "file_prefix": "nginx-ui",
       "display_name": "Nginx UI",
       "description": "Nginx可视化管理面板，支持在线编辑配置、一键Reload、SSL证书管理。需搭配Nginx应用使用。",
-      "version": "2.3.6",
-      "fpk_version": "2.3.6",
-      "release_tag": "nginx-ui/v2.3.6",
+      "version": "2.3.7",
+      "fpk_version": "2.3.7",
+      "release_tag": "nginx-ui/v2.3.7",
       "service_port": 9000,
       "homepage_url": "https://github.com/0xJacky/nginx-ui",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx-ui/fnos/ICON_256.PNG",
@@ -463,8 +442,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-08T08:21:38Z",
-      "download_count": 51,
+      "updated_at": "2026-04-19T08:16:39Z",
+      "download_count": 50,
       "app_type": "native",
       "category": "system"
     },
@@ -485,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-04-10T08:27:17Z",
-      "download_count": 47,
+      "download_count": 48,
       "app_type": "native",
       "category": "content"
     },
@@ -506,9 +485,30 @@
         "arm"
       ],
       "updated_at": "2026-04-11T08:09:33Z",
-      "download_count": 158,
+      "download_count": 170,
       "app_type": "native",
       "category": "media"
+    },
+    {
+      "slug": "qbittorrent",
+      "appname": "qBittorrent",
+      "file_prefix": "qBittorrent",
+      "display_name": "qBittorrent",
+      "description": "qBittorrent是一个轻量级BitTorrent客户端，简单易用，功能强大。默认用户名admin，密码adminadmin。",
+      "version": "5.1.4",
+      "fpk_version": "5.1.4",
+      "release_tag": "qbittorrent/v5.1.4",
+      "service_port": 8085,
+      "homepage_url": "https://github.com/userdocs/qbittorrent-nox-static",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/qbittorrent/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-04-19T08:16:41Z",
+      "download_count": 0,
+      "app_type": "native",
+      "category": "download"
     },
     {
       "slug": "sun-panel",
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:35Z",
-      "download_count": 10,
+      "download_count": 11,
       "app_type": "native",
       "category": "system"
     },
@@ -548,7 +548,7 @@
         "arm"
       ],
       "updated_at": "2026-04-10T08:27:06Z",
-      "download_count": 42,
+      "download_count": 44,
       "app_type": "native",
       "category": "download"
     },
@@ -569,7 +569,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:15Z",
-      "download_count": 88,
+      "download_count": 93,
       "app_type": "docker",
       "category": "media"
     },
@@ -590,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-04-15T08:29:39Z",
-      "download_count": 56,
+      "download_count": 58,
       "app_type": "docker",
       "category": "download"
     },
@@ -611,7 +611,7 @@
         "arm"
       ],
       "updated_at": "2026-04-14T08:29:41Z",
-      "download_count": 42,
+      "download_count": 44,
       "app_type": "docker",
       "category": "system"
     },
