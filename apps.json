@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-19T08:56:25Z",
+  "generated_at": "2026-04-21T09:19:33Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -54,9 +54,9 @@
       "file_prefix": "audiobookshelf",
       "display_name": "Audiobookshelf",
       "description": "自托管的有声书和播客服务器，支持多用户管理、进度同步和丰富的元数据管理。",
-      "version": "2.33.1",
-      "fpk_version": "2.33.1",
-      "release_tag": "audiobookshelf/v2.33.1",
+      "version": "2.33.2",
+      "fpk_version": "2.33.2",
+      "release_tag": "audiobookshelf/v2.33.2",
       "service_port": 13378,
       "homepage_url": "https://www.audiobookshelf.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/audiobookshelf/fnos/ICON_256.PNG",
@@ -64,8 +64,29 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-15T08:29:37Z",
-      "download_count": 14,
+      "updated_at": "2026-04-20T08:39:57Z",
+      "download_count": 19,
+      "app_type": "docker",
+      "category": "content"
+    },
+    {
+      "slug": "auto-bangumi",
+      "appname": "auto-bangumi",
+      "file_prefix": "auto-bangumi",
+      "display_name": "AutoBangumi",
+      "description": "基于 RSS 的全自动追番下载整理工具，支持 Mikan 等数据源，自动下载并重命名为 Plex/Jellyfin 兼容格式。",
+      "version": "3.2.6",
+      "fpk_version": "3.2.6",
+      "release_tag": "auto-bangumi/v3.2.6",
+      "service_port": 7892,
+      "homepage_url": "https://github.com/EstrellaXD/Auto_Bangumi",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/auto-bangumi/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-04-20T08:39:56Z",
+      "download_count": 12,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:20Z",
-      "download_count": 27,
+      "download_count": 28,
       "app_type": "native",
       "category": "system"
     },
@@ -107,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:27Z",
-      "download_count": 293,
+      "download_count": 309,
       "app_type": "docker",
       "category": "browser"
     },
@@ -117,9 +138,9 @@
       "file_prefix": "ddns-go",
       "display_name": "DDNS-GO",
       "description": "DDNS-GO 是一个简单好用的 DDNS 工具，支持阿里云、腾讯云、Cloudflare 等多个 DNS 服务商。",
-      "version": "6.16.9",
-      "fpk_version": "6.16.9",
-      "release_tag": "ddns-go/v6.16.9",
+      "version": "6.16.10",
+      "fpk_version": "6.16.10",
+      "release_tag": "ddns-go/v6.16.10",
       "service_port": 9876,
       "homepage_url": "https://github.com/jeessy2/ddns-go",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ddns-go/fnos/ICON_256.PNG",
@@ -127,8 +148,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-19T08:16:29Z",
-      "download_count": 14,
+      "updated_at": "2026-04-21T08:31:31Z",
+      "download_count": 19,
       "app_type": "native",
       "category": "system"
     },
@@ -149,30 +170,9 @@
         "arm"
       ],
       "updated_at": "2026-03-26T16:25:32Z",
-      "download_count": 354,
+      "download_count": 372,
       "app_type": "native",
       "category": "media"
-    },
-    {
-      "slug": "firefox",
-      "appname": "firefox",
-      "file_prefix": "firefox",
-      "display_name": "Firefox",
-      "description": "Firefox 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
-      "version": "26.03.1",
-      "fpk_version": "26.03.1-r3",
-      "release_tag": "firefox/v26.03.1-r3",
-      "service_port": 5801,
-      "homepage_url": "https://github.com/jlesage/docker-firefox",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/firefox/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-03-26T16:25:14Z",
-      "download_count": 427,
-      "app_type": "docker",
-      "category": "browser"
     },
     {
       "slug": "fnos-apps-store",
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-04-07T08:21:47Z",
-      "download_count": 2702,
+      "download_count": 2820,
       "app_type": "native",
       "category": "store"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-04-18T08:11:12Z",
-      "download_count": 49,
+      "download_count": 67,
       "app_type": "native",
       "category": "download"
     },
@@ -254,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-04-14T08:29:38Z",
-      "download_count": 164,
+      "download_count": 174,
       "app_type": "docker",
       "category": "media"
     },
@@ -275,51 +275,9 @@
         "arm"
       ],
       "updated_at": "2026-04-06T08:28:05Z",
-      "download_count": 442,
+      "download_count": 447,
       "app_type": "native",
       "category": "media"
-    },
-    {
-      "slug": "kavita",
-      "appname": "kavita",
-      "file_prefix": "kavita",
-      "display_name": "Kavita",
-      "description": "开源的漫画、轻小说和电子书阅读服务器",
-      "version": "0.8.9",
-      "fpk_version": "0.8.9-r3",
-      "release_tag": "kavita/v0.8.9-r3",
-      "service_port": 5000,
-      "homepage_url": "https://github.com/Kareadita/Kavita",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/kavita/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-03-26T16:25:18Z",
-      "download_count": 38,
-      "app_type": "docker",
-      "category": "media"
-    },
-    {
-      "slug": "kodbox",
-      "appname": "kodbox",
-      "file_prefix": "kodbox",
-      "display_name": "KodBox",
-      "description": "KodBox (可道云) 是一个开源的私有云存储和文件管理平台，支持在线文档编辑和多人协作。",
-      "version": "1.63",
-      "fpk_version": "1.63-r3",
-      "release_tag": "kodbox/v1.63-r3",
-      "service_port": 8500,
-      "homepage_url": "https://kodcloud.com",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/kodbox/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-03-26T16:25:09Z",
-      "download_count": 38,
-      "app_type": "docker",
-      "category": "content"
     },
     {
       "slug": "koel",
@@ -338,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-04-08T08:21:13Z",
-      "download_count": 47,
+      "download_count": 50,
       "app_type": "docker",
       "category": "media"
     },
@@ -349,8 +307,8 @@
       "display_name": "Memos",
       "description": "轻量级自托管笔记服务,支持Markdown,适合个人知识管理和日常记录。",
       "version": "0.26.2",
-      "fpk_version": "0.26.2-r3",
-      "release_tag": "memos/v0.26.2-r3",
+      "fpk_version": "0.26.2",
+      "release_tag": "memos/v0.26.2",
       "service_port": 5230,
       "homepage_url": "https://www.usememos.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/memos/fnos/ICON_256.PNG",
@@ -358,8 +316,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-03-26T16:25:10Z",
-      "download_count": 32,
+      "updated_at": "2026-04-21T08:31:34Z",
+      "download_count": 0,
       "app_type": "native",
       "category": "content"
     },
@@ -380,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-04-19T08:16:39Z",
-      "download_count": 22,
+      "download_count": 35,
       "app_type": "docker",
       "category": "content"
     },
@@ -401,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-04-13T08:37:09Z",
-      "download_count": 125,
+      "download_count": 129,
       "app_type": "native",
       "category": "media"
     },
@@ -432,9 +390,9 @@
       "file_prefix": "nginx-ui",
       "display_name": "Nginx UI",
       "description": "Nginx可视化管理面板，支持在线编辑配置、一键Reload、SSL证书管理。需搭配Nginx应用使用。",
-      "version": "2.3.7",
-      "fpk_version": "2.3.7",
-      "release_tag": "nginx-ui/v2.3.7",
+      "version": "2.3.8",
+      "fpk_version": "2.3.8",
+      "release_tag": "nginx-ui/v2.3.8",
       "service_port": 9000,
       "homepage_url": "https://github.com/0xJacky/nginx-ui",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx-ui/fnos/ICON_256.PNG",
@@ -442,8 +400,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-19T08:16:39Z",
-      "download_count": 52,
+      "updated_at": "2026-04-21T08:31:49Z",
+      "download_count": 27,
       "app_type": "native",
       "category": "system"
     },
@@ -464,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-04-10T08:27:17Z",
-      "download_count": 50,
+      "download_count": 55,
       "app_type": "native",
       "category": "content"
     },
@@ -485,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-04-11T08:09:33Z",
-      "download_count": 172,
+      "download_count": 187,
       "app_type": "native",
       "category": "media"
     },
@@ -506,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-04-19T08:16:41Z",
-      "download_count": 0,
+      "download_count": 28,
       "app_type": "native",
       "category": "download"
     },
@@ -548,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-04-10T08:27:06Z",
-      "download_count": 46,
+      "download_count": 50,
       "app_type": "native",
       "category": "download"
     },
@@ -569,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-04-16T08:29:15Z",
-      "download_count": 93,
+      "download_count": 96,
       "app_type": "docker",
       "category": "media"
     },
@@ -611,7 +569,7 @@
         "arm"
       ],
       "updated_at": "2026-04-14T08:29:41Z",
-      "download_count": 44,
+      "download_count": 45,
       "app_type": "docker",
       "category": "system"
     },
@@ -632,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-04-17T08:29:20Z",
-      "download_count": 4,
+      "download_count": 5,
       "app_type": "native",
       "category": "system"
     }
