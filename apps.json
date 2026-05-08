@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-08T09:04:31Z",
+  "generated_at": "2026-05-08T09:23:26Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-04-24T08:38:03Z",
-      "download_count": 209,
+      "download_count": 210,
       "app_type": "native",
       "category": "media"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-05-06T09:13:26Z",
-      "download_count": 2644,
+      "download_count": 2646,
       "app_type": "native",
       "category": "store"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-04-28T08:45:29Z",
-      "download_count": 37,
+      "download_count": 38,
       "app_type": "native",
       "category": "system"
     },
@@ -485,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-04-11T08:09:33Z",
-      "download_count": 313,
+      "download_count": 315,
       "app_type": "native",
       "category": "media"
     },
