@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-09T09:07:08Z",
+  "generated_at": "2026-05-10T09:39:03Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-04-17T08:29:15Z",
-      "download_count": 48,
+      "download_count": 50,
       "app_type": "docker",
       "category": "system"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:27Z",
-      "download_count": 463,
+      "download_count": 478,
       "app_type": "docker",
       "category": "browser"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-05-01T08:35:29Z",
-      "download_count": 12,
+      "download_count": 13,
       "app_type": "native",
       "category": "system"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-04-24T08:38:03Z",
-      "download_count": 217,
+      "download_count": 249,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-04-22T08:30:23Z",
-      "download_count": 320,
+      "download_count": 343,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-05-06T09:13:26Z",
-      "download_count": 2770,
+      "download_count": 2992,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-04-18T08:11:12Z",
-      "download_count": 139,
+      "download_count": 140,
       "app_type": "native",
       "category": "download"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-04-14T08:29:38Z",
-      "download_count": 292,
+      "download_count": 348,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-05-01T08:35:21Z",
-      "download_count": 81,
+      "download_count": 88,
       "app_type": "docker",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-04-22T08:30:20Z",
-      "download_count": 26,
+      "download_count": 27,
       "app_type": "docker",
       "category": "content"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-05-04T08:46:16Z",
-      "download_count": 18,
+      "download_count": 21,
       "app_type": "docker",
       "category": "media"
     },
@@ -359,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-04-29T08:42:07Z",
-      "download_count": 29,
+      "download_count": 33,
       "app_type": "native",
       "category": "content"
     },
@@ -369,9 +369,9 @@
       "file_prefix": "moviepilot",
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
-      "version": "2.10.11",
-      "fpk_version": "2.10.11",
-      "release_tag": "moviepilot/v2.10.11",
+      "version": "2.11.0",
+      "fpk_version": "2.11.0",
+      "release_tag": "moviepilot/v2.11.0",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -379,8 +379,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-08T08:28:04Z",
-      "download_count": 59,
+      "updated_at": "2026-05-10T08:34:06Z",
+      "download_count": 43,
       "app_type": "docker",
       "category": "content"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-04-13T08:37:09Z",
-      "download_count": 151,
+      "download_count": 152,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-04-28T08:45:29Z",
-      "download_count": 39,
+      "download_count": 40,
       "app_type": "native",
       "category": "system"
     },
@@ -464,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-04-27T13:50:49Z",
-      "download_count": 99,
+      "download_count": 127,
       "app_type": "native",
       "category": "content"
     },
@@ -485,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-04-11T08:09:33Z",
-      "download_count": 318,
+      "download_count": 325,
       "app_type": "native",
       "category": "media"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-05-04T08:46:09Z",
-      "download_count": 271,
+      "download_count": 319,
       "app_type": "native",
       "category": "download"
     },
@@ -527,30 +527,9 @@
         "arm"
       ],
       "updated_at": "2026-04-12T08:13:35Z",
-      "download_count": 25,
+      "download_count": 26,
       "app_type": "native",
       "category": "system"
-    },
-    {
-      "slug": "syncthing",
-      "appname": "syncthing",
-      "file_prefix": "syncthing",
-      "display_name": "Syncthing",
-      "description": "开源的文件同步工具，支持多设备间安全同步",
-      "version": "2.0.16",
-      "fpk_version": "2.0.16",
-      "release_tag": "syncthing/v2.0.16",
-      "service_port": 8384,
-      "homepage_url": "https://syncthing.net",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/syncthing/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-04-10T08:27:06Z",
-      "download_count": 78,
-      "app_type": "native",
-      "category": "download"
     },
     {
       "slug": "tinymediamanager",
@@ -590,7 +569,7 @@
         "arm"
       ],
       "updated_at": "2026-05-06T09:13:16Z",
-      "download_count": 40,
+      "download_count": 46,
       "app_type": "docker",
       "category": "download"
     },
