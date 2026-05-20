@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-19T11:24:26Z",
+  "generated_at": "2026-05-20T10:41:03Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -12,9 +12,9 @@
       "file_prefix": "adguardhome",
       "display_name": "AdGuardHome",
       "description": "AdGuardHome 是一个网络范围的广告和跟踪器拦截 DNS 服务器，支持 DNS-over-HTTPS、DNS-over-TLS。",
-      "version": "0.107.74",
-      "fpk_version": "0.107.74",
-      "release_tag": "adguardhome/v0.107.74",
+      "version": "0.107.75",
+      "fpk_version": "0.107.75",
+      "release_tag": "adguardhome/v0.107.75",
       "service_port": 3080,
       "homepage_url": "https://adguard.com/adguard-home/overview.html",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/adguardhome/fnos/ICON_256.PNG",
@@ -22,8 +22,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-04-17T08:29:15Z",
-      "download_count": 67,
+      "updated_at": "2026-05-20T09:01:19Z",
+      "download_count": 59,
       "app_type": "docker",
       "category": "system"
     },
@@ -33,9 +33,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "3.1.33",
-      "fpk_version": "3.1.33",
-      "release_tag": "ani-rss/v3.1.33",
+      "version": "3.1.34",
+      "fpk_version": "3.1.34",
+      "release_tag": "ani-rss/v3.1.34",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -43,7 +43,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-19T09:01:49Z",
+      "updated_at": "2026-05-20T09:01:16Z",
       "download_count": 11,
       "app_type": "docker",
       "category": "content"
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-05-18T09:03:00Z",
-      "download_count": 23,
+      "download_count": 26,
       "app_type": "docker",
       "category": "content"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-05-17T14:45:22Z",
-      "download_count": 237,
+      "download_count": 252,
       "app_type": "docker",
       "category": "browser"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-05-01T08:35:29Z",
-      "download_count": 15,
+      "download_count": 16,
       "app_type": "native",
       "category": "system"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-05-19T09:03:13Z",
-      "download_count": 70,
+      "download_count": 115,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-05-17T14:35:16Z",
-      "download_count": 177,
+      "download_count": 188,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-05-14T12:57:58Z",
-      "download_count": 3078,
+      "download_count": 3195,
       "app_type": "native",
       "category": "store"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-05-15T08:59:02Z",
-      "download_count": 105,
+      "download_count": 113,
       "app_type": "docker",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-05-19T09:01:49Z",
-      "download_count": 4,
+      "download_count": 8,
       "app_type": "docker",
       "category": "media"
     },
@@ -348,9 +348,9 @@
       "file_prefix": "moviepilot",
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
-      "version": "2.12.1",
-      "fpk_version": "2.12.1",
-      "release_tag": "moviepilot/v2.12.1",
+      "version": "2.12.2",
+      "fpk_version": "2.12.2",
+      "release_tag": "moviepilot/v2.12.2",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -358,8 +358,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-18T09:03:07Z",
-      "download_count": 35,
+      "updated_at": "2026-05-20T09:01:17Z",
+      "download_count": 42,
       "app_type": "docker",
       "category": "content"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-05-18T09:03:29Z",
-      "download_count": 29,
+      "download_count": 32,
       "app_type": "native",
       "category": "system"
     },
@@ -427,6 +427,27 @@
       "category": "content"
     },
     {
+      "slug": "plex",
+      "appname": "plexmediaserver",
+      "file_prefix": "plexmediaserver",
+      "display_name": "Plex",
+      "description": "Plex Media Server是一款强大的媒体服务器软件，可以管理和串流您的电影、电视剧、音乐和照片到任何设备。支持硬件转码、离线同步等高级功能。",
+      "version": "1.43.2.10687",
+      "fpk_version": "1.43.2.10687",
+      "release_tag": "plex/v1.43.2.10687",
+      "service_port": 32400,
+      "homepage_url": "https://www.plex.tv/media-server-downloads/",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/plex/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-05-20T09:01:42Z",
+      "download_count": 400,
+      "app_type": "native",
+      "category": "media"
+    },
+    {
       "slug": "qbittorrent",
       "appname": "qBittorrent",
       "file_prefix": "qBittorrent",
@@ -443,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-05-15T04:09:27Z",
-      "download_count": 248,
+      "download_count": 262,
       "app_type": "native",
       "category": "download"
     },
@@ -464,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-05-14T12:57:56Z",
-      "download_count": 89,
+      "download_count": 91,
       "app_type": "native",
       "category": "download"
     },
@@ -485,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-05-15T08:58:59Z",
-      "download_count": 160,
+      "download_count": 163,
       "app_type": "docker",
       "category": "media"
     },
@@ -496,8 +517,8 @@
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
       "version": "4.1.1",
-      "fpk_version": "4.1.1-r1-ls343",
-      "release_tag": "transmission/v4.1.1-r1-ls343",
+      "fpk_version": "4.1.1-r1-ls344",
+      "release_tag": "transmission/v4.1.1-r1-ls344",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -505,8 +526,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-13T08:57:02Z",
-      "download_count": 52,
+      "updated_at": "2026-05-20T09:01:16Z",
+      "download_count": 41,
       "app_type": "docker",
       "category": "download"
     },
