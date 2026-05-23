@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-22T10:52:05Z",
+  "generated_at": "2026-05-23T09:42:49Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -33,9 +33,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "3.1.37",
-      "fpk_version": "3.1.37",
-      "release_tag": "ani-rss/v3.1.37",
+      "version": "3.1.38",
+      "fpk_version": "3.1.38",
+      "release_tag": "ani-rss/v3.1.38",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -43,8 +43,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-22T09:00:33Z",
-      "download_count": 4,
+      "updated_at": "2026-05-23T08:38:40Z",
+      "download_count": 8,
       "app_type": "docker",
       "category": "content"
     },
@@ -70,35 +70,14 @@
       "category": "content"
     },
     {
-      "slug": "auto-bangumi",
-      "appname": "auto-bangumi",
-      "file_prefix": "auto-bangumi",
-      "display_name": "AutoBangumi",
-      "description": "基于 RSS 的全自动追番下载整理工具，支持 Mikan 等数据源，自动下载并重命名为 Plex/Jellyfin 兼容格式。",
-      "version": "3.2.6",
-      "fpk_version": "3.2.6",
-      "release_tag": "auto-bangumi/v3.2.6",
-      "service_port": 7892,
-      "homepage_url": "https://github.com/EstrellaXD/Auto_Bangumi",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/auto-bangumi/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-04-20T08:39:56Z",
-      "download_count": 49,
-      "app_type": "docker",
-      "category": "content"
-    },
-    {
       "slug": "certimate",
       "appname": "certimate",
       "file_prefix": "certimate",
       "display_name": "Certimate",
       "description": "SSL/TLS证书自动化管理工具，支持ACME协议自动申请和续签证书。",
-      "version": "0.4.22",
-      "fpk_version": "0.4.22",
-      "release_tag": "certimate/v0.4.22",
+      "version": "0.4.23",
+      "fpk_version": "0.4.23",
+      "release_tag": "certimate/v0.4.23",
       "service_port": 8090,
       "homepage_url": "https://github.com/certimate-go/certimate",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/certimate/fnos/ICON_256.PNG",
@@ -106,8 +85,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-01T08:35:36Z",
-      "download_count": 32,
+      "updated_at": "2026-05-23T08:38:48Z",
+      "download_count": 22,
       "app_type": "native",
       "category": "system"
     },
@@ -128,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-05-17T14:45:22Z",
-      "download_count": 287,
+      "download_count": 306,
       "app_type": "docker",
       "category": "browser"
     },
@@ -170,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-05-19T09:03:13Z",
-      "download_count": 189,
+      "download_count": 209,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-05-17T14:35:16Z",
-      "download_count": 227,
+      "download_count": 239,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-05-14T12:57:58Z",
-      "download_count": 3384,
+      "download_count": 3499,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-05-14T12:57:59Z",
-      "download_count": 66,
+      "download_count": 75,
       "app_type": "native",
       "category": "download"
     },
@@ -254,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-05-14T12:57:45Z",
-      "download_count": 7,
+      "download_count": 9,
       "app_type": "native",
       "category": "system"
     },
@@ -275,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-05-21T09:02:48Z",
-      "download_count": 694,
+      "download_count": 719,
       "app_type": "native",
       "category": "media"
     },
@@ -296,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-05-15T08:59:02Z",
-      "download_count": 119,
+      "download_count": 125,
       "app_type": "docker",
       "category": "media"
     },
@@ -338,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-05-19T09:01:49Z",
-      "download_count": 11,
+      "download_count": 16,
       "app_type": "docker",
       "category": "media"
     },
@@ -359,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-04-29T08:42:07Z",
-      "download_count": 50,
+      "download_count": 53,
       "app_type": "native",
       "category": "content"
     },
@@ -380,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-05-22T09:00:42Z",
-      "download_count": 29,
+      "download_count": 58,
       "app_type": "docker",
       "category": "content"
     },
@@ -390,9 +369,9 @@
       "file_prefix": "nginxserver",
       "display_name": "Nginx",
       "description": "Nginx是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP代理服务器。",
-      "version": "1.30.1",
-      "fpk_version": "1.30.1-r1",
-      "release_tag": "nginx/v1.30.1-r1",
+      "version": "1.30.2",
+      "fpk_version": "1.30.2",
+      "release_tag": "nginx/v1.30.2",
       "service_port": 8888,
       "homepage_url": "https://nginx.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx/fnos/ICON_256.PNG",
@@ -400,8 +379,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-14T12:57:55Z",
-      "download_count": 25,
+      "updated_at": "2026-05-23T08:38:37Z",
+      "download_count": 19,
       "app_type": "native",
       "category": "system"
     },
@@ -422,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-05-18T09:03:29Z",
-      "download_count": 36,
+      "download_count": 38,
       "app_type": "native",
       "category": "system"
     },
@@ -443,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-04-27T13:50:49Z",
-      "download_count": 147,
+      "download_count": 152,
       "app_type": "native",
       "category": "content"
     },
@@ -464,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-05-20T09:01:42Z",
-      "download_count": 439,
+      "download_count": 472,
       "app_type": "native",
       "category": "media"
     },
@@ -485,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-05-15T04:09:27Z",
-      "download_count": 301,
+      "download_count": 322,
       "app_type": "native",
       "category": "download"
     },
@@ -506,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-05-14T12:57:56Z",
-      "download_count": 95,
+      "download_count": 98,
       "app_type": "native",
       "category": "download"
     },
@@ -527,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-05-15T08:58:59Z",
-      "download_count": 168,
+      "download_count": 171,
       "app_type": "docker",
       "category": "media"
     },
@@ -548,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-05-20T09:01:16Z",
-      "download_count": 44,
+      "download_count": 45,
       "app_type": "docker",
       "category": "download"
     },
@@ -569,7 +548,7 @@
         "arm"
       ],
       "updated_at": "2026-05-04T08:46:13Z",
-      "download_count": 84,
+      "download_count": 86,
       "app_type": "docker",
       "category": "system"
     },
