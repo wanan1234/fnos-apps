@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-03T12:42:17Z",
+  "generated_at": "2026-06-04T11:18:46Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-06-03T09:29:55Z",
-      "download_count": 23,
+      "download_count": 24,
       "app_type": "docker",
       "category": "system"
     },
@@ -33,9 +33,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "3.1.45",
-      "fpk_version": "3.1.45",
-      "release_tag": "ani-rss/v3.1.45",
+      "version": "3.1.46",
+      "fpk_version": "3.1.46",
+      "release_tag": "ani-rss/v3.1.46",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -43,8 +43,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-02T09:20:48Z",
-      "download_count": 35,
+      "updated_at": "2026-06-04T09:14:08Z",
+      "download_count": 22,
       "app_type": "docker",
       "category": "content"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-05-27T09:02:22Z",
-      "download_count": 11,
+      "download_count": 12,
       "app_type": "native",
       "category": "system"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:43Z",
-      "download_count": 296,
+      "download_count": 308,
       "app_type": "docker",
       "category": "browser"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:41Z",
-      "download_count": 172,
+      "download_count": 174,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:37Z",
-      "download_count": 243,
+      "download_count": 253,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:29Z",
-      "download_count": 3504,
+      "download_count": 3563,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:40Z",
-      "download_count": 96,
+      "download_count": 102,
       "app_type": "native",
       "category": "download"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:02Z",
-      "download_count": 205,
+      "download_count": 211,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-05-25T09:14:58Z",
-      "download_count": 679,
+      "download_count": 682,
       "app_type": "native",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:27Z",
-      "download_count": 117,
+      "download_count": 120,
       "app_type": "docker",
       "category": "media"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-06-01T09:43:45Z",
-      "download_count": 15,
+      "download_count": 17,
       "app_type": "native",
       "category": "content"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-06-03T09:29:56Z",
-      "download_count": 62,
+      "download_count": 67,
       "app_type": "docker",
       "category": "content"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:57Z",
-      "download_count": 28,
+      "download_count": 29,
       "app_type": "native",
       "category": "system"
     },
@@ -485,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-05-26T09:03:17Z",
-      "download_count": 66,
+      "download_count": 81,
       "app_type": "native",
       "category": "content"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:34Z",
-      "download_count": 501,
+      "download_count": 504,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-05-26T09:03:09Z",
-      "download_count": 341,
+      "download_count": 355,
       "app_type": "native",
       "category": "download"
     },
@@ -548,7 +548,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:47Z",
-      "download_count": 9,
+      "download_count": 11,
       "app_type": "native",
       "category": "system"
     },
@@ -579,9 +579,9 @@
       "file_prefix": "transmission",
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
-      "version": "4.1.1",
-      "fpk_version": "4.1.1-r1-ls346",
-      "release_tag": "transmission/v4.1.1-r1-ls346",
+      "version": "4.1.2",
+      "fpk_version": "4.1.2-r0-ls347",
+      "release_tag": "transmission/v4.1.2-r0-ls347",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -589,8 +589,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-01T09:43:46Z",
-      "download_count": 28,
+      "updated_at": "2026-06-04T09:14:14Z",
+      "download_count": 30,
       "app_type": "docker",
       "category": "download"
     },
@@ -611,7 +611,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:45Z",
-      "download_count": 72,
+      "download_count": 73,
       "app_type": "docker",
       "category": "system"
     },
