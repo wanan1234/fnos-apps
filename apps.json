@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-06T10:14:31Z",
+  "generated_at": "2026-06-07T10:19:17Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-06-04T09:14:08Z",
-      "download_count": 35,
+      "download_count": 45,
       "app_type": "docker",
       "category": "content"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-05-29T09:02:37Z",
-      "download_count": 21,
+      "download_count": 23,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:55Z",
-      "download_count": 20,
+      "download_count": 21,
       "app_type": "docker",
       "category": "content"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:43Z",
-      "download_count": 335,
+      "download_count": 343,
       "app_type": "docker",
       "category": "browser"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:41Z",
-      "download_count": 212,
+      "download_count": 243,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:37Z",
-      "download_count": 284,
+      "download_count": 296,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:29Z",
-      "download_count": 3707,
+      "download_count": 3759,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:40Z",
-      "download_count": 108,
+      "download_count": 113,
       "app_type": "native",
       "category": "download"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:02Z",
-      "download_count": 220,
+      "download_count": 228,
       "app_type": "docker",
       "category": "media"
     },
@@ -285,9 +285,9 @@
       "file_prefix": "jellyfin",
       "display_name": "Jellyfin",
       "description": "Jellyfin 是一款免费开源的媒体系统，让您管理和播放您的媒体内容。支持电影、电视剧、音乐等多种媒体类型的管理和流式传输。",
-      "version": "10.11.10",
-      "fpk_version": "10.11.10",
-      "release_tag": "jellyfin/v10.11.10",
+      "version": "10.11.11",
+      "fpk_version": "10.11.11",
+      "release_tag": "jellyfin/v10.11.11",
       "service_port": 8097,
       "homepage_url": "https://jellyfin.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/jellyfin/fnos/ICON_256.PNG",
@@ -295,8 +295,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-25T09:14:58Z",
-      "download_count": 711,
+      "updated_at": "2026-06-07T09:00:22Z",
+      "download_count": 204,
       "app_type": "native",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:27Z",
-      "download_count": 122,
+      "download_count": 124,
       "app_type": "docker",
       "category": "media"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-06-06T08:49:44Z",
-      "download_count": 16,
+      "download_count": 21,
       "app_type": "native",
       "category": "content"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-06-05T09:02:14Z",
-      "download_count": 48,
+      "download_count": 52,
       "app_type": "docker",
       "category": "content"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:34Z",
-      "download_count": 515,
+      "download_count": 519,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-05-26T09:03:09Z",
-      "download_count": 372,
+      "download_count": 383,
       "app_type": "native",
       "category": "download"
     },
@@ -569,7 +569,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:15Z",
-      "download_count": 178,
+      "download_count": 179,
       "app_type": "docker",
       "category": "media"
     },
@@ -590,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-06-04T09:14:14Z",
-      "download_count": 37,
+      "download_count": 38,
       "app_type": "docker",
       "category": "download"
     },
@@ -611,7 +611,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:45Z",
-      "download_count": 76,
+      "download_count": 79,
       "app_type": "docker",
       "category": "system"
     },
