@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-09T11:18:01Z",
+  "generated_at": "2026-06-10T11:30:01Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-06-03T09:29:55Z",
-      "download_count": 35,
+      "download_count": 40,
       "app_type": "docker",
       "category": "system"
     },
@@ -33,9 +33,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "3.1.47",
-      "fpk_version": "3.1.47",
-      "release_tag": "ani-rss/v3.1.47",
+      "version": "3.1.48",
+      "fpk_version": "3.1.48",
+      "release_tag": "ani-rss/v3.1.48",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -43,8 +43,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-08T09:28:49Z",
-      "download_count": 56,
+      "updated_at": "2026-06-10T09:07:59Z",
+      "download_count": 40,
       "app_type": "docker",
       "category": "content"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-05-29T09:02:37Z",
-      "download_count": 29,
+      "download_count": 32,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:55Z",
-      "download_count": 22,
+      "download_count": 23,
       "app_type": "docker",
       "category": "content"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:43Z",
-      "download_count": 375,
+      "download_count": 392,
       "app_type": "docker",
       "category": "browser"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:41Z",
-      "download_count": 289,
+      "download_count": 306,
       "app_type": "native",
       "category": "media"
     },
@@ -191,30 +191,9 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:37Z",
-      "download_count": 313,
+      "download_count": 329,
       "app_type": "docker",
       "category": "browser"
-    },
-    {
-      "slug": "fnos-apps-store",
-      "appname": "fnos-apps-store",
-      "file_prefix": "fnos-apps-store",
-      "display_name": "fnOS Apps",
-      "description": "fnOS第三方应用中心，支持一键安装、更新和卸载来自conversun/fnos-apps的所有应用。",
-      "version": "1.7.9",
-      "fpk_version": "1.7.9-r2",
-      "release_tag": "fnos-apps-store/v1.7.9-r2",
-      "service_port": 8011,
-      "homepage_url": "https://github.com/conversun/fnos-store",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnos-apps-store/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-05-24T18:54:29Z",
-      "download_count": 3883,
-      "app_type": "native",
-      "category": "store"
     },
     {
       "slug": "gopeed",
@@ -275,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:02Z",
-      "download_count": 253,
+      "download_count": 254,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-06-07T09:00:22Z",
-      "download_count": 262,
+      "download_count": 296,
       "app_type": "native",
       "category": "media"
     },
@@ -338,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:25Z",
-      "download_count": 14,
+      "download_count": 16,
       "app_type": "docker",
       "category": "content"
     },
@@ -380,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-06-06T08:49:44Z",
-      "download_count": 27,
+      "download_count": 28,
       "app_type": "native",
       "category": "content"
     },
@@ -401,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-06-09T09:01:56Z",
-      "download_count": 42,
+      "download_count": 56,
       "app_type": "docker",
       "category": "content"
     },
@@ -422,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-06-09T09:02:10Z",
-      "download_count": 96,
+      "download_count": 101,
       "app_type": "native",
       "category": "media"
     },
@@ -485,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-05-26T09:03:17Z",
-      "download_count": 98,
+      "download_count": 99,
       "app_type": "native",
       "category": "content"
     },
@@ -506,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:34Z",
-      "download_count": 731,
+      "download_count": 737,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-05-26T09:03:09Z",
-      "download_count": 417,
+      "download_count": 425,
       "app_type": "native",
       "category": "download"
     },
@@ -548,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:47Z",
-      "download_count": 15,
+      "download_count": 16,
       "app_type": "native",
       "category": "system"
     },
@@ -580,8 +559,8 @@
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
       "version": "4.1.2",
-      "fpk_version": "4.1.2-r0-ls347",
-      "release_tag": "transmission/v4.1.2-r0-ls347",
+      "fpk_version": "4.1.2-r0-ls348",
+      "release_tag": "transmission/v4.1.2-r0-ls348",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -589,8 +568,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-04T09:14:14Z",
-      "download_count": 48,
+      "updated_at": "2026-06-10T09:08:20Z",
+      "download_count": 35,
       "app_type": "docker",
       "category": "download"
     },
@@ -611,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:45Z",
-      "download_count": 83,
+      "download_count": 84,
       "app_type": "docker",
       "category": "system"
     },
