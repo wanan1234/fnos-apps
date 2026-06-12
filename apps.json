@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-11T12:14:27Z",
+  "generated_at": "2026-06-12T11:33:53Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-06-03T09:29:55Z",
-      "download_count": 40,
+      "download_count": 41,
       "app_type": "docker",
       "category": "system"
     },
@@ -33,9 +33,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "3.1.49",
-      "fpk_version": "3.1.49",
-      "release_tag": "ani-rss/v3.1.49",
+      "version": "3.1.50",
+      "fpk_version": "3.1.50",
+      "release_tag": "ani-rss/v3.1.50",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -43,8 +43,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-11T09:22:55Z",
-      "download_count": 9,
+      "updated_at": "2026-06-12T09:18:16Z",
+      "download_count": 18,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:55Z",
-      "download_count": 25,
+      "download_count": 28,
       "app_type": "docker",
       "category": "content"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-06-11T09:22:57Z",
-      "download_count": 13,
+      "download_count": 14,
       "app_type": "native",
       "category": "system"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:43Z",
-      "download_count": 410,
+      "download_count": 420,
       "app_type": "docker",
       "category": "browser"
     },
@@ -149,30 +149,9 @@
         "arm"
       ],
       "updated_at": "2026-06-01T09:43:36Z",
-      "download_count": 13,
+      "download_count": 14,
       "app_type": "native",
       "category": "system"
-    },
-    {
-      "slug": "emby",
-      "appname": "embyserver",
-      "file_prefix": "embyserver",
-      "display_name": "Emby",
-      "description": "EmbyServer是一款软件媒体系统，可让您控制媒体的管理和流式传输。可以通过多个应用程序将专用服务器中的媒体提供给最终用户设备。",
-      "version": "4.9.5.0",
-      "fpk_version": "4.9.5.0-r1",
-      "release_tag": "emby/v4.9.5.0-r1",
-      "service_port": 8096,
-      "homepage_url": "https://emby.media",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/emby/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-05-24T18:54:41Z",
-      "download_count": 317,
-      "app_type": "native",
-      "category": "media"
     },
     {
       "slug": "firefox",
@@ -191,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:37Z",
-      "download_count": 344,
+      "download_count": 348,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:40Z",
-      "download_count": 119,
+      "download_count": 121,
       "app_type": "native",
       "category": "download"
     },
@@ -254,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:02Z",
-      "download_count": 273,
+      "download_count": 275,
       "app_type": "docker",
       "category": "media"
     },
@@ -275,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-06-07T09:00:22Z",
-      "download_count": 302,
+      "download_count": 308,
       "app_type": "native",
       "category": "media"
     },
@@ -296,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:27Z",
-      "download_count": 131,
+      "download_count": 132,
       "app_type": "docker",
       "category": "media"
     },
@@ -380,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-06-11T09:22:58Z",
-      "download_count": 62,
+      "download_count": 82,
       "app_type": "docker",
       "category": "content"
     },
@@ -401,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-06-09T09:02:10Z",
-      "download_count": 103,
+      "download_count": 106,
       "app_type": "native",
       "category": "media"
     },
@@ -464,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-05-26T09:03:17Z",
-      "download_count": 100,
+      "download_count": 101,
       "app_type": "native",
       "category": "content"
     },
@@ -485,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:34Z",
-      "download_count": 740,
+      "download_count": 745,
       "app_type": "native",
       "category": "media"
     },
@@ -506,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-05-26T09:03:09Z",
-      "download_count": 434,
+      "download_count": 440,
       "app_type": "native",
       "category": "download"
     },
@@ -527,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:47Z",
-      "download_count": 17,
+      "download_count": 18,
       "app_type": "native",
       "category": "system"
     },
@@ -548,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:15Z",
-      "download_count": 196,
+      "download_count": 200,
       "app_type": "docker",
       "category": "media"
     },
@@ -569,7 +548,7 @@
         "arm"
       ],
       "updated_at": "2026-06-10T09:08:20Z",
-      "download_count": 41,
+      "download_count": 43,
       "app_type": "docker",
       "category": "download"
     },
@@ -590,7 +569,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:45Z",
-      "download_count": 86,
+      "download_count": 87,
       "app_type": "docker",
       "category": "system"
     },
@@ -611,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:52Z",
-      "download_count": 10,
+      "download_count": 11,
       "app_type": "native",
       "category": "system"
     }
