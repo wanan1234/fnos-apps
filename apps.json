@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-17T12:22:18Z",
+  "generated_at": "2026-06-18T11:53:36Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-06-12T09:18:16Z",
-      "download_count": 27,
+      "download_count": 31,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:54:55Z",
-      "download_count": 31,
+      "download_count": 33,
       "app_type": "docker",
       "category": "content"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:40Z",
-      "download_count": 137,
+      "download_count": 138,
       "app_type": "native",
       "category": "download"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:02Z",
-      "download_count": 288,
+      "download_count": 295,
       "app_type": "docker",
       "category": "media"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-06-07T09:00:22Z",
-      "download_count": 420,
+      "download_count": 425,
       "app_type": "native",
       "category": "media"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:27Z",
-      "download_count": 136,
+      "download_count": 142,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-06-06T08:49:44Z",
-      "download_count": 29,
+      "download_count": 30,
       "app_type": "native",
       "category": "content"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-06-15T10:01:12Z",
-      "download_count": 79,
+      "download_count": 90,
       "app_type": "docker",
       "category": "content"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-06-09T09:02:10Z",
-      "download_count": 111,
+      "download_count": 112,
       "app_type": "native",
       "category": "media"
     },
@@ -348,9 +348,9 @@
       "file_prefix": "nginxserver",
       "display_name": "Nginx",
       "description": "Nginx是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP代理服务器。",
-      "version": "1.30.2",
-      "fpk_version": "1.30.2-r1",
-      "release_tag": "nginx/v1.30.2-r1",
+      "version": "1.30.3",
+      "fpk_version": "1.30.3",
+      "release_tag": "nginx/v1.30.3",
       "service_port": 8888,
       "homepage_url": "https://nginx.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx/fnos/ICON_256.PNG",
@@ -358,8 +358,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-05-24T18:54:57Z",
-      "download_count": 34,
+      "updated_at": "2026-06-18T09:25:48Z",
+      "download_count": 22,
       "app_type": "native",
       "category": "system"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:07Z",
-      "download_count": 86,
+      "download_count": 87,
       "app_type": "native",
       "category": "system"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-05-26T09:03:17Z",
-      "download_count": 114,
+      "download_count": 116,
       "app_type": "native",
       "category": "content"
     },
@@ -422,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-05-24T18:55:34Z",
-      "download_count": 765,
+      "download_count": 769,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-06-16T09:42:49Z",
-      "download_count": 328,
+      "download_count": 359,
       "app_type": "native",
       "category": "download"
     },
@@ -485,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-06-17T06:01:41Z",
-      "download_count": 99,
+      "download_count": 105,
       "app_type": "native",
       "category": "download"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-06-17T09:30:42Z",
-      "download_count": 43,
+      "download_count": 48,
       "app_type": "docker",
       "category": "download"
     },
