@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-07T10:57:12Z",
+  "generated_at": "2026-07-08T10:10:54Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-07-07T09:02:21Z",
-      "download_count": 15,
+      "download_count": 36,
       "app_type": "docker",
       "category": "content"
     },
@@ -75,9 +75,9 @@
       "file_prefix": "auto-bangumi",
       "display_name": "AutoBangumi",
       "description": "基于 RSS 的全自动追番下载整理工具，支持 Mikan 等数据源，自动下载并重命名为 Plex/Jellyfin 兼容格式。",
-      "version": "3.2.8",
-      "fpk_version": "3.2.8",
-      "release_tag": "auto-bangumi/v3.2.8",
+      "version": "3.3.2",
+      "fpk_version": "3.3.2",
+      "release_tag": "auto-bangumi/v3.3.2",
       "service_port": 7892,
       "homepage_url": "https://github.com/EstrellaXD/Auto_Bangumi",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/auto-bangumi/fnos/ICON_256.PNG",
@@ -85,8 +85,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-03T09:00:01Z",
-      "download_count": 64,
+      "updated_at": "2026-07-08T08:49:07Z",
+      "download_count": 54,
       "app_type": "docker",
       "category": "content"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-07-03T09:00:06Z",
-      "download_count": 768,
+      "download_count": 786,
       "app_type": "docker",
       "category": "browser"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-07-07T09:02:23Z",
-      "download_count": 632,
+      "download_count": 667,
       "app_type": "docker",
       "category": "browser"
     },
@@ -180,9 +180,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "release-2026.07.07",
-      "fpk_version": "release-2026.07.07",
-      "release_tag": "immich/vrelease-2026.07.07",
+      "version": "release-2026.07.08",
+      "fpk_version": "release-2026.07.08",
+      "release_tag": "immich/vrelease-2026.07.08",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -190,8 +190,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-07T06:49:57Z",
-      "download_count": 401,
+      "updated_at": "2026-07-08T08:49:06Z",
+      "download_count": 76,
       "app_type": "docker",
       "category": "media"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-06-07T09:00:22Z",
-      "download_count": 801,
+      "download_count": 805,
       "app_type": "native",
       "category": "media"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-07-02T09:00:00Z",
-      "download_count": 16,
+      "download_count": 17,
       "app_type": "docker",
       "category": "media"
     },
@@ -254,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-06-06T08:49:44Z",
-      "download_count": 51,
+      "download_count": 52,
       "app_type": "native",
       "category": "content"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-07-07T09:02:20Z",
-      "download_count": 46,
+      "download_count": 49,
       "app_type": "docker",
       "category": "content"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-06-09T09:02:10Z",
-      "download_count": 152,
+      "download_count": 153,
       "app_type": "native",
       "category": "media"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-07-07T09:02:43Z",
-      "download_count": 83,
+      "download_count": 99,
       "app_type": "native",
       "category": "system"
     },
@@ -359,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-07-02T09:00:20Z",
-      "download_count": 188,
+      "download_count": 191,
       "app_type": "native",
       "category": "content"
     },
@@ -369,9 +369,9 @@
       "file_prefix": "qBittorrent",
       "display_name": "qBittorrent",
       "description": "qBittorrent是一个轻量级BitTorrent客户端，简单易用，功能强大。默认用户名admin，密码adminadmin。",
-      "version": "5.2.2",
-      "fpk_version": "5.2.2",
-      "release_tag": "qbittorrent/v5.2.2",
+      "version": "5.2.3",
+      "fpk_version": "5.2.3",
+      "release_tag": "qbittorrent/v5.2.3",
       "service_port": 8085,
       "homepage_url": "https://github.com/userdocs/qbittorrent-nox-static",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/qbittorrent/fnos/ICON_256.PNG",
@@ -379,8 +379,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-16T09:42:49Z",
-      "download_count": 663,
+      "updated_at": "2026-07-08T08:49:14Z",
+      "download_count": 635,
       "app_type": "native",
       "category": "download"
     },
@@ -411,9 +411,9 @@
       "file_prefix": "transmission",
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
-      "version": "latest-2026.07.07",
-      "fpk_version": "latest-2026.07.07",
-      "release_tag": "transmission/vlatest-2026.07.07",
+      "version": "latest-2026.07.08",
+      "fpk_version": "latest-2026.07.08",
+      "release_tag": "transmission/vlatest-2026.07.08",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -421,8 +421,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-07T06:50:02Z",
-      "download_count": 44,
+      "updated_at": "2026-07-08T08:49:15Z",
+      "download_count": 24,
       "app_type": "docker",
       "category": "download"
     }
