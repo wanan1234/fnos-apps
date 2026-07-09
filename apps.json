@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-08T10:25:38Z",
+  "generated_at": "2026-07-09T10:56:58Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -44,28 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-07-07T09:02:21Z",
-      "download_count": 36,
-      "app_type": "docker",
-      "category": "content"
-    },
-    {
-      "slug": "audiobookshelf",
-      "appname": "audiobookshelf",
-      "file_prefix": "audiobookshelf",
-      "display_name": "Audiobookshelf",
-      "description": "自托管的有声书和播客服务器，支持多用户管理、进度同步和丰富的元数据管理。",
-      "version": "2.35.1",
-      "fpk_version": "2.35.1",
-      "release_tag": "audiobookshelf/v2.35.1",
-      "service_port": 13378,
-      "homepage_url": "https://www.audiobookshelf.org",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/audiobookshelf/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-05-29T09:02:37Z",
-      "download_count": 61,
+      "download_count": 43,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-07-08T08:49:07Z",
-      "download_count": 54,
+      "download_count": 63,
       "app_type": "docker",
       "category": "content"
     },
@@ -128,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-07-03T09:00:06Z",
-      "download_count": 786,
+      "download_count": 792,
       "app_type": "docker",
       "category": "browser"
     },
@@ -149,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-06-01T09:43:36Z",
-      "download_count": 49,
+      "download_count": 55,
       "app_type": "native",
       "category": "system"
     },
@@ -170,9 +149,30 @@
         "arm"
       ],
       "updated_at": "2026-07-07T09:02:23Z",
-      "download_count": 667,
+      "download_count": 688,
       "app_type": "docker",
       "category": "browser"
+    },
+    {
+      "slug": "fnos-apps-store",
+      "appname": "fnos-apps-store",
+      "file_prefix": "fnos-apps-store",
+      "display_name": "fnOS Apps",
+      "description": "fnOS第三方应用中心，支持一键安装、更新和卸载来自conversun/fnos-apps的所有应用。",
+      "version": "1.7.10",
+      "fpk_version": "1.7.10",
+      "release_tag": "fnos-apps-store/v1.7.10",
+      "service_port": 8011,
+      "homepage_url": "https://github.com/conversun/fnos-store",
+      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/fnos-apps-store/fnos/ICON_256.PNG",
+      "platforms": [
+        "x86",
+        "arm"
+      ],
+      "updated_at": "2026-07-09T09:07:41Z",
+      "download_count": 4552,
+      "app_type": "native",
+      "category": "store"
     },
     {
       "slug": "immich",
@@ -180,9 +180,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "release-2026.07.08",
-      "fpk_version": "release-2026.07.08",
-      "release_tag": "immich/vrelease-2026.07.08",
+      "version": "release-2026.07.09",
+      "fpk_version": "release-2026.07.09",
+      "release_tag": "immich/vrelease-2026.07.09",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -190,8 +190,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-08T08:49:06Z",
-      "download_count": 76,
+      "updated_at": "2026-07-09T09:07:44Z",
+      "download_count": 57,
       "app_type": "docker",
       "category": "media"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-06-07T09:00:22Z",
-      "download_count": 805,
+      "download_count": 814,
       "app_type": "native",
       "category": "media"
     },
@@ -254,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-06-06T08:49:44Z",
-      "download_count": 52,
+      "download_count": 53,
       "app_type": "native",
       "category": "content"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-07-07T09:02:20Z",
-      "download_count": 49,
+      "download_count": 57,
       "app_type": "docker",
       "category": "content"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-06-09T09:02:10Z",
-      "download_count": 153,
+      "download_count": 155,
       "app_type": "native",
       "category": "media"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-07-07T09:02:43Z",
-      "download_count": 99,
+      "download_count": 101,
       "app_type": "native",
       "category": "system"
     },
@@ -359,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-07-02T09:00:20Z",
-      "download_count": 191,
+      "download_count": 195,
       "app_type": "native",
       "category": "content"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-07-08T08:49:14Z",
-      "download_count": 635,
+      "download_count": 671,
       "app_type": "native",
       "category": "download"
     },
@@ -390,9 +390,9 @@
       "file_prefix": "syncthing",
       "display_name": "Syncthing",
       "description": "开源的文件同步工具，支持多设备间安全同步",
-      "version": "2.1.1",
-      "fpk_version": "2.1.1",
-      "release_tag": "syncthing/v2.1.1",
+      "version": "2.1.2",
+      "fpk_version": "2.1.2",
+      "release_tag": "syncthing/v2.1.2",
       "service_port": 8384,
       "homepage_url": "https://syncthing.net",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/syncthing/fnos/ICON_256.PNG",
@@ -400,8 +400,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-17T06:01:41Z",
-      "download_count": 121,
+      "updated_at": "2026-07-09T09:07:43Z",
+      "download_count": 73,
       "app_type": "native",
       "category": "download"
     },
@@ -411,9 +411,9 @@
       "file_prefix": "transmission",
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
-      "version": "latest-2026.07.08",
-      "fpk_version": "latest-2026.07.08",
-      "release_tag": "transmission/vlatest-2026.07.08",
+      "version": "latest-2026.07.09",
+      "fpk_version": "latest-2026.07.09",
+      "release_tag": "transmission/vlatest-2026.07.09",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -421,8 +421,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-08T08:49:15Z",
-      "download_count": 24,
+      "updated_at": "2026-07-09T09:07:43Z",
+      "download_count": 8,
       "app_type": "docker",
       "category": "download"
     }
