@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-09T10:56:58Z",
+  "generated_at": "2026-07-10T10:43:08Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-06-03T09:29:55Z",
-      "download_count": 72,
+      "download_count": 73,
       "app_type": "docker",
       "category": "system"
     },
@@ -33,9 +33,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "3.1.68",
-      "fpk_version": "3.1.68",
-      "release_tag": "ani-rss/v3.1.68",
+      "version": "3.1.69",
+      "fpk_version": "3.1.69",
+      "release_tag": "ani-rss/v3.1.69",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -43,8 +43,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-07T09:02:21Z",
-      "download_count": 43,
+      "updated_at": "2026-07-10T09:02:00Z",
+      "download_count": 46,
       "app_type": "docker",
       "category": "content"
     },
@@ -54,9 +54,9 @@
       "file_prefix": "auto-bangumi",
       "display_name": "AutoBangumi",
       "description": "基于 RSS 的全自动追番下载整理工具，支持 Mikan 等数据源，自动下载并重命名为 Plex/Jellyfin 兼容格式。",
-      "version": "3.3.2",
-      "fpk_version": "3.3.2",
-      "release_tag": "auto-bangumi/v3.3.2",
+      "version": "3.3.3",
+      "fpk_version": "3.3.3",
+      "release_tag": "auto-bangumi/v3.3.3",
       "service_port": 7892,
       "homepage_url": "https://github.com/EstrellaXD/Auto_Bangumi",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/auto-bangumi/fnos/ICON_256.PNG",
@@ -64,8 +64,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-08T08:49:07Z",
-      "download_count": 63,
+      "updated_at": "2026-07-10T09:02:00Z",
+      "download_count": 23,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-06-24T09:00:54Z",
-      "download_count": 38,
+      "download_count": 40,
       "app_type": "native",
       "category": "system"
     },
@@ -107,30 +107,9 @@
         "arm"
       ],
       "updated_at": "2026-07-03T09:00:06Z",
-      "download_count": 792,
+      "download_count": 802,
       "app_type": "docker",
       "category": "browser"
-    },
-    {
-      "slug": "ddns-go",
-      "appname": "ddns-go",
-      "file_prefix": "ddns-go",
-      "display_name": "DDNS-GO",
-      "description": "DDNS-GO 是一个简单好用的 DDNS 工具，支持阿里云、腾讯云、Cloudflare 等多个 DNS 服务商。",
-      "version": "6.17.1",
-      "fpk_version": "6.17.1",
-      "release_tag": "ddns-go/v6.17.1",
-      "service_port": 9876,
-      "homepage_url": "https://github.com/jeessy2/ddns-go",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ddns-go/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-06-01T09:43:36Z",
-      "download_count": 55,
-      "app_type": "native",
-      "category": "system"
     },
     {
       "slug": "firefox",
@@ -149,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-07-07T09:02:23Z",
-      "download_count": 688,
+      "download_count": 709,
       "app_type": "docker",
       "category": "browser"
     },
@@ -170,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-07-09T09:07:41Z",
-      "download_count": 4552,
+      "download_count": 4733,
       "app_type": "native",
       "category": "store"
     },
@@ -180,9 +159,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "release-2026.07.09",
-      "fpk_version": "release-2026.07.09",
-      "release_tag": "immich/vrelease-2026.07.09",
+      "version": "release-2026.07.10",
+      "fpk_version": "release-2026.07.10",
+      "release_tag": "immich/vrelease-2026.07.10",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -190,8 +169,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-09T09:07:44Z",
-      "download_count": 57,
+      "updated_at": "2026-07-10T09:02:04Z",
+      "download_count": 48,
       "app_type": "docker",
       "category": "media"
     },
@@ -212,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-06-07T09:00:22Z",
-      "download_count": 814,
+      "download_count": 844,
       "app_type": "native",
       "category": "media"
     },
@@ -275,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-07-07T09:02:20Z",
-      "download_count": 57,
+      "download_count": 79,
       "app_type": "docker",
       "category": "content"
     },
@@ -285,9 +264,9 @@
       "file_prefix": "navidrome",
       "display_name": "Navidrome",
       "description": "开源的个人音乐流媒体服务器,兼容 Subsonic/Airsonic API,支持多用户和移动端应用。",
-      "version": "0.62.0",
-      "fpk_version": "0.62.0",
-      "release_tag": "navidrome/v0.62.0",
+      "version": "0.63.1",
+      "fpk_version": "0.63.1",
+      "release_tag": "navidrome/v0.63.1",
       "service_port": 4533,
       "homepage_url": "https://www.navidrome.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/navidrome/fnos/ICON_256.PNG",
@@ -295,8 +274,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-09T09:02:10Z",
-      "download_count": 155,
+      "updated_at": "2026-07-10T09:02:14Z",
+      "download_count": 98,
       "app_type": "native",
       "category": "media"
     },
@@ -317,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-06-18T09:25:48Z",
-      "download_count": 41,
+      "download_count": 46,
       "app_type": "native",
       "category": "system"
     },
@@ -338,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-07-07T09:02:43Z",
-      "download_count": 101,
+      "download_count": 111,
       "app_type": "native",
       "category": "system"
     },
@@ -359,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-07-02T09:00:20Z",
-      "download_count": 195,
+      "download_count": 205,
       "app_type": "native",
       "category": "content"
     },
@@ -380,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-07-08T08:49:14Z",
-      "download_count": 671,
+      "download_count": 710,
       "app_type": "native",
       "category": "download"
     },
@@ -401,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-07-09T09:07:43Z",
-      "download_count": 73,
+      "download_count": 83,
       "app_type": "native",
       "category": "download"
     },
@@ -411,9 +390,9 @@
       "file_prefix": "transmission",
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
-      "version": "latest-2026.07.09",
-      "fpk_version": "latest-2026.07.09",
-      "release_tag": "transmission/vlatest-2026.07.09",
+      "version": "latest-2026.07.10",
+      "fpk_version": "latest-2026.07.10",
+      "release_tag": "transmission/vlatest-2026.07.10",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -421,8 +400,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-09T09:07:43Z",
-      "download_count": 8,
+      "updated_at": "2026-07-10T09:02:08Z",
+      "download_count": 21,
       "app_type": "docker",
       "category": "download"
     }
