@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-15T10:08:52Z",
+  "generated_at": "2026-07-16T10:09:15Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-07-14T08:41:23Z",
-      "download_count": 68,
+      "download_count": 72,
       "app_type": "docker",
       "category": "system"
     },
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-07-15T08:44:14Z",
-      "download_count": 26,
+      "download_count": 30,
       "app_type": "docker",
       "category": "content"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-07-14T08:41:25Z",
-      "download_count": 20,
+      "download_count": 21,
       "app_type": "docker",
       "category": "content"
     },
@@ -75,9 +75,9 @@
       "file_prefix": "certimate",
       "display_name": "Certimate",
       "description": "SSL/TLS证书自动化管理工具，支持ACME协议自动申请和续签证书。",
-      "version": "0.4.26",
-      "fpk_version": "0.4.26",
-      "release_tag": "certimate/v0.4.26",
+      "version": "0.4.27",
+      "fpk_version": "0.4.27",
+      "release_tag": "certimate/v0.4.27",
       "service_port": 8090,
       "homepage_url": "https://github.com/certimate-go/certimate",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/certimate/fnos/ICON_256.PNG",
@@ -85,8 +85,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-24T09:00:54Z",
-      "download_count": 41,
+      "updated_at": "2026-07-16T08:43:45Z",
+      "download_count": 29,
       "app_type": "native",
       "category": "system"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-07-14T08:41:27Z",
-      "download_count": 712,
+      "download_count": 720,
       "app_type": "docker",
       "category": "browser"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-07-15T08:44:16Z",
-      "download_count": 682,
+      "download_count": 714,
       "app_type": "docker",
       "category": "browser"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-07-09T09:07:41Z",
-      "download_count": 5389,
+      "download_count": 5508,
       "app_type": "native",
       "category": "store"
     },
@@ -159,9 +159,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "release-2026.07.15",
-      "fpk_version": "release-2026.07.15",
-      "release_tag": "immich/vrelease-2026.07.15",
+      "version": "release-2026.07.16",
+      "fpk_version": "release-2026.07.16",
+      "release_tag": "immich/vrelease-2026.07.16",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -169,8 +169,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-15T08:44:13Z",
-      "download_count": 11,
+      "updated_at": "2026-07-16T08:43:36Z",
+      "download_count": 7,
       "app_type": "docker",
       "category": "media"
     },
@@ -201,9 +201,9 @@
       "file_prefix": "moviepilot",
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
-      "version": "2.14.3",
-      "fpk_version": "2.14.3",
-      "release_tag": "moviepilot/v2.14.3",
+      "version": "2.14.4",
+      "fpk_version": "2.14.4",
+      "release_tag": "moviepilot/v2.14.4",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -211,8 +211,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-14T08:41:34Z",
-      "download_count": 141,
+      "updated_at": "2026-07-16T08:43:40Z",
+      "download_count": 111,
       "app_type": "docker",
       "category": "content"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-07-12T08:42:31Z",
-      "download_count": 104,
+      "download_count": 107,
       "app_type": "native",
       "category": "media"
     },
@@ -243,9 +243,9 @@
       "file_prefix": "nginxserver",
       "display_name": "Nginx",
       "description": "Nginx是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP代理服务器。",
-      "version": "1.30.3",
-      "fpk_version": "1.30.3",
-      "release_tag": "nginx/v1.30.3",
+      "version": "1.30.4",
+      "fpk_version": "1.30.4",
+      "release_tag": "nginx/v1.30.4",
       "service_port": 8888,
       "homepage_url": "https://nginx.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx/fnos/ICON_256.PNG",
@@ -253,8 +253,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-06-18T09:25:48Z",
-      "download_count": 56,
+      "updated_at": "2026-07-16T08:43:43Z",
+      "download_count": 51,
       "app_type": "native",
       "category": "system"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-07-02T09:00:20Z",
-      "download_count": 246,
+      "download_count": 254,
       "app_type": "native",
       "category": "content"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-07-15T08:44:48Z",
-      "download_count": 1001,
+      "download_count": 1053,
       "app_type": "native",
       "category": "media"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-07-08T08:49:14Z",
-      "download_count": 809,
+      "download_count": 840,
       "app_type": "native",
       "category": "download"
     },
@@ -359,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-07-09T09:07:43Z",
-      "download_count": 94,
+      "download_count": 96,
       "app_type": "native",
       "category": "download"
     },
@@ -369,9 +369,9 @@
       "file_prefix": "transmission",
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
-      "version": "latest-2026.07.15",
-      "fpk_version": "latest-2026.07.15",
-      "release_tag": "transmission/vlatest-2026.07.15",
+      "version": "latest-2026.07.16",
+      "fpk_version": "latest-2026.07.16",
+      "release_tag": "transmission/vlatest-2026.07.16",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -379,7 +379,7 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-15T08:44:23Z",
+      "updated_at": "2026-07-16T08:43:43Z",
       "download_count": 12,
       "app_type": "docker",
       "category": "download"
