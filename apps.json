@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-20T10:52:42Z",
+  "generated_at": "2026-07-21T10:13:35Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-07-14T08:41:23Z",
-      "download_count": 73,
+      "download_count": 77,
       "app_type": "docker",
       "category": "system"
     },
@@ -33,9 +33,9 @@
       "file_prefix": "ani-rss",
       "display_name": "ANI-RSS",
       "description": "动漫 RSS 自动追番、订阅、下载和刮削工具，支持自动识别季数集数和重命名。默认用户名admin，密码admin。",
-      "version": "3.1.75",
-      "fpk_version": "3.1.75",
-      "release_tag": "ani-rss/v3.1.75",
+      "version": "3.1.76",
+      "fpk_version": "3.1.76",
+      "release_tag": "ani-rss/v3.1.76",
       "service_port": 7789,
       "homepage_url": "https://github.com/wushuo894/ani-rss",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ani-rss/fnos/ICON_256.PNG",
@@ -43,8 +43,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-19T08:44:18Z",
-      "download_count": 28,
+      "updated_at": "2026-07-21T08:50:11Z",
+      "download_count": 24,
       "app_type": "docker",
       "category": "content"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-07-14T08:41:25Z",
-      "download_count": 24,
+      "download_count": 31,
       "app_type": "docker",
       "category": "content"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-07-14T08:41:27Z",
-      "download_count": 756,
+      "download_count": 766,
       "app_type": "docker",
       "category": "browser"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-07-15T08:44:16Z",
-      "download_count": 767,
+      "download_count": 780,
       "app_type": "docker",
       "category": "browser"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-07-09T09:07:41Z",
-      "download_count": 5887,
+      "download_count": 5972,
       "app_type": "native",
       "category": "store"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-07-19T08:44:17Z",
-      "download_count": 35,
+      "download_count": 36,
       "app_type": "native",
       "category": "system"
     },
@@ -201,9 +201,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "release-2026.07.20",
-      "fpk_version": "release-2026.07.20",
-      "release_tag": "immich/vrelease-2026.07.20",
+      "version": "release-2026.07.21",
+      "fpk_version": "release-2026.07.21",
+      "release_tag": "immich/vrelease-2026.07.21",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -211,8 +211,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-20T08:59:42Z",
-      "download_count": 22,
+      "updated_at": "2026-07-21T08:50:17Z",
+      "download_count": 31,
       "app_type": "docker",
       "category": "media"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-07-14T08:41:20Z",
-      "download_count": 12,
+      "download_count": 13,
       "app_type": "docker",
       "category": "media"
     },
@@ -254,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-07-20T08:59:45Z",
-      "download_count": 25,
+      "download_count": 43,
       "app_type": "docker",
       "category": "content"
     },
@@ -275,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-07-12T08:42:31Z",
-      "download_count": 112,
+      "download_count": 115,
       "app_type": "native",
       "category": "media"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-07-16T08:43:43Z",
-      "download_count": 54,
+      "download_count": 55,
       "app_type": "native",
       "category": "system"
     },
@@ -306,9 +306,9 @@
       "file_prefix": "nginx-ui",
       "display_name": "Nginx UI",
       "description": "Nginx可视化管理面板，支持在线编辑配置、一键Reload、SSL证书管理。需搭配Nginx应用使用。",
-      "version": "2.4.2",
-      "fpk_version": "2.4.2",
-      "release_tag": "nginx-ui/v2.4.2",
+      "version": "2.4.3",
+      "fpk_version": "2.4.3",
+      "release_tag": "nginx-ui/v2.4.3",
       "service_port": 9000,
       "homepage_url": "https://github.com/0xJacky/nginx-ui",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/nginx-ui/fnos/ICON_256.PNG",
@@ -316,8 +316,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-07T09:02:43Z",
-      "download_count": 128,
+      "updated_at": "2026-07-21T08:50:32Z",
+      "download_count": 92,
       "app_type": "native",
       "category": "system"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-07-02T09:00:20Z",
-      "download_count": 260,
+      "download_count": 266,
       "app_type": "native",
       "category": "content"
     },
@@ -359,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-07-15T08:44:48Z",
-      "download_count": 1196,
+      "download_count": 1206,
       "app_type": "native",
       "category": "media"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-07-08T08:49:14Z",
-      "download_count": 893,
+      "download_count": 906,
       "app_type": "native",
       "category": "download"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-07-09T09:07:43Z",
-      "download_count": 102,
+      "download_count": 103,
       "app_type": "native",
       "category": "download"
     },
@@ -422,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-07-17T08:40:47Z",
-      "download_count": 227,
+      "download_count": 230,
       "app_type": "docker",
       "category": "media"
     },
@@ -432,9 +432,9 @@
       "file_prefix": "transmission",
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
-      "version": "latest-2026.07.20",
-      "fpk_version": "latest-2026.07.20",
-      "release_tag": "transmission/vlatest-2026.07.20",
+      "version": "latest-2026.07.21",
+      "fpk_version": "latest-2026.07.21",
+      "release_tag": "transmission/vlatest-2026.07.21",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -442,8 +442,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-20T08:59:48Z",
-      "download_count": 21,
+      "updated_at": "2026-07-21T08:50:23Z",
+      "download_count": 20,
       "app_type": "docker",
       "category": "download"
     }
