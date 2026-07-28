@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-27T11:29:27Z",
+  "generated_at": "2026-07-28T10:37:42Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:23:16Z",
-      "download_count": 70,
+      "download_count": 71,
       "app_type": "docker",
       "category": "system"
     },
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-07-27T09:02:28Z",
-      "download_count": 14,
+      "download_count": 20,
       "app_type": "docker",
       "category": "content"
     },
@@ -54,9 +54,9 @@
       "file_prefix": "audiobookshelf",
       "display_name": "Audiobookshelf",
       "description": "自托管的有声书和播客服务器，支持多用户管理、进度同步和丰富的元数据管理。",
-      "version": "2.35.1",
-      "fpk_version": "2.35.1-r1",
-      "release_tag": "audiobookshelf/v2.35.1-r1",
+      "version": "2.36.0",
+      "fpk_version": "2.36.0",
+      "release_tag": "audiobookshelf/v2.36.0",
       "service_port": 13378,
       "homepage_url": "https://www.audiobookshelf.org",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/audiobookshelf/fnos/ICON_256.PNG",
@@ -64,8 +64,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-25T17:24:04Z",
-      "download_count": 9,
+      "updated_at": "2026-07-28T08:53:00Z",
+      "download_count": 6,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-07-27T09:02:22Z",
-      "download_count": 10,
+      "download_count": 14,
       "app_type": "docker",
       "category": "content"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:23:33Z",
-      "download_count": 33,
+      "download_count": 37,
       "app_type": "native",
       "category": "system"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:23:35Z",
-      "download_count": 710,
+      "download_count": 732,
       "app_type": "docker",
       "category": "browser"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:23:45Z",
-      "download_count": 65,
+      "download_count": 66,
       "app_type": "native",
       "category": "system"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:15Z",
-      "download_count": 154,
+      "download_count": 196,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:00Z",
-      "download_count": 730,
+      "download_count": 769,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-07-27T10:16:27Z",
-      "download_count": 35,
+      "download_count": 220,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:12Z",
-      "download_count": 65,
+      "download_count": 78,
       "app_type": "native",
       "category": "download"
     },
@@ -254,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:23:59Z",
-      "download_count": 21,
+      "download_count": 28,
       "app_type": "native",
       "category": "system"
     },
@@ -264,9 +264,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "release-2026.07.27",
-      "fpk_version": "release-2026.07.27",
-      "release_tag": "immich/vrelease-2026.07.27",
+      "version": "release-2026.07.28",
+      "fpk_version": "release-2026.07.28",
+      "release_tag": "immich/vrelease-2026.07.28",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -274,8 +274,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-27T09:02:30Z",
-      "download_count": 13,
+      "updated_at": "2026-07-28T08:53:04Z",
+      "download_count": 35,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:22Z",
-      "download_count": 258,
+      "download_count": 294,
       "app_type": "native",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:23:45Z",
-      "download_count": 106,
+      "download_count": 114,
       "app_type": "docker",
       "category": "media"
     },
@@ -338,7 +338,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:23:29Z",
-      "download_count": 86,
+      "download_count": 87,
       "app_type": "docker",
       "category": "content"
     },
@@ -359,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:23:35Z",
-      "download_count": 11,
+      "download_count": 12,
       "app_type": "docker",
       "category": "media"
     },
@@ -369,9 +369,9 @@
       "file_prefix": "memos",
       "display_name": "Memos",
       "description": "轻量级自托管笔记服务,支持Markdown,适合个人知识管理和日常记录。",
-      "version": "0.29.1",
-      "fpk_version": "0.29.1-r1",
-      "release_tag": "memos/v0.29.1-r1",
+      "version": "0.30.0",
+      "fpk_version": "0.30.0",
+      "release_tag": "memos/v0.30.0",
       "service_port": 5230,
       "homepage_url": "https://www.usememos.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/memos/fnos/ICON_256.PNG",
@@ -379,8 +379,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-25T17:24:15Z",
-      "download_count": 24,
+      "updated_at": "2026-07-28T08:53:11Z",
+      "download_count": 17,
       "app_type": "native",
       "category": "content"
     },
@@ -401,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-07-27T09:02:31Z",
-      "download_count": 51,
+      "download_count": 70,
       "app_type": "docker",
       "category": "content"
     },
@@ -422,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:34Z",
-      "download_count": 99,
+      "download_count": 105,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:25:01Z",
-      "download_count": 55,
+      "download_count": 56,
       "app_type": "native",
       "category": "system"
     },
@@ -464,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:32Z",
-      "download_count": 97,
+      "download_count": 98,
       "app_type": "native",
       "category": "system"
     },
@@ -485,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:48Z",
-      "download_count": 266,
+      "download_count": 270,
       "app_type": "native",
       "category": "content"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:23:47Z",
-      "download_count": 1028,
+      "download_count": 1056,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:51Z",
-      "download_count": 704,
+      "download_count": 734,
       "app_type": "native",
       "category": "download"
     },
@@ -548,7 +548,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:23:50Z",
-      "download_count": 1,
+      "download_count": 2,
       "app_type": "native",
       "category": "system"
     },
@@ -569,7 +569,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:25:03Z",
-      "download_count": 81,
+      "download_count": 87,
       "app_type": "native",
       "category": "download"
     },
@@ -590,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:25:14Z",
-      "download_count": 208,
+      "download_count": 210,
       "app_type": "docker",
       "category": "media"
     },
@@ -600,9 +600,9 @@
       "file_prefix": "transmission",
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
-      "version": "latest-2026.07.27",
-      "fpk_version": "latest-2026.07.27",
-      "release_tag": "transmission/vlatest-2026.07.27",
+      "version": "latest-2026.07.28",
+      "fpk_version": "latest-2026.07.28",
+      "release_tag": "transmission/vlatest-2026.07.28",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -610,8 +610,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-27T09:02:32Z",
-      "download_count": 4,
+      "updated_at": "2026-07-28T08:53:06Z",
+      "download_count": 11,
       "app_type": "docker",
       "category": "download"
     },
@@ -632,7 +632,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:57Z",
-      "download_count": 149,
+      "download_count": 150,
       "app_type": "docker",
       "category": "system"
     },
@@ -653,7 +653,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:25:07Z",
-      "download_count": 5,
+      "download_count": 6,
       "app_type": "native",
       "category": "system"
     }
