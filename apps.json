@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-31T10:33:10Z",
+  "generated_at": "2026-08-01T10:00:21Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-07-30T08:52:06Z",
-      "download_count": 32,
+      "download_count": 38,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-07-27T09:02:22Z",
-      "download_count": 17,
+      "download_count": 21,
       "app_type": "docker",
       "category": "content"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-07-31T08:59:07Z",
-      "download_count": 229,
+      "download_count": 240,
       "app_type": "docker",
       "category": "browser"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-07-31T08:59:15Z",
-      "download_count": 15,
+      "download_count": 21,
       "app_type": "native",
       "category": "system"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:15Z",
-      "download_count": 256,
+      "download_count": 268,
       "app_type": "native",
       "category": "media"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:00Z",
-      "download_count": 828,
+      "download_count": 847,
       "app_type": "docker",
       "category": "browser"
     },
@@ -212,7 +212,7 @@
         "arm"
       ],
       "updated_at": "2026-07-27T10:16:27Z",
-      "download_count": 758,
+      "download_count": 874,
       "app_type": "native",
       "category": "store"
     },
@@ -233,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:12Z",
-      "download_count": 112,
+      "download_count": 118,
       "app_type": "native",
       "category": "download"
     },
@@ -254,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:23:59Z",
-      "download_count": 28,
+      "download_count": 29,
       "app_type": "native",
       "category": "system"
     },
@@ -264,9 +264,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "release-2026.07.31",
-      "fpk_version": "release-2026.07.31",
-      "release_tag": "immich/vrelease-2026.07.31",
+      "version": "release-2026.08.01",
+      "fpk_version": "release-2026.08.01",
+      "release_tag": "immich/vrelease-2026.08.01",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -274,8 +274,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-31T08:59:10Z",
-      "download_count": 50,
+      "updated_at": "2026-08-01T08:43:19Z",
+      "download_count": 30,
       "app_type": "docker",
       "category": "media"
     },
@@ -296,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:22Z",
-      "download_count": 362,
+      "download_count": 443,
       "app_type": "native",
       "category": "media"
     },
@@ -317,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:23:45Z",
-      "download_count": 117,
+      "download_count": 119,
       "app_type": "docker",
       "category": "media"
     },
@@ -380,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-07-28T08:53:11Z",
-      "download_count": 32,
+      "download_count": 34,
       "app_type": "native",
       "category": "content"
     },
@@ -390,9 +390,9 @@
       "file_prefix": "moviepilot",
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
-      "version": "2.15.1",
-      "fpk_version": "2.15.1",
-      "release_tag": "moviepilot/v2.15.1",
+      "version": "2.15.2",
+      "fpk_version": "2.15.2",
+      "release_tag": "moviepilot/v2.15.2",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -400,8 +400,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-27T09:02:31Z",
-      "download_count": 109,
+      "updated_at": "2026-08-01T08:43:33Z",
+      "download_count": 96,
       "app_type": "docker",
       "category": "content"
     },
@@ -422,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-07-31T08:04:08Z",
-      "download_count": 92,
+      "download_count": 98,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:25:01Z",
-      "download_count": 59,
+      "download_count": 65,
       "app_type": "native",
       "category": "system"
     },
@@ -464,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-07-31T08:59:27Z",
-      "download_count": 38,
+      "download_count": 40,
       "app_type": "native",
       "category": "system"
     },
@@ -485,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:48Z",
-      "download_count": 292,
+      "download_count": 293,
       "app_type": "native",
       "category": "content"
     },
@@ -506,7 +506,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:23:47Z",
-      "download_count": 1160,
+      "download_count": 1173,
       "app_type": "native",
       "category": "media"
     },
@@ -527,7 +527,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:51Z",
-      "download_count": 812,
+      "download_count": 843,
       "app_type": "native",
       "category": "download"
     },
@@ -548,7 +548,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:23:50Z",
-      "download_count": 5,
+      "download_count": 6,
       "app_type": "native",
       "category": "system"
     },
@@ -590,7 +590,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:25:14Z",
-      "download_count": 221,
+      "download_count": 222,
       "app_type": "docker",
       "category": "media"
     },
@@ -600,9 +600,9 @@
       "file_prefix": "transmission",
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
-      "version": "latest-2026.07.31",
-      "fpk_version": "latest-2026.07.31",
-      "release_tag": "transmission/vlatest-2026.07.31",
+      "version": "latest-2026.08.01",
+      "fpk_version": "latest-2026.08.01",
+      "release_tag": "transmission/vlatest-2026.08.01",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -610,8 +610,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-31T08:59:13Z",
-      "download_count": 12,
+      "updated_at": "2026-08-01T08:43:38Z",
+      "download_count": 11,
       "app_type": "docker",
       "category": "download"
     },
