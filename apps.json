@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-07T08:59:55Z",
+  "generated_at": "2026-08-08T08:33:23Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-08-06T08:53:53Z",
-      "download_count": 67,
+      "download_count": 70,
       "app_type": "docker",
       "category": "content"
     },
@@ -44,7 +44,7 @@
         "arm"
       ],
       "updated_at": "2026-07-28T08:53:00Z",
-      "download_count": 25,
+      "download_count": 28,
       "app_type": "docker",
       "category": "content"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-07-27T09:02:22Z",
-      "download_count": 34,
+      "download_count": 38,
       "app_type": "docker",
       "category": "content"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-07-31T08:59:07Z",
-      "download_count": 298,
+      "download_count": 307,
       "app_type": "docker",
       "category": "browser"
     },
@@ -117,9 +117,9 @@
       "file_prefix": "ddns-go",
       "display_name": "DDNS-GO",
       "description": "DDNS-GO 是一个简单好用的 DDNS 工具，支持阿里云、腾讯云、Cloudflare 等多个 DNS 服务商。",
-      "version": "6.17.4",
-      "fpk_version": "6.17.4",
-      "release_tag": "ddns-go/v6.17.4",
+      "version": "6.17.5",
+      "fpk_version": "6.17.5",
+      "release_tag": "ddns-go/v6.17.5",
       "service_port": 9876,
       "homepage_url": "https://github.com/jeessy2/ddns-go",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/ddns-go/fnos/ICON_256.PNG",
@@ -127,8 +127,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-31T08:59:15Z",
-      "download_count": 34,
+      "updated_at": "2026-08-08T08:11:30Z",
+      "download_count": 27,
       "app_type": "native",
       "category": "system"
     },
@@ -149,7 +149,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:15Z",
-      "download_count": 397,
+      "download_count": 410,
       "app_type": "native",
       "category": "media"
     },
@@ -170,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:00Z",
-      "download_count": 905,
+      "download_count": 937,
       "app_type": "docker",
       "category": "browser"
     },
@@ -191,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-08-02T15:37:45Z",
-      "download_count": 1754,
+      "download_count": 1875,
       "app_type": "native",
       "category": "store"
     },
@@ -212,30 +212,9 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:12Z",
-      "download_count": 158,
+      "download_count": 163,
       "app_type": "native",
       "category": "download"
-    },
-    {
-      "slug": "gotify",
-      "appname": "gotify",
-      "file_prefix": "gotify",
-      "display_name": "Gotify",
-      "description": "Gotify 是一个简单的自托管推送通知服务器，支持通过 REST API 发送和接收消息。",
-      "version": "3.0.0",
-      "fpk_version": "3.0.0-r1",
-      "release_tag": "gotify/v3.0.0-r1",
-      "service_port": 8070,
-      "homepage_url": "https://gotify.net",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/gotify/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-07-25T17:23:59Z",
-      "download_count": 38,
-      "app_type": "native",
-      "category": "system"
     },
     {
       "slug": "immich",
@@ -243,9 +222,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "release-2026.08.07",
-      "fpk_version": "release-2026.08.07",
-      "release_tag": "immich/vrelease-2026.08.07",
+      "version": "release-2026.08.08",
+      "fpk_version": "release-2026.08.08",
+      "release_tag": "immich/vrelease-2026.08.08",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -253,8 +232,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-07T08:22:45Z",
-      "download_count": 18,
+      "updated_at": "2026-08-08T08:11:28Z",
+      "download_count": 23,
       "app_type": "docker",
       "category": "media"
     },
@@ -275,7 +254,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:22Z",
-      "download_count": 602,
+      "download_count": 610,
       "app_type": "native",
       "category": "media"
     },
@@ -296,7 +275,7 @@
         "arm"
       ],
       "updated_at": "2026-07-28T08:53:11Z",
-      "download_count": 37,
+      "download_count": 50,
       "app_type": "native",
       "category": "content"
     },
@@ -317,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-08-07T08:22:56Z",
-      "download_count": 48,
+      "download_count": 73,
       "app_type": "docker",
       "category": "content"
     },
@@ -338,7 +317,7 @@
         "arm"
       ],
       "updated_at": "2026-07-31T08:04:08Z",
-      "download_count": 134,
+      "download_count": 138,
       "app_type": "native",
       "category": "media"
     },
@@ -380,7 +359,7 @@
         "arm"
       ],
       "updated_at": "2026-07-31T08:59:27Z",
-      "download_count": 74,
+      "download_count": 75,
       "app_type": "native",
       "category": "system"
     },
@@ -401,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:48Z",
-      "download_count": 340,
+      "download_count": 354,
       "app_type": "native",
       "category": "content"
     },
@@ -422,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-08-05T08:53:45Z",
-      "download_count": 879,
+      "download_count": 890,
       "app_type": "native",
       "category": "media"
     },
@@ -443,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:51Z",
-      "download_count": 960,
+      "download_count": 972,
       "app_type": "native",
       "category": "download"
     },
@@ -464,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-08-06T08:54:01Z",
-      "download_count": 56,
+      "download_count": 61,
       "app_type": "native",
       "category": "download"
     },
@@ -485,7 +464,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:25:14Z",
-      "download_count": 241,
+      "download_count": 247,
       "app_type": "docker",
       "category": "media"
     },
@@ -495,9 +474,9 @@
       "file_prefix": "transmission",
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
-      "version": "latest-2026.08.07",
-      "fpk_version": "latest-2026.08.07",
-      "release_tag": "transmission/vlatest-2026.08.07",
+      "version": "latest-2026.08.08",
+      "fpk_version": "latest-2026.08.08",
+      "release_tag": "transmission/vlatest-2026.08.08",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -505,8 +484,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-07T08:22:52Z",
-      "download_count": 6,
+      "updated_at": "2026-08-08T08:11:35Z",
+      "download_count": 9,
       "app_type": "docker",
       "category": "download"
     },
