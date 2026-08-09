@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-08T08:33:23Z",
+  "generated_at": "2026-08-09T08:43:04Z",
   "source": {
     "name": "conversun/fnos-apps",
     "url": "https://github.com/conversun/fnos-apps"
@@ -23,7 +23,7 @@
         "arm"
       ],
       "updated_at": "2026-08-06T08:53:53Z",
-      "download_count": 70,
+      "download_count": 75,
       "app_type": "docker",
       "category": "content"
     },
@@ -65,7 +65,7 @@
         "arm"
       ],
       "updated_at": "2026-07-27T09:02:22Z",
-      "download_count": 38,
+      "download_count": 43,
       "app_type": "docker",
       "category": "content"
     },
@@ -86,7 +86,7 @@
         "arm"
       ],
       "updated_at": "2026-07-31T08:59:13Z",
-      "download_count": 23,
+      "download_count": 24,
       "app_type": "native",
       "category": "system"
     },
@@ -107,7 +107,7 @@
         "arm"
       ],
       "updated_at": "2026-07-31T08:59:07Z",
-      "download_count": 307,
+      "download_count": 319,
       "app_type": "docker",
       "category": "browser"
     },
@@ -128,7 +128,7 @@
         "arm"
       ],
       "updated_at": "2026-08-08T08:11:30Z",
-      "download_count": 27,
+      "download_count": 30,
       "app_type": "native",
       "category": "system"
     },
@@ -149,30 +149,9 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:15Z",
-      "download_count": 410,
+      "download_count": 430,
       "app_type": "native",
       "category": "media"
-    },
-    {
-      "slug": "firefox",
-      "appname": "firefox",
-      "file_prefix": "firefox",
-      "display_name": "Firefox",
-      "description": "Firefox 浏览器的 Docker 容器版本，通过网页即可远程访问，内置中文字体支持。",
-      "version": "26.07.2",
-      "fpk_version": "26.07.2-r1",
-      "release_tag": "firefox/v26.07.2-r1",
-      "service_port": 5801,
-      "homepage_url": "https://github.com/jlesage/docker-firefox",
-      "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/firefox/fnos/ICON_256.PNG",
-      "platforms": [
-        "x86",
-        "arm"
-      ],
-      "updated_at": "2026-07-25T17:24:00Z",
-      "download_count": 937,
-      "app_type": "docker",
-      "category": "browser"
     },
     {
       "slug": "fnos-apps-store",
@@ -191,7 +170,7 @@
         "arm"
       ],
       "updated_at": "2026-08-02T15:37:45Z",
-      "download_count": 1875,
+      "download_count": 2011,
       "app_type": "native",
       "category": "store"
     },
@@ -212,7 +191,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:12Z",
-      "download_count": 163,
+      "download_count": 167,
       "app_type": "native",
       "category": "download"
     },
@@ -222,9 +201,9 @@
       "file_prefix": "immich",
       "display_name": "Immich",
       "description": "自托管照片和视频备份方案,支持人脸识别和智能搜索。",
-      "version": "release-2026.08.08",
-      "fpk_version": "release-2026.08.08",
-      "release_tag": "immich/vrelease-2026.08.08",
+      "version": "release-2026.08.09",
+      "fpk_version": "release-2026.08.09",
+      "release_tag": "immich/vrelease-2026.08.09",
       "service_port": 2283,
       "homepage_url": "https://github.com/immich-app/immich",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/immich/fnos/ICON_256.PNG",
@@ -232,8 +211,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-08T08:11:28Z",
-      "download_count": 23,
+      "updated_at": "2026-08-09T08:12:00Z",
+      "download_count": 21,
       "app_type": "docker",
       "category": "media"
     },
@@ -254,7 +233,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:22Z",
-      "download_count": 610,
+      "download_count": 626,
       "app_type": "native",
       "category": "media"
     },
@@ -285,9 +264,9 @@
       "file_prefix": "moviepilot",
       "display_name": "MoviePilot",
       "description": "影视自动化管理工具,支持自动订阅、下载、整理和通知。首次启动通过 Web UI 配置。",
-      "version": "2.15.5",
-      "fpk_version": "2.15.5",
-      "release_tag": "moviepilot/v2.15.5",
+      "version": "3.0.0",
+      "fpk_version": "3.0.0",
+      "release_tag": "moviepilot/v3.0.0",
       "service_port": 3000,
       "homepage_url": "https://github.com/jxxghp/MoviePilot",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/moviepilot/fnos/ICON_256.PNG",
@@ -295,8 +274,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-07T08:22:56Z",
-      "download_count": 73,
+      "updated_at": "2026-08-09T08:12:08Z",
+      "download_count": 38,
       "app_type": "docker",
       "category": "content"
     },
@@ -317,7 +296,7 @@
         "arm"
       ],
       "updated_at": "2026-07-31T08:04:08Z",
-      "download_count": 138,
+      "download_count": 140,
       "app_type": "native",
       "category": "media"
     },
@@ -369,9 +348,9 @@
       "file_prefix": "openlist",
       "display_name": "OpenList",
       "description": "支持多种存储后端的文件列表/WebDAV 程序（AList 社区分支）",
-      "version": "4.2.4",
-      "fpk_version": "4.2.4-r1",
-      "release_tag": "openlist/v4.2.4-r1",
+      "version": "4.2.5",
+      "fpk_version": "4.2.5",
+      "release_tag": "openlist/v4.2.5",
       "service_port": 5244,
       "homepage_url": "https://github.com/OpenListTeam/OpenList",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/openlist/fnos/ICON_256.PNG",
@@ -379,8 +358,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-07-25T17:24:48Z",
-      "download_count": 354,
+      "updated_at": "2026-08-09T08:12:10Z",
+      "download_count": 224,
       "app_type": "native",
       "category": "content"
     },
@@ -401,7 +380,7 @@
         "arm"
       ],
       "updated_at": "2026-08-05T08:53:45Z",
-      "download_count": 890,
+      "download_count": 930,
       "app_type": "native",
       "category": "media"
     },
@@ -422,7 +401,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:24:51Z",
-      "download_count": 972,
+      "download_count": 984,
       "app_type": "native",
       "category": "download"
     },
@@ -443,7 +422,7 @@
         "arm"
       ],
       "updated_at": "2026-08-06T08:54:01Z",
-      "download_count": 61,
+      "download_count": 62,
       "app_type": "native",
       "category": "download"
     },
@@ -464,7 +443,7 @@
         "arm"
       ],
       "updated_at": "2026-07-25T17:25:14Z",
-      "download_count": 247,
+      "download_count": 251,
       "app_type": "docker",
       "category": "media"
     },
@@ -474,9 +453,9 @@
       "file_prefix": "transmission",
       "display_name": "Transmission",
       "description": "Transmission 是一个轻量级的 BitTorrent 客户端，以简洁高效著称，支持 Web 远程管理。",
-      "version": "latest-2026.08.08",
-      "fpk_version": "latest-2026.08.08",
-      "release_tag": "transmission/vlatest-2026.08.08",
+      "version": "latest-2026.08.09",
+      "fpk_version": "latest-2026.08.09",
+      "release_tag": "transmission/vlatest-2026.08.09",
       "service_port": 9091,
       "homepage_url": "https://transmissionbt.com",
       "icon_url": "https://raw.githubusercontent.com/conversun/fnos-apps/main/apps/transmission/fnos/ICON_256.PNG",
@@ -484,8 +463,8 @@
         "x86",
         "arm"
       ],
-      "updated_at": "2026-08-08T08:11:35Z",
-      "download_count": 9,
+      "updated_at": "2026-08-09T08:12:08Z",
+      "download_count": 32,
       "app_type": "docker",
       "category": "download"
     },
@@ -506,7 +485,7 @@
         "arm"
       ],
       "updated_at": "2026-07-30T08:52:11Z",
-      "download_count": 158,
+      "download_count": 159,
       "app_type": "docker",
       "category": "system"
     },
